@@ -95,12 +95,6 @@ dnl is defined as a weak alias of snprintf; we prefer to use the latter).
 AC_CHECK_DECLS([_snprintf], , , [#include <stdio.h>])
 gt_PRINTF_POSIX
 
-dnl Check for tools needed for formatting the documentation.
-ac_aux_dir_abs=`cd $ac_aux_dir && pwd`
-AC_PATH_PROG([DVIPS], [dvips], [$ac_aux_dir_abs/missing dvips])
-AC_PATH_PROG([TEXI2PDF], [texi2pdf], [$ac_aux_dir_abs/missing texi2pdf])
-AC_PATH_PROG([PERL], [perl], [$ac_aux_dir_abs/missing perl])
-
 AC_CONFIG_FILES([Makefile])
 
 AC_OUTPUT

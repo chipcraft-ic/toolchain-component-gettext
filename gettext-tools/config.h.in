@@ -627,8 +627,7 @@
 /* Define to 1 if you have `alloca', as a function or macro. */
 #undef HAVE_ALLOCA
 
-/* Define to 1 if you have <alloca.h> and it should be used (not on Ultrix).
-   */
+/* Define to 1 if <alloca.h> works. */
 #undef HAVE_ALLOCA_H
 
 /* Define to 1 if you have the `argz_count' function. */
@@ -1213,9 +1212,6 @@
 
 /* Define to 1 if you have the `memmove' function. */
 #undef HAVE_MEMMOVE
-
-/* Define to 1 if you have the <memory.h> header file. */
-#undef HAVE_MEMORY_H
 
 /* Define to 1 if you have the `mempcpy' function. */
 #undef HAVE_MEMPCPY
@@ -1934,7 +1930,8 @@
 /* Define to 1 if the `S_IS*' macros in <sys/stat.h> do not work properly. */
 #undef STAT_MACROS_BROKEN
 
-/* Define to 1 if you have the ANSI C header files. */
+/* Always define to 1, for backward compatibility. You can assume the C90
+   standard headers exist. */
 #undef STDC_HEADERS
 
 /* Define to 1 if strerror_r returns char *. */
