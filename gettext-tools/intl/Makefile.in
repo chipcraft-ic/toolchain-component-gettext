@@ -471,13 +471,12 @@ am__v_CCLD_0 = @echo "  CCLD    " $@;
 am__v_CCLD_1 = 
 am__yacc_c2h = sed -e s/cc$$/hh/ -e s/cpp$$/hpp/ -e s/cxx$$/hxx/ \
 		   -e s/c++$$/h++/ -e s/c$$/h/
-YACCCOMPILE = $(YACC) $(AM_YFLAGS) $(YFLAGS)
-LTYACCCOMPILE = $(LIBTOOL) $(AM_V_lt) $(AM_LIBTOOLFLAGS) \
-	$(LIBTOOLFLAGS) --mode=compile $(YACC) $(AM_YFLAGS) $(YFLAGS)
+YACCCOMPILE = true
+LTYACCCOMPILE = true
 AM_V_YACC = $(am__v_YACC_@AM_V@)
 am__v_YACC_ = $(am__v_YACC_@AM_DEFAULT_V@)
 am__v_YACC_0 = @echo "  YACC    " $@;
-am__v_YACC_1 = 
+am__v_YACC_1 =
 YLWRAP = $(top_srcdir)/../build-aux/ylwrap
 SOURCES = $(libgnuintl_la_SOURCES) $(libintl_la_SOURCES)
 DIST_SOURCES = $(am__libgnuintl_la_SOURCES_DIST) \
@@ -1928,7 +1927,7 @@ WOE32DLL = @WOE32DLL@
 XGETTEXT = @XGETTEXT@
 XGETTEXT_015 = @XGETTEXT_015@
 XGETTEXT_EXTRA_OPTIONS = @XGETTEXT_EXTRA_OPTIONS@
-YACC = @INTLBISON@ -y -d
+YACC = true
 YFLAGS = @YFLAGS@
 YIELD_LIB = @YIELD_LIB@
 abs_builddir = @abs_builddir@
@@ -2135,6 +2134,10 @@ libgnuintl_la_LDFLAGS = $(AM_LDFLAGS) $(OTHER_LDFLAGS)
 all: $(BUILT_SOURCES)
 	$(MAKE) $(AM_MAKEFLAGS) all-am
 
+# disable built-in rules:
+%.c: %.y
+	@echo "do not generate *.c from *y"
+
 .SUFFIXES:
 .SUFFIXES: .c .lo .o .obj .y
 $(srcdir)/Makefile.in:  $(srcdir)/Makefile.am  $(am__configure_deps)
@@ -2198,9 +2201,6 @@ distclean-compile:
 
 .c.lo:
 	$(AM_V_CC)$(LTCOMPILE) -c -o $@ $<
-
-.y.c:
-	$(AM_V_YACC)$(am__skipyacc) $(SHELL) $(YLWRAP) $< y.tab.c $@ y.tab.h `echo $@ | $(am__yacc_c2h)` y.output $*.output -- $(YACCCOMPILE)
 
 mostlyclean-libtool:
 	-rm -f *.lo
@@ -2500,26 +2500,6 @@ localename-table.h: $(srcdir)/localename-table.in.h $(srcdir)/export.h
 	  < $(srcdir)/localename-table.in.h \
 	| sed -e 's,@''HAVE_VISIBILITY''@,@HAVE_VISIBILITY@,g' \
 	  > localename-table.h
-
-# The Automake generated .y.c rule is broken: When executed in a VPATH build,
-#   - The .c file gets generated in the build directory. But since it requires
-#     special tools to rebuild it, we need to distribute it in the tarballs,
-#     and by the GNU Coding Standards
-#     <https://www.gnu.org/prep/standards/html_node/Makefile-Basics.html>
-#     the file should be generated in the source directory.
-#   - The #line numbers in the .c file refer to a nonexistent file once it
-#     has been moved from the build directory to the source directory. This
-#     leads to error if 'lcov' is used later.
-# Additionally, here we assume GNU Bison and therefore don't need the ylwrap
-# script.
-# Additionally, here we need a rule that works even without a VPATH variable.
-# Therefore we override this rule.
-
-$(srcdir)/plural.c: $(srcdir)/plural.y
-	$(AM_V_YACC)$(YACC) $(BISONFLAGS) --output plural.c $(srcdir)/plural.y \
-	&& sed -e 's|".*/plural.y"|"plural.y"|' < plural.c > plural.c-tmp \
-	&& rm -f plural.c plural.h \
-	&& mv plural.c-tmp $(srcdir)/plural.c
 
 # Rules for compiling a .c file, that work even without a VPATH variable.
 bindtextdom.lo: $(srcdir)/bindtextdom.c

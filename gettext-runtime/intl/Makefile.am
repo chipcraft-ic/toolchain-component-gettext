@@ -60,7 +60,7 @@ AM_CPPFLAGS += \
   -Drelocate2=libintl_relocate2 \
   -DDEPENDS_ON_LIBICONV=1
 
-YACC = @INTLBISON@ -y -d
+YACC = true
 BISONFLAGS = --name-prefix=__gettext
 
 # Tell the ELF linker which symbols to export.
@@ -145,6 +145,10 @@ endif
 # export.h is an auxiliary file used in constructing the .h files.
 EXTRA_DIST += export.h
 
+# disable built-in rules:
+%.c: %.y
+	@echo "do not generate *.c from *y"
+
 libgnuintl.h: $(srcdir)/libgnuintl.in.h $(srcdir)/export.h
 	sed -e '/IN_LIBGLOCALE/d' \
 	    -e 's,@''HAVE_POSIX_PRINTF''@,@HAVE_POSIX_PRINTF@,g' \
@@ -199,15 +203,6 @@ MOSTLYCLEANFILES += localename-table.h
 # Additionally, here we need a rule that works even without a VPATH variable.
 # Therefore we override this rule.
 
-$(srcdir)/plural.c: $(srcdir)/plural.y
-	$(AM_V_YACC)$(YACC) $(BISONFLAGS) --output plural.c $(srcdir)/plural.y \
-	&& sed -e 's|".*/plural.y"|"plural.y"|' < plural.c > plural.c-tmp \
-	&& rm -f plural.c plural.h \
-	&& mv plural.c-tmp $(srcdir)/plural.c
-# Don't put plural.c into BUILT_SOURCES. Since plural.c is in the source
-# directory, 'make' does not find it without a VPATH variable.
-MOSTLYCLEANFILES     += plural.c-tmp
-MAINTAINERCLEANFILES += plural.c
 EXTRA_DIST           += plural.c
 
 # Rules for compiling a .c file, that work even without a VPATH variable.

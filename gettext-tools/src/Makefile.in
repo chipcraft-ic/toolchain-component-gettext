@@ -795,13 +795,12 @@ am__v_CXXLD_0 = @echo "  CXXLD   " $@;
 am__v_CXXLD_1 = 
 am__yacc_c2h = sed -e s/cc$$/hh/ -e s/cpp$$/hpp/ -e s/cxx$$/hxx/ \
 		   -e s/c++$$/h++/ -e s/c$$/h/
-YACCCOMPILE = $(YACC) $(AM_YFLAGS) $(YFLAGS)
-LTYACCCOMPILE = $(LIBTOOL) $(AM_V_lt) $(AM_LIBTOOLFLAGS) \
-	$(LIBTOOLFLAGS) --mode=compile $(YACC) $(AM_YFLAGS) $(YFLAGS)
+YACCCOMPILE = true
+LTYACCCOMPILE = true
 AM_V_YACC = $(am__v_YACC_@AM_V@)
 am__v_YACC_ = $(am__v_YACC_@AM_DEFAULT_V@)
 am__v_YACC_0 = @echo "  YACC    " $@;
-am__v_YACC_1 = 
+am__v_YACC_1 =
 YLWRAP = $(top_srcdir)/../build-aux/ylwrap
 SOURCES = $(libgettextsrc_la_SOURCES) $(cldr_plurals_SOURCES) \
 	$(hostname_SOURCES) $(msgattrib_SOURCES) $(msgcat_SOURCES) \
@@ -2253,7 +2252,7 @@ WOE32DLL = @WOE32DLL@
 XGETTEXT = @XGETTEXT@
 XGETTEXT_015 = @XGETTEXT_015@
 XGETTEXT_EXTRA_OPTIONS = @XGETTEXT_EXTRA_OPTIONS@
-YACC = @YACC@ -d
+YACC = true
 YFLAGS = @YFLAGS@
 YIELD_LIB = @YIELD_LIB@
 abs_builddir = @abs_builddir@
@@ -2728,6 +2727,9 @@ USEJAVA_no = 0
 @WOE32_TRUE@WOE32_LDADD = gettext.res
 all: $(BUILT_SOURCES)
 	$(MAKE) $(AM_MAKEFLAGS) all-am
+
+# disable built-in rules:
+%.c: %.y
 
 .SUFFIXES:
 .SUFFIXES: .c .cc .lo .o .obj .y
@@ -3707,9 +3709,6 @@ xgettext-x-desktop.obj: x-desktop.c
 ../woe32dll/xgettext-c++xgettext.obj: ../woe32dll/c++xgettext.cc
 	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xgettext_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o ../woe32dll/xgettext-c++xgettext.obj `if test -f '../woe32dll/c++xgettext.cc'; then $(CYGPATH_W) '../woe32dll/c++xgettext.cc'; else $(CYGPATH_W) '$(srcdir)/../woe32dll/c++xgettext.cc'; fi`
 
-.y.c:
-	$(AM_V_YACC)$(am__skipyacc) $(SHELL) $(YLWRAP) $< y.tab.c $@ y.tab.h `echo $@ | $(am__yacc_c2h)` y.output $*.output -- $(YACCCOMPILE)
-
 mostlyclean-libtool:
 	-rm -f *.lo
 
@@ -3974,17 +3973,6 @@ install-exec-clean:
 #     leads to error if 'lcov' is used later.
 # Therefore we override this rule.
 
-po-gram-gen.c po-gram-gen.h: po-gram-gen.y
-	$(AM_V_GEN)$(SHELL) $(YLWRAP) $(srcdir)/po-gram-gen.y \
-	                              y.tab.c po-gram-gen.c \
-	                              y.tab.h po-gram-gen.h \
-	                              y.output po-gram-gen.output \
-	                              -- $(YACC) $(YFLAGS) $(AM_YFLAGS) \
-	&& sed -e 's|".*/po-gram-gen.y"|"po-gram-gen.y"|' < po-gram-gen.c > po-gram-gen.c-tmp \
-	&& rm -f po-gram-gen.c \
-	&& mv po-gram-gen.c-tmp $(srcdir)/po-gram-gen.c \
-	&& { test '$(srcdir)' = . || mv po-gram-gen.h $(srcdir)/po-gram-gen.h; }
-
 # po-gram-gen2.h is generated from po-gram-gen.h and is also distributed in the
 # tarballs (just for convenience).
 po-gram-gen2.h: po-gram-gen.h
@@ -3992,17 +3980,6 @@ po-gram-gen2.h: po-gram-gen.h
 	&& mv po-gram-gen2.h-tmp $(srcdir)/po-gram-gen2.h
 
 po-lex.o po-lex.lo: po-gram-gen2.h
-
-cldr-plural.c cldr-plural.h: cldr-plural.y
-	$(AM_V_GEN)$(SHELL) $(YLWRAP) $(srcdir)/cldr-plural.y \
-	                              y.tab.c cldr-plural.c \
-	                              y.tab.h cldr-plural.h \
-	                              y.output cldr-plural.output \
-	                              -- $(YACC) $(YFLAGS) $(AM_YFLAGS) \
-	&& sed -e 's|".*/cldr-plural.y"|"cldr-plural.y"|' < cldr-plural.c > cldr-plural.c-tmp \
-	&& rm -f cldr-plural.c \
-	&& mv cldr-plural.c-tmp $(srcdir)/cldr-plural.c \
-	&& { test '$(srcdir)' = . || mv cldr-plural.h $(srcdir)/cldr-plural.h; }
 
 # Special rules for installation of auxiliary programs.
 

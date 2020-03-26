@@ -92,7 +92,7 @@ LDADD = ../gnulib-lib/libgettextlib.la $(LTLIBUNISTRING) @LTLIBINTL@ $(WOE32_LDA
 OTHERPROGDEPENDENCIES = ../gnulib-lib/libgettextlib.la $(WOE32_LDADD)
 
 SED = sed
-YACC = @YACC@ -d
+YACC = true
 JAR = @JAR@
 JAVACOMP = $(SHELL) ../javacomp.sh
 CSHARPCOMP = $(SHELL) ../csharpcomp.sh
@@ -249,6 +249,9 @@ urlget_SOURCES = urlget.c
 cldr_plurals_SOURCES = cldr-plural.y cldr-plural-exp.c cldr-plurals.c
 cldr_plurals_CFLAGS = $(AM_CFLAGS) $(INCXML)
 cldr_plurals_LDADD = libgettextsrc.la $(LDADD)
+
+# disable built-in rules:
+%.c: %.y
 
 # How to get the include files of libtextstyle.
 textstyle.h textstyle/stdbool.h textstyle/version.h textstyle/woe32dll.h:
@@ -490,19 +493,6 @@ endif
 #     leads to error if 'lcov' is used later.
 # Therefore we override this rule.
 
-po-gram-gen.c po-gram-gen.h: po-gram-gen.y
-	$(AM_V_GEN)$(SHELL) $(YLWRAP) $(srcdir)/po-gram-gen.y \
-	                              y.tab.c po-gram-gen.c \
-	                              y.tab.h po-gram-gen.h \
-	                              y.output po-gram-gen.output \
-	                              -- $(YACC) $(YFLAGS) $(AM_YFLAGS) \
-	&& sed -e 's|".*/po-gram-gen.y"|"po-gram-gen.y"|' < po-gram-gen.c > po-gram-gen.c-tmp \
-	&& rm -f po-gram-gen.c \
-	&& mv po-gram-gen.c-tmp $(srcdir)/po-gram-gen.c \
-	&& { test '$(srcdir)' = . || mv po-gram-gen.h $(srcdir)/po-gram-gen.h; }
-BUILT_SOURCES += po-gram-gen.c po-gram-gen.h
-MOSTLYCLEANFILES += po-gram-gen.c-tmp
-MAINTAINERCLEANFILES += po-gram-gen.c po-gram-gen.h
 EXTRA_DIST += po-gram-gen.c po-gram-gen.h
 
 # po-gram-gen2.h is generated from po-gram-gen.h and is also distributed in the
@@ -517,19 +507,6 @@ EXTRA_DIST += po-gram-gen2.h
 
 po-lex.o po-lex.lo: po-gram-gen2.h
 
-cldr-plural.c cldr-plural.h: cldr-plural.y
-	$(AM_V_GEN)$(SHELL) $(YLWRAP) $(srcdir)/cldr-plural.y \
-	                              y.tab.c cldr-plural.c \
-	                              y.tab.h cldr-plural.h \
-	                              y.output cldr-plural.output \
-	                              -- $(YACC) $(YFLAGS) $(AM_YFLAGS) \
-	&& sed -e 's|".*/cldr-plural.y"|"cldr-plural.y"|' < cldr-plural.c > cldr-plural.c-tmp \
-	&& rm -f cldr-plural.c \
-	&& mv cldr-plural.c-tmp $(srcdir)/cldr-plural.c \
-	&& { test '$(srcdir)' = . || mv cldr-plural.h $(srcdir)/cldr-plural.h; }
-BUILT_SOURCES += cldr-plural.c cldr-plural.h
-MOSTLYCLEANFILES += cldr-plural.c-tmp
-MAINTAINERCLEANFILES += cldr-plural.c cldr-plural.h
 EXTRA_DIST += cldr-plural.c cldr-plural.h
 
 
