@@ -375,15 +375,6 @@ $(srcdir)/Makefile.in:  $(srcdir)/Makefile.am  $(am__configure_deps)
 	echo ' cd $(top_srcdir) && $(AUTOMAKE) --gnu Makefile'; \
 	$(am__cd) $(top_srcdir) && \
 	  $(AUTOMAKE) --gnu Makefile
-Makefile: $(srcdir)/Makefile.in $(top_builddir)/config.status
-	@case '$?' in \
-	  *config.status*) \
-	    echo ' $(SHELL) ./config.status'; \
-	    $(SHELL) ./config.status;; \
-	  *) \
-	    echo ' cd $(top_builddir) && $(SHELL) ./config.status $@ $(am__maybe_remake_depfiles)'; \
-	    cd $(top_builddir) && $(SHELL) ./config.status $@ $(am__maybe_remake_depfiles);; \
-	esac;
 
 $(top_builddir)/config.status: $(top_srcdir)/configure $(CONFIG_STATUS_DEPENDENCIES)
 	$(SHELL) ./config.status --recheck
@@ -893,8 +884,7 @@ distcheck-hook:
 	test "`sed 1,15d $(srcdir)/gnulib-local/lib/alloca.in.h | md5sum`" = "`sed 1,15d $(srcdir)/gettext-runtime/libasprintf/alloca.in.h | md5sum`"
 # Verify that all files have appropriate copyright headers.
 	if test -d '$(distdir)'; then $(srcdir)/check-copyright-headers '$(distdir)'; fi
-$(top_srcdir)/.version:
-	echo $(VERSION) > $@-t && mv $@-t $@
+
 dist-hook: gen-ChangeLogs
 	echo $(VERSION) > $(distdir)/.tarball-version
 .PHONY: gen-ChangeLogs

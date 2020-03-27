@@ -128,9 +128,7 @@ EXTRA_DIST += INSTALL.windows windows/windres-options windows/gettext.rc
 # Versioning based on Git release tags.
 
 EXTRA_DIST += $(top_srcdir)/.version
-BUILT_SOURCES = $(top_srcdir)/.version
-$(top_srcdir)/.version:
-	echo $(VERSION) > $@-t && mv $@-t $@
+
 dist-hook: gen-ChangeLogs
 	echo $(VERSION) > $(distdir)/.tarball-version
 
