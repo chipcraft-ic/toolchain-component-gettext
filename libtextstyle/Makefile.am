@@ -20,7 +20,7 @@ AUTOMAKE_OPTIONS = 1.13 gnu no-dependencies
 ACLOCAL_AMFLAGS = -I m4 -I gnulib-m4
 
 # The list of subdirectories containing Makefiles.
-SUBDIRS = lib tests adhoc-tests doc
+SUBDIRS = lib tests adhoc-tests
 
 EXTRA_DIST = \
   version.sh \
@@ -194,25 +194,7 @@ EXTRA_DIST = \
   build-aux/texi2html \
   build-aux/run-test \
   build-aux/test-driver.diff \
-  m4/libtextstyle.m4 \
-  examples/color-filter/README \
-  examples/color-filter/INSTALL \
-  examples/color-filter/autogen.sh \
-  examples/color-filter/autoclean.sh \
-  examples/color-filter/configure.ac \
-  examples/color-filter/Makefile.am \
-  examples/color-filter/filter.c \
-  examples/color-filter/filter-default.css \
-  examples/color-hello/README \
-  examples/color-hello/INSTALL \
-  examples/color-hello/autogen.sh \
-  examples/color-hello/autoclean.sh \
-  examples/color-hello/configure.ac \
-  examples/color-hello/Makefile.am \
-  examples/color-hello/hello.c \
-  examples/color-hello/names.c \
-  examples/color-hello/hello-default.css
-
+  m4/libtextstyle.m4
 
 # Allow users to use "gnulib-tool --update".
 EXTRA_DIST += gnulib-m4/gnulib-cache.m4

@@ -92,7 +92,6 @@ LDADD = @LTLIBINTL@
 EOF
 
 cp -p "$abs_top_srcdir"/gnulib-lib/gettext.h .
-cp -p "$abs_top_srcdir"/examples/hello-c/hello.c .
 
 $gettext_datadir/autopoint -f >/dev/null 2>autopoint.err
 test $? = 0 || { cat autopoint.err; Exit 1; }

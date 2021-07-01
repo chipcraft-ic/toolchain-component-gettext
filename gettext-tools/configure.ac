@@ -508,12 +508,6 @@ AC_SUBST([PACKAGE_SUFFIX])
 AC_DEFINE_UNQUOTED(PACKAGE_SUFFIX, "$PACKAGE_SUFFIX",
   [Define to the suffix of this package])
 
-dnl Check for tools needed for formatting the documentation.
-ac_aux_dir_abs=`cd $ac_aux_dir && pwd`
-AC_PATH_PROG([DVIPS], [dvips], [$ac_aux_dir_abs/missing dvips])
-AC_PATH_PROG([TEXI2PDF], [texi2pdf], [$ac_aux_dir_abs/missing texi2pdf])
-AC_PATH_PROG([PERL], [perl], [$ac_aux_dir_abs/missing perl])
-
 dnl Check for tools needed for formatting man pages.
 CROSS_COMPILING=$cross_compiling
 AC_SUBST([CROSS_COMPILING])
@@ -554,11 +548,7 @@ dnl Check whether to execute tests of the system (vendor-provided) libintl API.
 dnl We execute these tests if and only if we don't install our own libintl.
 AM_CONDITIONAL([TEST_SYSTEM_LIBINTL], [test $USE_INCLUDED_LIBINTL = no])
 
-AC_CONFIG_SUBDIRS([examples])
-
 AC_CONFIG_FILES([Makefile])
-
-AC_CONFIG_FILES([doc/Makefile])
 
 AC_CONFIG_FILES([its/Makefile])
 

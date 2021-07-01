@@ -31,13 +31,6 @@ aclocal_DATA = \
   ../../gettext-runtime/m4/po.m4 \
   ../../gettext-runtime/m4/progtest.m4
 
-# Files installed for the examples.
-
-examplesbuildauxdir = $(docdir)/examples/build-aux
-examplesbuildaux_DATA = \
-  ../gnulib-m4/javacomp.m4 ../gnulib-m4/javaexec.m4 \
-  ../gnulib-m4/csharpcomp.m4 ../gnulib-m4/csharpexec.m4 csharpexec-test.exe
-
 # Generate this list with
 # find . -type f -name '*.m4' -printf '%f\n' | sort | tr '\012' @ | sed 's/@$/%/;s/@/ \\@/g' | tr @% '\012\012'
 EXTRA_DIST = README csharpexec-test.exe \

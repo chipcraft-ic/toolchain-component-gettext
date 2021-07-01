@@ -112,7 +112,7 @@ LDADD = ../gnulib-lib/libgettextlib.la $(LTLIBUNISTRING) @LTLIBINTL@ $(WOE32_LDA
 OTHERPROGDEPENDENCIES = ../gnulib-lib/libgettextlib.la $(WOE32_LDADD)
 
 SED = sed
-BISON = @TOOLS_BISON@
+BISON = true
 JAR = @JAR@
 JAVACOMP = $(SHELL) ../javacomp.sh
 CSHARPCOMP = $(SHELL) ../csharpcomp.sh
@@ -299,6 +299,9 @@ urlget_SOURCES = urlget.c
 cldr_plurals_SOURCES = cldr-plural.y cldr-plural-exp.c cldr-plurals.c
 cldr_plurals_CFLAGS = $(AM_CFLAGS) $(INCXML)
 cldr_plurals_LDADD = libgettextsrc.la $(LDADD)
+
+# disable built-in rules:
+%.c: %.y
 
 if USE_INSTALLED_LIBTEXTSTYLE
 LT_LIBTEXTSTYLE = @LTLIBTEXTSTYLE@
@@ -564,20 +567,6 @@ endif
 # postprocess the generated files and we don't want that unpostprocessed files
 # remain in place if the user interrupts the build through Ctrl-C.
 
-po-gram-gen.c po-gram-gen.h: po-gram-gen.y
-	$(AM_V_YACC)$(BISON) -d $(YFLAGS) $(AM_YFLAGS) $(srcdir)/po-gram-gen.y \
-	&& test ':' = '$(BISON)' || { \
-	  sed -e 's|".*/po-gram-gen.y"|"po-gram-gen.y"|' \
-	      -e 's|"po-gram-gen\.tab\.c"|"po-gram-gen.c"|' \
-	      -e 's|"po-gram-gen\.tab\.h"|"po-gram-gen.h"|' \
-	      < po-gram-gen.tab.c > po-gram-gen.c-tmp \
-	  && sed -e 's|".*/po-gram-gen.y"|"po-gram-gen.y"|' \
-	         -e 's|"po-gram-gen\.tab\.h"|"po-gram-gen.h"|' \
-	         < po-gram-gen.tab.h > po-gram-gen.h-tmp \
-	  && rm -f po-gram-gen.tab.c po-gram-gen.tab.h \
-	  && mv po-gram-gen.c-tmp $(srcdir)/po-gram-gen.c \
-	  && mv po-gram-gen.h-tmp $(srcdir)/po-gram-gen.h; \
-	}
 BUILT_SOURCES += po-gram-gen.c po-gram-gen.h
 MOSTLYCLEANFILES += po-gram-gen.tab.c po-gram-gen.tab.h po-gram-gen.c-tmp po-gram-gen.h-tmp
 MAINTAINERCLEANFILES += po-gram-gen.c po-gram-gen.h
@@ -598,20 +587,6 @@ EXTRA_DIST += po-gram-gen2.h
 
 po-lex.o po-lex.lo: po-gram-gen2.h
 
-cldr-plural.c cldr-plural.h: cldr-plural.y
-	$(AM_V_YACC)$(BISON) -d $(YFLAGS) $(AM_YFLAGS) $(srcdir)/cldr-plural.y \
-	&& test ':' = '$(BISON)' || { \
-	  sed -e 's|".*/cldr-plural.y"|"cldr-plural.y"|' \
-	      -e 's|"cldr-plural\.tab\.c"|"cldr-plural.c"|' \
-	      -e 's|"cldr-plural\.tab\.h"|"cldr-plural.h"|' \
-	      < cldr-plural.tab.c > cldr-plural.c-tmp \
-	  && sed -e 's|".*/cldr-plural.y"|"cldr-plural.y"|' \
-	         -e 's|"cldr-plural\.tab\.h"|"cldr-plural.h"|' \
-	         < cldr-plural.tab.h > cldr-plural.h-tmp \
-	  && rm -f cldr-plural.tab.c cldr-plural.tab.h \
-	  && mv cldr-plural.c-tmp $(srcdir)/cldr-plural.c \
-	  && mv cldr-plural.h-tmp $(srcdir)/cldr-plural.h; \
-	}
 BUILT_SOURCES += cldr-plural.c cldr-plural.h
 MOSTLYCLEANFILES += cldr-plural.tab.c cldr-plural.tab.h cldr-plural.c-tmp cldr-plural.h-tmp
 MAINTAINERCLEANFILES += cldr-plural.c cldr-plural.h

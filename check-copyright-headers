@@ -106,8 +106,6 @@ func_check_file ()
 
     /gettext-tools/doc/ISO_3166 | /gettext-tools/doc/ISO_3166_de | \
     /gettext-tools/doc/ISO_639 | /gettext-tools/doc/ISO_639-2 | \
-    /gettext-tools/examples/hello-*/m4/Makefile.am | \
-    /gettext-tools/examples/hello-objc-gnustep/po/LocaleAliases )
       # These are a mostly data.  They don't have much programmer expression.
       return 0 ;;
 
@@ -129,20 +127,13 @@ func_check_file ()
       # in attaching our own copyright header to each.
       return 0 ;;
 
-    /gettext-tools/examples/hello-*-gnome/m4/*.m4 | \
     /gettext-tools/projects/GNOME/teams.html )
       # These files come from the GNOME project.
       # We are not interested in attaching our own copyright header to each.
       return 0 ;;
 
-    /gettext-tools/examples/hello-*-kde/admin/* | \
     /gettext-tools/projects/KDE/teams.html )
       # These files come from the KDE project.
-      # We are not interested in attaching our own copyright header to each.
-      return 0 ;;
-
-    /gettext-tools/examples/hello-*-wxwidgets/m4/wxwidgets.m4 )
-      # These files come from the wxwidgets project.
       # We are not interested in attaching our own copyright header to each.
       return 0 ;;
 

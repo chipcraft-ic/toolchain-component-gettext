@@ -11,7 +11,6 @@ COPYING.LIB$
 ^gettext-tools/doc/gpl\.texi$
 ^gettext-tools/doc/lgpl\.texi$
 ^gettext-tools/doc/fdl\.texi$
-^gettext-tools/examples/hello-c++-kde/admin/.*$
 ^gettext-tools/tests/msgcomm-22$
 ^gettext-tools/tests/msgfilter-sr-latin-1$
 ^gettext-tools/tests/msggrep-1$

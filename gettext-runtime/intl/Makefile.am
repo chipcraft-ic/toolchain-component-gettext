@@ -46,7 +46,7 @@ if WOE32
 AM_CPPFLAGS += -D__USE_MINGW_ANSI_STDIO=0
 endif
 
-BISON = @INTLBISON@
+BISON = true
 BISONFLAGS = --name-prefix=__gettext
 # Just to shut up Automake "error: Yacc source seen but 'YACC' is undefined".
 YACC = $(BISON) -d
@@ -217,6 +217,10 @@ endif
 # export.h is an auxiliary file used in constructing the .h files.
 EXTRA_DIST += export.h
 
+# disable built-in rules:
+%.c: %.y
+	@echo "do not generate *.c from *y"
+
 libgnuintl.h: $(srcdir)/libgnuintl.in.h $(srcdir)/export.h
 	sed -e '/IN_LIBGLOCALE/d' \
 	    -e 's,@''HAVE_POSIX_PRINTF''@,@HAVE_POSIX_PRINTF@,g' \
@@ -265,20 +269,6 @@ MOSTLYCLEANFILES += libintl.h
 # postprocess the generated files and we don't want that unpostprocessed files
 # remain in place if the user interrupts the build through Ctrl-C.
 
-$(srcdir)/plural.c: $(srcdir)/plural.y
-	$(AM_V_YACC)$(BISON) -d $(BISONFLAGS) $(srcdir)/plural.y \
-	&& test ':' = '$(BISON)' || { \
-	  sed -e 's|".*/plural.y"|"plural.y"|' \
-	      -e 's|"plural\.tab\.c"|"plural.c"|' \
-	      -e 's|"plural\.tab\.h"|"plural.h"|' \
-	      < plural.tab.c > plural.c-tmp \
-	  && sed -e 's|".*/plural.y"|"plural.y"|' \
-	         -e 's|"plural\.tab\.h"|"plural.h"|' \
-	         < plural.tab.h > plural.h-tmp \
-	  && rm -f plural.tab.c plural.tab.h \
-	  && mv plural.c-tmp $(srcdir)/plural.c \
-	  && mv plural.h-tmp $(srcdir)/plural.h; \
-	}
 # Don't put plural.c into BUILT_SOURCES. Since plural.c is in the source
 # directory, 'make' does not find it without a VPATH variable.
 MOSTLYCLEANFILES     += plural.tab.c plural.tab.h plural.c-tmp plural.h-tmp

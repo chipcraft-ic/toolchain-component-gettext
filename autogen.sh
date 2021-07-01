@@ -474,15 +474,6 @@ cd libtextstyle
 ) || exit $?
 cd "$dir0"
 
-echo "$0: generating configure in gettext-tools/examples..."
-cd gettext-tools/examples
-aclocal -I ../../gettext-runtime/m4 -I ../../m4 \
-  && autoconf \
-  && touch ChangeLog \
-  && rm -rf autom4te.cache \
-  || exit $?
-cd "$dir0"
-
 echo "$0: copying common files from gettext-runtime to gettext-tools..."
 cp -p gettext-runtime/ABOUT-NLS gettext-tools/ABOUT-NLS
 cp -p gettext-runtime/po/Makefile.in.in gettext-tools/po/Makefile.in.in
@@ -528,18 +519,10 @@ aclocal -I m4 \
             gettext-runtime/libasprintf/autom4te.cache \
             libtextstyle/autom4te.cache \
             gettext-tools/autom4te.cache \
-            gettext-tools/examples/autom4te.cache \
   || exit $?
 
 echo "$0: generating Makefile.in in gettext-tools..."
 cd gettext-tools
-automake --add-missing --copy \
-  && rm -rf autom4te.cache \
-  || exit $?
-cd "$dir0"
-
-echo "$0: generating Makefile.in in gettext-tools/examples..."
-cd gettext-tools/examples
 automake --add-missing --copy \
   && rm -rf autom4te.cache \
   || exit $?

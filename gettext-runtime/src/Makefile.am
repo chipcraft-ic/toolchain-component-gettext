@@ -22,6 +22,10 @@ MOSTLYCLEANFILES = core *.stackdump
 CLEANFILES =
 DISTCLEANFILES =
 
+# disable built-in rules:
+%.c: %.y
+	@echo "do not generate *.c from *y"
+
 RM = rm -f
 
 bin_PROGRAMS = gettext ngettext envsubst

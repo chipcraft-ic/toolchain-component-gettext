@@ -19,7 +19,7 @@
 AUTOMAKE_OPTIONS = 1.5 gnu no-dependencies
 ACLOCAL_AMFLAGS = -I m4 -I ../gettext-runtime/m4 -I ../m4 -I gnulib-m4 -I libgrep/gnulib-m4 -I libgettextpo/gnulib-m4
 
-SUBDIRS = gnulib-lib libgrep src libgettextpo po its projects styles emacs misc man m4 tests system-tests gnulib-tests examples doc
+SUBDIRS = gnulib-lib libgrep src libgettextpo po its projects styles emacs misc man m4 tests system-tests gnulib-tests
 
 EXTRA_DIST = misc/DISCLAIM
 MOSTLYCLEANFILES = core *.stackdump
@@ -29,15 +29,6 @@ MOSTLYCLEANFILES = core *.stackdump
 
 gettextsrcdir = $(datadir)/gettext
 gettextsrc_SCRIPTS = ../build-aux/config.rpath
-
-
-# Files installed for the examples.
-
-examplesbuildauxdir = $(docdir)/examples/build-aux
-examplesbuildaux_DATA = \
-  ../build-aux/javacomp.sh.in ../build-aux/javaexec.sh.in \
-  ../build-aux/csharpcomp.sh.in ../build-aux/csharpexec.sh.in
-
 
 # Files copied from other directories.
 
@@ -63,4 +54,3 @@ maintainer-update-po: $(top_builddir)/config.status
 	$(SHELL) ./config.status --recheck
 	$(SHELL) ./config.status po/Makefile.in po-directories
 	cd po && $(MAKE) update-po
-	cd examples && $(MAKE) maintainer-update-po
