@@ -26,10 +26,10 @@ CSHARPCOMP = $(SHELL) ../csharpcomp.sh
 CSHARPCOMPFLAGS = @CSHARPCOMPFLAGS@
 
 
-all-local: all-dll all-doc
-install-data-local: install-dll install-doc
-installdirs-local: installdirs-dll installdirs-doc
-uninstall-local: uninstall-dll uninstall-doc
+all-local: all-dll
+install-data-local: install-dll
+installdirs-local: installdirs-dll
+uninstall-local: uninstall-dll
 
 
 # Special rules for C# compilation.
@@ -58,42 +58,3 @@ installdirs-dll:
 uninstall-dll:
 	$(RM) $(DESTDIR)$(libdir)/GNU.Gettext.dll
 
-
-# C# reference documentation. Requires the pnet tools.
-
-doc:
-	test -d doc || mkdir doc
-	csdoc -flibrary-name=GNU.Gettext intl.cs | \
-	csdoc2html -o doc -fmulti-file -fframes -fcombine-members -fno-namespace-directories -
-
-intl-csharp.texi: intl.cs
-	csdoc -flibrary-name=GNU.Gettext intl.cs | \
-	csdoc2texi -fembedded -fparent='C#' -o $@ -
-
-all-doc: $(srcdir)/doc/index.html
-
-DOC_FILES = \
-  doc/index.html \
-  doc/namespaces.html \
-  doc/begin.html \
-  doc/GNU_Gettext.html \
-  doc/GNU_Gettext_GettextResourceManager.html \
-  doc/GNU_Gettext_GettextResourceSet.html
-
-EXTRA_DIST += $(DOC_FILES)
-
-install-doc: all-doc
-	$(MKDIR_P) $(DESTDIR)$(htmldir)/csharpdoc
-	@for f in $(DOC_FILES); do \
-	  echo "$(INSTALL_DATA) $(srcdir)/$$f $(DESTDIR)$(htmldir)/csharpdoc/`basename $$f`"; \
-	  $(INSTALL_DATA) $(srcdir)/$$f $(DESTDIR)$(htmldir)/csharpdoc/`basename $$f`; \
-	done
-
-installdirs-doc:
-	$(MKDIR_P) $(DESTDIR)$(htmldir)/csharpdoc
-
-uninstall-doc:
-	@for f in $(DOC_FILES); do \
-	  echo "$(RM) $(DESTDIR)$(htmldir)/csharpdoc/`basename $$f`"; \
-	  $(RM) $(DESTDIR)$(htmldir)/csharpdoc/`basename $$f`; \
-	done

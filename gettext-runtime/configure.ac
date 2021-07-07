@@ -186,8 +186,6 @@ AC_CONFIG_SUBDIRS([libasprintf])
 
 AC_CONFIG_FILES([Makefile])
 
-AC_CONFIG_FILES([doc/Makefile])
-
 AC_CONFIG_FILES([intl-java/Makefile])
 
 AC_CONFIG_FILES([intl-csharp/Makefile])
@@ -199,12 +197,6 @@ AC_CONFIG_FILES([src/gettext.sh], [chmod a+x src/gettext.sh])
 
 AC_CONFIG_FILES([po/Makefile.in])
 
-AC_CONFIG_FILES([man/Makefile],
-                [FIX_MAKEFILE_DISTRIB])
-AC_CONFIG_FILES([man/x-to-1])
-
 AC_CONFIG_FILES([m4/Makefile])
-
-AC_CONFIG_FILES([tests/Makefile])
 
 AC_OUTPUT

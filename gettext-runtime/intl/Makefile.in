@@ -1975,8 +1975,8 @@ maintainer-clean-generic:
 	-rm -f plural.c
 	-test -z "$(BUILT_SOURCES)" || rm -f $(BUILT_SOURCES)
 	-test -z "$(MAINTAINERCLEANFILES)" || rm -f $(MAINTAINERCLEANFILES)
-@USE_INCLUDED_LIBINTL_FALSE@install-data-local:
 @PRELOADABLE_LIBINTL_FALSE@@USE_INCLUDED_LIBINTL_FALSE@uninstall-local:
+@USE_INCLUDED_LIBINTL_FALSE@install-data-local:
 @PRELOADABLE_LIBINTL_FALSE@@USE_INCLUDED_LIBINTL_FALSE@install-exec-local:
 clean: clean-recursive
 

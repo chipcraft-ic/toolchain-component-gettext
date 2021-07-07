@@ -216,7 +216,6 @@ am__aclocal_m4_deps = $(top_srcdir)/gnulib-m4/00gnulib.m4 \
 	$(top_srcdir)/gnulib-m4/xalloc.m4 \
 	$(top_srcdir)/gnulib-m4/year2038.m4 \
 	$(top_srcdir)/gnulib-m4/zzgnulib.m4 \
-	$(top_srcdir)/../m4/fixautomake.m4 \
 	$(top_srcdir)/../m4/libtool.m4 \
 	$(top_srcdir)/../m4/ltoptions.m4 \
 	$(top_srcdir)/../m4/ltsugar.m4 \
@@ -325,8 +324,8 @@ am__define_uniq_tagged_files = \
 ETAGS = etags
 CTAGS = ctags
 CSCOPE = cscope
-DIST_SUBDIRS = doc intl intl-java intl-csharp gnulib-lib libasprintf \
-	src po man m4 tests
+DIST_SUBDIRS = intl intl-java intl-csharp gnulib-lib libasprintf src \
+	po m4
 am__DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/config.h.in \
 	$(top_srcdir)/../build-aux/config.guess \
 	$(top_srcdir)/../build-aux/config.rpath \
@@ -1450,7 +1449,7 @@ ACLOCAL_AMFLAGS = -I m4 -I ../m4 -I gnulib-m4
 # The list of subdirectories depends on whether --disable-libasprintf was
 # specified.
 @ENABLE_LIBASPRINTF_TRUE@SUBDIR_libasprintf = libasprintf
-SUBDIRS = doc intl intl-java intl-csharp gnulib-lib $(SUBDIR_libasprintf) src po man m4 tests
+SUBDIRS = intl intl-java intl-csharp gnulib-lib $(SUBDIR_libasprintf) src po m4
 
 # Allow users to use "gnulib-tool --update".
 

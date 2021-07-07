@@ -575,14 +575,7 @@ AC_CONFIG_FILES([misc/gettextize], [chmod a+x misc/gettextize])
 AC_CONFIG_FILES([misc/autopoint], [chmod a+x misc/autopoint])
 AC_CONFIG_FILES([misc/convert-archive], [chmod a+x misc/convert-archive])
 
-AC_CONFIG_FILES([man/Makefile],
-                [FIX_MAKEFILE_DISTRIB])
-AC_CONFIG_FILES([man/x-to-1])
-
 AC_CONFIG_FILES([m4/Makefile])
-
-AC_CONFIG_FILES([tests/Makefile])
-AC_CONFIG_FILES([tests/init-env])
 
 AC_CONFIG_FILES([system-tests/Makefile])
 

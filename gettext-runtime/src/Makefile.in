@@ -219,7 +219,6 @@ am__aclocal_m4_deps = $(top_srcdir)/gnulib-m4/00gnulib.m4 \
 	$(top_srcdir)/gnulib-m4/xalloc.m4 \
 	$(top_srcdir)/gnulib-m4/year2038.m4 \
 	$(top_srcdir)/gnulib-m4/zzgnulib.m4 \
-	$(top_srcdir)/../m4/fixautomake.m4 \
 	$(top_srcdir)/../m4/libtool.m4 \
 	$(top_srcdir)/../m4/ltoptions.m4 \
 	$(top_srcdir)/../m4/ltsugar.m4 \

@@ -706,7 +706,6 @@ am__aclocal_m4_deps = $(top_srcdir)/libgettextpo/gnulib-m4/fsync.m4 \
 	$(top_srcdir)/gnulib-m4/year2038.m4 \
 	$(top_srcdir)/gnulib-m4/yield.m4 \
 	$(top_srcdir)/gnulib-m4/zzgnulib.m4 \
-	$(top_srcdir)/../m4/fixautomake.m4 \
 	$(top_srcdir)/../m4/libtool.m4 \
 	$(top_srcdir)/../m4/ltoptions.m4 \
 	$(top_srcdir)/../m4/ltsugar.m4 \
