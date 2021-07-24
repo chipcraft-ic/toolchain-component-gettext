@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gettext-tools 0.19.4.73\n"
 "Report-Msgid-Bugs-To: bug-gettext@gnu.org\n"
-"POT-Creation-Date: 2020-07-26 21:56+0200\n"
+"POT-Creation-Date: 2021-07-16 15:36+0200\n"
 "PO-Revision-Date: 2015-09-01 19:17+0300\n"
 "Last-Translator: Jorma Karvonen <karvonen.jorma@gmail.com>\n"
 "Language-Team: Finnish <translation-team-fi@lists.sourceforge.net>\n"
@@ -34,24 +34,19 @@ msgstr "argumentti %s kontekstille %s ei ole yksiselitteinen"
 msgid "Valid arguments are:"
 msgstr "Kelvolliset argumentit ovat:"
 
-#: gnulib-lib/clean-temp.c:460
-#, c-format
-msgid "cannot remove temporary file %s"
-msgstr "väliaikaistiedoston %s poistaminen epäonnistui"
-
-#: gnulib-lib/clean-temp.c:579
+#: gnulib-lib/clean-temp.c:235
 #, c-format
 msgid "cannot find a temporary directory, try setting $TMPDIR"
 msgstr ""
 "tilapäisen hakemiston löytäminen epäonnistui, yritä asettaa $TMPDIR-muuttuja"
 
-#: gnulib-lib/clean-temp.c:594
+#: gnulib-lib/clean-temp.c:250
 #, c-format
 msgid "cannot create a temporary directory using template \"%s\""
 msgstr ""
 "tilapäisen hakemiston luominen mallinnetta ”%s” käyttämällä epäonnistui"
 
-#: gnulib-lib/clean-temp.c:711
+#: gnulib-lib/clean-temp.c:371
 #, c-format
 msgid "cannot remove temporary directory %s"
 msgstr "tilapäisen hakemiston %s poistaminen epäonnistui"
@@ -90,21 +85,21 @@ msgstr "virhe tiedoston %s lukemisen jälkeen"
 msgid "preserving permissions for %s"
 msgstr "säilytetään käyttöoikeudet kohteelle %s"
 
-#: gnulib-lib/csharpcomp.c:202 gnulib-lib/javaversion.c:78 src/msginit.c:955
-#: src/msginit.c:1038 src/msginit.c:1207 src/msginit.c:1313 src/msginit.c:1483
-#: src/read-csharp.c:72 src/read-java.c:71 src/read-resources.c:73
-#: src/read-tcl.c:111 src/write-resources.c:79 src/x-ruby.c:134
+#: gnulib-lib/csharpcomp.c:203 gnulib-lib/javaversion.c:78 src/msginit.c:955
+#: src/msginit.c:1038 src/msginit.c:1207 src/msginit.c:1313 src/msginit.c:1482
+#: src/read-csharp.c:73 src/read-java.c:72 src/read-resources.c:74
+#: src/read-tcl.c:111 src/write-resources.c:79 src/x-ruby.c:135
 #, c-format
 msgid "fdopen() failed"
 msgstr "fdopen() epäonnistui"
 
-#: gnulib-lib/csharpcomp.c:443
+#: gnulib-lib/csharpcomp.c:444
 #, fuzzy, c-format
 #| msgid "C# compiler not found, try installing pnet"
 msgid "C# compiler not found, try installing mono"
 msgstr "C#-kääntäjää ei löytynyt, yritä asentaa pnet"
 
-#: gnulib-lib/csharpexec.c:255
+#: gnulib-lib/csharpexec.c:259
 #, fuzzy, c-format
 #| msgid "C# virtual machine not found, try installing pnet"
 msgid "C# virtual machine not found, try installing mono"
@@ -114,9 +109,8 @@ msgstr "C#-virtuaalikonetta ei löytynyt, yritä asentaa pnet"
 msgid "Unknown system error"
 msgstr "Tuntematon järjestelmän virhe"
 
-#: gnulib-lib/execute.c:185 gnulib-lib/execute.c:258
-#: gnulib-lib/spawn-pipe.c:235 gnulib-lib/spawn-pipe.c:349
-#: gnulib-lib/wait-process.c:290 gnulib-lib/wait-process.c:364
+#: gnulib-lib/execute.c:348 gnulib-lib/spawn-pipe.c:597
+#: gnulib-lib/wait-process.c:291 gnulib-lib/wait-process.c:365
 #, c-format
 msgid "%s subprocess failed"
 msgstr "%s aliprosessi epäonnistui"
@@ -172,74 +166,84 @@ msgstr "virheellinen source_version-argumentti kohteelle compile_java_class"
 msgid "invalid target_version argument to compile_java_class"
 msgstr "virheellinen target_version-argumentti kohteelle compile_java_class"
 
-#: gnulib-lib/javacomp.c:579 src/write-csharp.c:744 src/write-java.c:1145
-#: src/write-java.c:1153 src/write-java.c:1181 src/write-java.c:1193
+#: gnulib-lib/javacomp.c:583 src/write-csharp.c:745 src/write-java.c:1146
+#: src/write-java.c:1154 src/write-java.c:1182 src/write-java.c:1194
 #, c-format
 msgid "failed to create \"%s\""
 msgstr "tiedoston ”%s” luominen epäonnistui"
 
-#: gnulib-lib/javacomp.c:586 src/write-catalog.c:256 src/write-catalog.c:329
-#: src/write-csharp.c:753 src/write-desktop.c:183 src/write-java.c:1161
-#: src/write-java.c:1202 src/write-mo.c:802 src/write-mo.c:824
+#: gnulib-lib/javacomp.c:590 src/write-catalog.c:256 src/write-catalog.c:329
+#: src/write-csharp.c:754 src/write-desktop.c:183 src/write-java.c:1162
+#: src/write-java.c:1203 src/write-mo.c:802 src/write-mo.c:824
 #: src/write-qt.c:751 src/write-tcl.c:228 src/write-xml.c:76
 #, c-format
 msgid "error while writing \"%s\" file"
 msgstr "virhe kirjoitettaessa tiedostoa ”%s”"
 
-#: gnulib-lib/javacomp.c:2436
+#: gnulib-lib/javacomp.c:2442
 #, c-format
 msgid "Java compiler not found, try installing gcj or set $JAVAC"
 msgstr ""
 "Java-kääntäjää ei löytynyt, yritä asentaa gcj tai aseta muuttuja $JAVAC"
 
-#: gnulib-lib/javaexec.c:417
+#: gnulib-lib/javaexec.c:426
 #, c-format
 msgid "Java virtual machine not found, try installing gij or set $JAVA"
 msgstr ""
 "Java-virtuaalikonetta ei löytynyt, yritä asentaa gij tai aseta muuttuja $JAVA"
 
 #: gnulib-lib/javaversion.c:86 src/msginit.c:963 src/msginit.c:1046
-#: src/msginit.c:1215 src/msginit.c:1491
+#: src/msginit.c:1215 src/msginit.c:1490
 #, c-format
 msgid "%s subprocess I/O error"
 msgstr "%s aliprosessisiirräntävirhe"
 
-#: gnulib-lib/obstack.c:338 gnulib-lib/obstack.c:340 gnulib-lib/xmalloc.c:38
-#: gnulib-lib/xsetenv.c:37 src/msgl-check.c:563 src/po-lex.c:83
-#: src/po-lex.c:102 libgettextpo/gettext-po.c:1326 libgettextpo/obstack.c:338
-#: libgettextpo/obstack.c:340 libgettextpo/xmalloc.c:38
+#: gnulib-lib/obstack.c:337 gnulib-lib/obstack.c:339 gnulib-lib/xsetenv.c:37
+#: src/msgl-check.c:563 src/po-lex.c:83 src/po-lex.c:102
+#: libgettextpo/gettext-po.c:1326 libgettextpo/obstack.c:337
+#: libgettextpo/obstack.c:339
 #, c-format
 msgid "memory exhausted"
 msgstr "muisti loppui"
 
+#: gnulib-lib/os2-spawn.c:46
+#, c-format
+msgid "_open_osfhandle failed"
+msgstr "_open_osfhandle epäonnistui"
+
+#: gnulib-lib/os2-spawn.c:83
+#, c-format
+msgid "cannot restore fd %d: dup2 failed"
+msgstr "epäonnistunut tiedostotunnisteen %d palautus: dup2 epäonnistui"
+
 #  käännetty tällä tavalla, jotta alkaisi pienellä alkukirjaimella.
-#: gnulib-lib/pipe-filter-ii.c:313
+#: gnulib-lib/pipe-filter-ii.c:314
 #, c-format
 msgid "creation of threads failed"
 msgstr "säikeiden luominen epäonnistui"
 
-#: gnulib-lib/pipe-filter-ii.c:345 gnulib-lib/pipe-filter-ii.c:502
+#: gnulib-lib/pipe-filter-ii.c:346 gnulib-lib/pipe-filter-ii.c:503
 #: src/msgexec.c:428
 #, c-format
 msgid "write to %s subprocess failed"
 msgstr "kirjoittaminen aliprosessiin %s epäonnistui"
 
-#: gnulib-lib/pipe-filter-ii.c:366 gnulib-lib/pipe-filter-ii.c:545
+#: gnulib-lib/pipe-filter-ii.c:367 gnulib-lib/pipe-filter-ii.c:546
 #, c-format
 msgid "read from %s subprocess failed"
 msgstr "lukeminen aliprosessista %s epäonnistui"
 
-#: gnulib-lib/pipe-filter-ii.c:419
+#: gnulib-lib/pipe-filter-ii.c:420
 #, c-format
 msgid "cannot set up nonblocking I/O to %s subprocess"
 msgstr "ei-lukitsevan siirron asettaminen aliprosessiin %s epäonnistui"
 
-#: gnulib-lib/pipe-filter-ii.c:457
+#: gnulib-lib/pipe-filter-ii.c:458
 #, c-format
 msgid "communication with %s subprocess failed"
 msgstr "viestintä aliprosessin %s kanssa epäonnistui"
 
-#: gnulib-lib/pipe-filter-ii.c:577
+#: gnulib-lib/pipe-filter-ii.c:578
 #, c-format
 msgid "%s subprocess terminated with exit code %d"
 msgstr "%s aliprosessi päättyi poistumiskoodilla %d"
@@ -273,29 +277,19 @@ msgstr "”"
 msgid "'"
 msgstr "”"
 
-#: gnulib-lib/spawn-pipe.c:141 gnulib-lib/spawn-pipe.c:144
-#: gnulib-lib/spawn-pipe.c:265 gnulib-lib/spawn-pipe.c:268
+#: gnulib-lib/spawn-pipe.c:217 gnulib-lib/spawn-pipe.c:220
+#: gnulib-lib/spawn-pipe.c:459 gnulib-lib/spawn-pipe.c:462
 #, c-format
 msgid "cannot create pipe"
 msgstr "putken luominen epäonnistui"
 
-#: gnulib-lib/w32spawn.h:49
-#, c-format
-msgid "_open_osfhandle failed"
-msgstr "_open_osfhandle epäonnistui"
-
-#: gnulib-lib/w32spawn.h:90
-#, c-format
-msgid "cannot restore fd %d: dup2 failed"
-msgstr "epäonnistunut tiedostotunnisteen %d palautus: dup2 epäonnistui"
-
-#: gnulib-lib/wait-process.c:231 gnulib-lib/wait-process.c:263
-#: gnulib-lib/wait-process.c:325
+#: gnulib-lib/wait-process.c:232 gnulib-lib/wait-process.c:264
+#: gnulib-lib/wait-process.c:326
 #, c-format
 msgid "%s subprocess"
 msgstr "%s aliprosessi"
 
-#: gnulib-lib/wait-process.c:282 gnulib-lib/wait-process.c:354
+#: gnulib-lib/wait-process.c:283 gnulib-lib/wait-process.c:355
 #, c-format
 msgid "%s subprocess got fatal signal %d"
 msgstr "%s aliprosessi vastaanotti fataalin signaalin %d"
@@ -326,7 +320,7 @@ msgstr ""
 #: src/msgen.c:298 src/msgexec.c:256 src/msgfilter.c:407 src/msgfmt.c:900
 #: src/msggrep.c:506 src/msginit.c:405 src/msgmerge.c:534 src/msgunfmt.c:421
 #: src/msguniq.c:320 src/recode-sr-latin.c:140 src/urlget.c:169
-#: src/xgettext.c:1047
+#: src/xgettext.c:1050
 #, c-format
 msgid "Try '%s --help' for more information.\n"
 msgstr "Komento ’%s --help’ antaa lisää tietoja.\n"
@@ -347,7 +341,7 @@ msgid ""
 "If no argument is given, it reads CLDR plural rules from the standard input.\n"
 msgstr ""
 
-#: src/cldr-plurals.c:206 src/msgfmt.c:913 src/xgettext.c:1060
+#: src/cldr-plurals.c:206 src/msgfmt.c:913 src/xgettext.c:1063
 #, c-format, no-wrap
 msgid ""
 "Mandatory arguments to long options are mandatory for short options too.\n"
@@ -367,7 +361,7 @@ msgstr "  -V, --version                Näytä versiotiedot\n"
 #: src/msgen.c:381 src/msgexec.c:305 src/msgfilter.c:507 src/msgfmt.c:1066
 #: src/msggrep.c:624 src/msginit.c:469 src/msgmerge.c:664 src/msgunfmt.c:527
 #: src/msguniq.c:417 src/recode-sr-latin.c:161 src/urlget.c:185
-#: src/xgettext.c:1235
+#: src/xgettext.c:1238
 #, c-format, no-wrap
 msgid "  -h, --help                  display this help and exit\n"
 msgstr "  -h, --help                  näytä tämä ohje ja poistu\n"
@@ -377,7 +371,7 @@ msgstr "  -h, --help                  näytä tämä ohje ja poistu\n"
 #: src/msgen.c:383 src/msgexec.c:307 src/msgfilter.c:509 src/msgfmt.c:1068
 #: src/msggrep.c:626 src/msginit.c:471 src/msgmerge.c:666 src/msgunfmt.c:529
 #: src/msguniq.c:419 src/recode-sr-latin.c:164 src/urlget.c:187
-#: src/xgettext.c:1237
+#: src/xgettext.c:1240
 #, c-format, no-wrap
 msgid "  -V, --version               output version information and exit\n"
 msgstr "  -V, --version               tulosta ohjelman versiotiedot ja poistu\n"
@@ -392,7 +386,7 @@ msgstr "  -V, --version               tulosta ohjelman versiotiedot ja poistu\n"
 #: src/msgen.c:391 src/msgexec.c:315 src/msgfilter.c:517 src/msgfmt.c:1080
 #: src/msggrep.c:634 src/msginit.c:479 src/msgmerge.c:678 src/msgunfmt.c:539
 #: src/msguniq.c:427 src/recode-sr-latin.c:172 src/urlget.c:197
-#: src/xgettext.c:1247
+#: src/xgettext.c:1250
 #, c-format
 msgid ""
 "Report bugs in the bug tracker at <%s>\n"
@@ -405,7 +399,7 @@ msgstr ""
 #: src/msgen.c:239 src/msgexec.c:183 src/msgfilter.c:286 src/msgfmt.c:442
 #: src/msggrep.c:413 src/msginit.c:269 src/msgmerge.c:370 src/msgunfmt.c:260
 #: src/msguniq.c:262 src/recode-sr-latin.c:107 src/urlget.c:140
-#: src/xgettext.c:686
+#: src/xgettext.c:689
 #, fuzzy, c-format, no-wrap
 #| msgid ""
 #| "Copyright (C) %s Free Software Foundation, Inc.\n"
@@ -427,7 +421,7 @@ msgstr ""
 #: src/msgcat.c:297 src/msgcmp.c:175 src/msgcomm.c:288 src/msgconv.c:248
 #: src/msgen.c:245 src/msgexec.c:189 src/msgfilter.c:292 src/msgfmt.c:448
 #: src/msggrep.c:419 src/msginit.c:275 src/msgmerge.c:376 src/msgunfmt.c:266
-#: src/msguniq.c:268 src/urlget.c:146 src/xgettext.c:692
+#: src/msguniq.c:268 src/urlget.c:146 src/xgettext.c:695
 #, c-format
 msgid "Written by %s.\n"
 msgstr "Kirjoittanut %s.\n"
@@ -461,14 +455,14 @@ msgstr ""
 
 #: src/file-list.c:53 src/msggrep.c:241 src/open-catalog.c:124
 #: src/read-mo.c:270 src/read-tcl.c:126 src/urlget.c:217
-#: src/write-desktop.c:173 src/xgettext.c:1755 src/xgettext.c:1764
-#: src/xgettext.c:1780 src/xgettext.c:1812 src/xgettext.c:1822
-#: src/xgettext.c:1839
+#: src/write-desktop.c:173 src/xgettext.c:1764 src/xgettext.c:1776
+#: src/xgettext.c:1792 src/xgettext.c:1825 src/xgettext.c:1835
+#: src/xgettext.c:1852
 #, c-format
 msgid "error while opening \"%s\" for reading"
 msgstr "virhe avattaessa tiedostoa ”%s” lukemista varten"
 
-#: src/format-awk.c:509 src/format-boost.c:617 src/format-elisp.c:348
+#: src/format-awk.c:509 src/format-boost.c:618 src/format-elisp.c:348
 #: src/format-gcc-internal.c:627 src/format-java-printf.c:580
 #: src/format-javascript.c:355 src/format-kde.c:223 src/format-librep.c:312
 #: src/format-lua.c:228 src/format-pascal.c:396 src/format-perl.c:582
@@ -481,7 +475,7 @@ msgstr ""
 "muotomäärittelyä argumentille %u sellaisena kuin merkkijonossa ’%s’, ei ole "
 "olemassa merkkijonossa ’%s’"
 
-#: src/format-awk.c:520 src/format-boost.c:628 src/format-elisp.c:359
+#: src/format-awk.c:520 src/format-boost.c:629 src/format-elisp.c:359
 #: src/format-gcc-internal.c:638 src/format-java-printf.c:591
 #: src/format-javascript.c:366 src/format-kde.c:234 src/format-librep.c:323
 #: src/format-lua.c:235 src/format-pascal.c:407 src/format-perl.c:593
@@ -491,7 +485,7 @@ msgstr ""
 msgid "a format specification for argument %u doesn't exist in '%s'"
 msgstr "muotomäärittelyä argumentille %u ei ole merkkijonossa ’%s’"
 
-#: src/format-awk.c:540 src/format-boost.c:648 src/format-c.c:146
+#: src/format-awk.c:540 src/format-boost.c:649 src/format-c.c:146
 #: src/format-elisp.c:379 src/format-gcc-internal.c:658
 #: src/format-gfc-internal.c:372 src/format-java-printf.c:611
 #: src/format-javascript.c:389 src/format-librep.c:343 src/format-lua.c:242
@@ -503,7 +497,7 @@ msgstr ""
 "muotomäärittelyt eivät ole samat merkkijonossa ’%s’ ja merkkijonossa ’%s’ "
 "argumentille %u"
 
-#: src/format-boost.c:449
+#: src/format-boost.c:450
 #, c-format
 msgid "The directive number %u starts with | but does not end with |."
 msgstr "Direktiivinumero %u alkaa merkillä | mutta ei pääty merkkeihin |."
@@ -1210,7 +1204,7 @@ msgstr "  -i, --ip-address            osoitteet tietokoneelle\n"
 #: src/msgcomm.c:452 src/msgconv.c:383 src/msgen.c:379 src/msgexec.c:303
 #: src/msgfilter.c:505 src/msgfmt.c:1064 src/msggrep.c:622 src/msginit.c:467
 #: src/msgmerge.c:662 src/msgunfmt.c:525 src/msguniq.c:415
-#: src/recode-sr-latin.c:158 src/urlget.c:183 src/xgettext.c:1233
+#: src/recode-sr-latin.c:158 src/urlget.c:183 src/xgettext.c:1236
 #, c-format, no-wrap
 msgid "Informative output:\n"
 msgstr "Selittävä tuloste:\n"
@@ -1292,8 +1286,8 @@ msgstr "enintään yksi syötetiedosto on sallittu"
 #: src/msgen.c:267 src/msgfilter.c:307 src/msgfmt.c:501 src/msgfmt.c:509
 #: src/msgfmt.c:524 src/msgfmt.c:546 src/msggrep.c:440 src/msgmerge.c:401
 #: src/msgmerge.c:406 src/msgmerge.c:411 src/msgmerge.c:416 src/msgmerge.c:437
-#: src/msgunfmt.c:297 src/msguniq.c:289 src/xgettext.c:702 src/xgettext.c:709
-#: src/xgettext.c:712 src/xgettext.c:715 src/xgettext.c:739
+#: src/msgunfmt.c:297 src/msguniq.c:289 src/xgettext.c:705 src/xgettext.c:712
+#: src/xgettext.c:715 src/xgettext.c:718 src/xgettext.c:742
 #, c-format
 msgid "%s and %s are mutually exclusive"
 msgstr "valitsimet %s ja %s ovat toisensa poissulkevia"
@@ -1325,7 +1319,7 @@ msgstr ""
 #: src/msgattrib.c:431 src/msgcat.c:384 src/msgcmp.c:227 src/msgcomm.c:375
 #: src/msgconv.c:316 src/msgen.c:317 src/msgexec.c:287 src/msgfilter.c:422
 #: src/msgfmt.c:918 src/msggrep.c:523 src/msginit.c:422 src/msgmerge.c:558
-#: src/msgunfmt.c:447 src/msguniq.c:343 src/xgettext.c:1065
+#: src/msgunfmt.c:447 src/msguniq.c:343 src/xgettext.c:1068
 #, c-format
 msgid "Input file location:\n"
 msgstr "Syötetiedostosijainti:\n"
@@ -1338,7 +1332,7 @@ msgstr "  SYÖTETIEDOSTO               syötteen PO-tiedosto\n"
 #: src/msgattrib.c:435 src/msgcat.c:390 src/msgcmp.c:233 src/msgcomm.c:381
 #: src/msgconv.c:320 src/msgen.c:321 src/msgexec.c:291 src/msgfilter.c:426
 #: src/msgfmt.c:922 src/msggrep.c:527 src/msgmerge.c:564 src/msguniq.c:347
-#: src/xgettext.c:1071
+#: src/xgettext.c:1074
 #, c-format
 msgid ""
 "  -D, --directory=DIRECTORY   add DIRECTORY to list for input files search\n"
@@ -1355,7 +1349,7 @@ msgstr "Jos syötetiedostoa ei ole annettu tai se on -, luetaan vakiosyöte.\n"
 #: src/msgattrib.c:440 src/msgcat.c:395 src/msgcomm.c:386 src/msgconv.c:325
 #: src/msgen.c:326 src/msgfilter.c:431 src/msgfmt.c:946 src/msggrep.c:532
 #: src/msginit.c:430 src/msgmerge.c:576 src/msgunfmt.c:487 src/msguniq.c:352
-#: src/xgettext.c:1076
+#: src/xgettext.c:1079
 #, c-format
 msgid "Output file location:\n"
 msgstr "Tulostetiedostosijainti:\n"
@@ -1531,14 +1525,14 @@ msgstr ""
 #: src/msgattrib.c:496 src/msgcat.c:423 src/msgcomm.c:414 src/msgconv.c:347
 #: src/msgen.c:341 src/msgfilter.c:467 src/msgfmt.c:1054 src/msggrep.c:586
 #: src/msginit.c:445 src/msgmerge.c:624 src/msgunfmt.c:495 src/msguniq.c:374
-#: src/xgettext.c:1177
+#: src/xgettext.c:1180
 #, c-format
 msgid "Output details:\n"
 msgstr "Tulosteen yksityiskohdat:\n"
 
 #: src/msgattrib.c:498 src/msgcat.c:432 src/msgcomm.c:416 src/msgconv.c:349
 #: src/msgen.c:345 src/msgfilter.c:469 src/msggrep.c:588 src/msginit.c:451
-#: src/msgmerge.c:628 src/msgunfmt.c:497 src/msguniq.c:381 src/xgettext.c:1179
+#: src/msgmerge.c:628 src/msgunfmt.c:497 src/msguniq.c:381 src/xgettext.c:1182
 #, c-format
 msgid ""
 "      --color                 use colors and other text attributes always\n"
@@ -1555,7 +1549,7 @@ msgstr ""
 
 #: src/msgattrib.c:502 src/msgcat.c:436 src/msgcomm.c:420 src/msgconv.c:353
 #: src/msgen.c:349 src/msgfilter.c:473 src/msggrep.c:592 src/msginit.c:455
-#: src/msgmerge.c:632 src/msgunfmt.c:501 src/msguniq.c:385 src/xgettext.c:1183
+#: src/msgmerge.c:632 src/msgunfmt.c:501 src/msguniq.c:385 src/xgettext.c:1186
 #, c-format
 msgid "      --style=STYLEFILE       specify CSS style rule file for --color\n"
 msgstr ""
@@ -1564,7 +1558,7 @@ msgstr ""
 
 #: src/msgattrib.c:504 src/msgcat.c:438 src/msgcomm.c:422 src/msgconv.c:355
 #: src/msgen.c:351 src/msgmerge.c:634 src/msgunfmt.c:503 src/msguniq.c:387
-#: src/xgettext.c:1185
+#: src/xgettext.c:1188
 #, c-format
 msgid ""
 "  -e, --no-escape             do not use C escapes in output (default)\n"
@@ -1574,7 +1568,7 @@ msgstr ""
 
 #: src/msgattrib.c:506 src/msgcat.c:440 src/msgcomm.c:424 src/msgconv.c:357
 #: src/msgen.c:353 src/msgfilter.c:477 src/msgmerge.c:636 src/msgunfmt.c:505
-#: src/msguniq.c:389 src/xgettext.c:1187
+#: src/msguniq.c:389 src/xgettext.c:1190
 #, c-format
 msgid ""
 "  -E, --escape                use C escapes in output, no extended chars\n"
@@ -1584,14 +1578,14 @@ msgstr ""
 
 #: src/msgattrib.c:508 src/msgcat.c:442 src/msgcomm.c:426 src/msgconv.c:359
 #: src/msgen.c:355 src/msgfilter.c:479 src/msggrep.c:598 src/msgmerge.c:638
-#: src/msgunfmt.c:507 src/msguniq.c:391 src/xgettext.c:1189
+#: src/msgunfmt.c:507 src/msguniq.c:391 src/xgettext.c:1192
 #, c-format
 msgid "      --force-po              write PO file even if empty\n"
 msgstr ""
 "      --force-po              kirjoita PO-tiedosto vaikka se on tyhjä\n"
 
 #: src/msgattrib.c:510 src/msgcat.c:444 src/msgcomm.c:428 src/msguniq.c:393
-#: src/xgettext.c:1191
+#: src/xgettext.c:1194
 #, c-format
 msgid "  -i, --indent                write the .po file using indented style\n"
 msgstr ""
@@ -1599,14 +1593,14 @@ msgstr ""
 "tyyliä\n"
 
 #: src/msgattrib.c:512 src/msgcat.c:446 src/msgcomm.c:430 src/msguniq.c:395
-#: src/xgettext.c:1193
+#: src/xgettext.c:1196
 #, c-format
 msgid "      --no-location           do not write '#: filename:line' lines\n"
 msgstr ""
 "      --no-location           älä kirjoita ’#: filename:line’ -rivejä\n"
 
 #: src/msgattrib.c:514 src/msgcat.c:448 src/msgcomm.c:432 src/msguniq.c:397
-#: src/xgettext.c:1195
+#: src/xgettext.c:1198
 #, c-format
 msgid ""
 "  -n, --add-location          generate '#: filename:line' lines (default)\n"
@@ -1614,7 +1608,7 @@ msgstr ""
 "  -n, --add-location          tuota ’#: filename:line’ -rivit (oletus)\n"
 
 #: src/msgattrib.c:516 src/msgcat.c:450 src/msgcomm.c:434 src/msguniq.c:399
-#: src/xgettext.c:1197
+#: src/xgettext.c:1200
 #, c-format
 msgid ""
 "      --strict                write out strict Uniforum conforming .po file\n"
@@ -1631,7 +1625,7 @@ msgstr "  -p, --properties-output     luo Java .properties -tiedosto\n"
 
 #: src/msgattrib.c:520 src/msgcat.c:454 src/msgcomm.c:438 src/msgconv.c:371
 #: src/msgen.c:367 src/msgfilter.c:493 src/msggrep.c:610 src/msginit.c:459
-#: src/msgmerge.c:650 src/msgunfmt.c:515 src/msguniq.c:403 src/xgettext.c:1201
+#: src/msgmerge.c:650 src/msgunfmt.c:515 src/msguniq.c:403 src/xgettext.c:1204
 #, c-format
 msgid ""
 "      --stringtable-output    write out a NeXTstep/GNUstep .strings file\n"
@@ -1640,14 +1634,14 @@ msgstr ""
 
 #: src/msgattrib.c:522 src/msgcat.c:456 src/msgcomm.c:440 src/msgconv.c:373
 #: src/msgen.c:369 src/msgfilter.c:495 src/msggrep.c:612 src/msginit.c:461
-#: src/msgmerge.c:652 src/msgunfmt.c:517 src/msguniq.c:405 src/xgettext.c:1205
+#: src/msgmerge.c:652 src/msgunfmt.c:517 src/msguniq.c:405 src/xgettext.c:1208
 #, c-format
 msgid "  -w, --width=NUMBER          set output page width\n"
 msgstr "  -w, --width=NUMERO          aseta tulostesivun leveys\n"
 
 #: src/msgattrib.c:524 src/msgcat.c:458 src/msgcomm.c:442 src/msgconv.c:375
 #: src/msgen.c:371 src/msgfilter.c:497 src/msggrep.c:614 src/msginit.c:463
-#: src/msgmerge.c:654 src/msgunfmt.c:519 src/msguniq.c:407 src/xgettext.c:1207
+#: src/msgmerge.c:654 src/msgunfmt.c:519 src/msguniq.c:407 src/xgettext.c:1210
 #, c-format
 msgid ""
 "      --no-wrap               do not break long message lines, longer than\n"
@@ -1659,14 +1653,14 @@ msgstr ""
 
 #: src/msgattrib.c:527 src/msgcat.c:461 src/msgcomm.c:445 src/msgconv.c:378
 #: src/msgen.c:374 src/msgfilter.c:500 src/msgmerge.c:657 src/msgunfmt.c:522
-#: src/msguniq.c:410 src/xgettext.c:1210
+#: src/msguniq.c:410 src/xgettext.c:1213
 #, c-format
 msgid "  -s, --sort-output           generate sorted output\n"
 msgstr "  -s, --sort-output           tuota lajiteltu tuloste\n"
 
 #: src/msgattrib.c:529 src/msgcat.c:463 src/msgcomm.c:447 src/msgconv.c:380
 #: src/msgen.c:376 src/msgfilter.c:502 src/msgmerge.c:659 src/msguniq.c:412
-#: src/xgettext.c:1212
+#: src/xgettext.c:1215
 #, c-format
 msgid "  -F, --sort-by-file          sort output by file location\n"
 msgstr ""
@@ -1677,7 +1671,7 @@ msgstr ""
 msgid "impossible selection criteria specified (%d < n < %d)"
 msgstr "määritelty mahdoton valintakriteeri (%d < n < %d)"
 
-#: src/msgcat.c:364 src/msgcomm.c:356 src/xgettext.c:1051
+#: src/msgcat.c:364 src/msgcomm.c:356 src/xgettext.c:1054
 #, c-format
 msgid "Usage: %s [OPTION] [INPUTFILE]...\n"
 msgstr "Käyttö: %s [VALITSIN] [SYÖTETIEDOSTO]...\n"
@@ -1706,19 +1700,19 @@ msgstr ""
 "--use-first on määritelty. Silloin ne otetaan ensimmäisestä PO-tiedostosta,\n"
 "joka on määritellyt ne.\n"
 
-#: src/msgcat.c:386 src/msgcomm.c:377 src/xgettext.c:1067
+#: src/msgcat.c:386 src/msgcomm.c:377 src/xgettext.c:1070
 #, c-format
 msgid "  INPUTFILE ...               input files\n"
 msgstr "  SYÖTETIEDOSTO ...           syötetiedostot\n"
 
-#: src/msgcat.c:388 src/msgcomm.c:379 src/xgettext.c:1069
+#: src/msgcat.c:388 src/msgcomm.c:379 src/xgettext.c:1072
 #, c-format
 msgid "  -f, --files-from=FILE       get list of input files from FILE\n"
 msgstr ""
 "  -f, --files-from=TIEDOSTO   hae syötetiedostojen luettelo TIEDOSTOsta\n"
 
 #: src/msgcat.c:392 src/msgcomm.c:383 src/msgen.c:323 src/msgfmt.c:924
-#: src/xgettext.c:1073
+#: src/xgettext.c:1076
 #, c-format
 msgid "If input file is -, standard input is read.\n"
 msgstr "Jos syötetiedosto on -, luetaan vakiosyötettä.\n"
@@ -1905,7 +1899,7 @@ msgstr ""
 msgid "warning: this message is not used"
 msgstr "varoitus: tätä viestiä ei käytetä"
 
-#: src/msgcmp.c:556 src/msgfmt.c:773 src/msgfmt.c:1606 src/xgettext.c:1020
+#: src/msgcmp.c:556 src/msgfmt.c:773 src/msgfmt.c:1605 src/xgettext.c:1023
 #, c-format
 msgid "found %d fatal error"
 msgid_plural "found %d fatal errors"
@@ -1949,7 +1943,7 @@ msgstr ""
 "                              monta määrittelyä. Oletus 1, jos ei ole "
 "asetettu\n"
 
-#: src/msgcomm.c:449 src/xgettext.c:1214
+#: src/msgcomm.c:449 src/xgettext.c:1217
 #, c-format
 msgid ""
 "      --omit-header           don't write header with 'msgid \"\"' entry\n"
@@ -1997,7 +1991,7 @@ msgstr ""
 msgid "      --strict                strict Uniforum output style\n"
 msgstr "      --strict                tiukka Uniforum-tulostetyyli\n"
 
-#: src/msgen.c:256 src/msgfmt.c:461 src/xgettext.c:732
+#: src/msgen.c:256 src/msgfmt.c:461 src/xgettext.c:735
 #, c-format
 msgid "no input file given"
 msgstr "syötetiedostoa ei annettu"
@@ -2194,7 +2188,7 @@ msgid "invalid endianness: %s"
 msgstr "virheellinen endian-tyyppi: %s"
 
 #. This is a proper name. See the gettext manual, section Names.
-#: src/msgfmt.c:448 src/msgunfmt.c:266 src/xgettext.c:692
+#: src/msgfmt.c:448 src/msgunfmt.c:266 src/xgettext.c:695
 msgid "Ulrich Drepper"
 msgstr "Ulrich Drepper"
 
@@ -2291,7 +2285,7 @@ msgstr ""
 msgid "  filename.po ...             input files\n"
 msgstr "  tiedosto.po ...             syötetiedostot\n"
 
-#: src/msgfmt.c:927 src/msgmerge.c:570 src/msgunfmt.c:436 src/xgettext.c:1109
+#: src/msgfmt.c:927 src/msgmerge.c:570 src/msgunfmt.c:436 src/xgettext.c:1112
 #, c-format
 msgid "Operation mode:\n"
 msgstr "Toimintatila:\n"
@@ -2357,7 +2351,7 @@ msgstr "      --qt                    Qt-tila: tuota Qt .qm -tiedosto\n"
 msgid "      --strict                enable strict Uniforum mode\n"
 msgstr "      --strict                ota käyttöön tiukka Uniforum-tila\n"
 
-#: src/msgfmt.c:952 src/xgettext.c:1084
+#: src/msgfmt.c:952 src/xgettext.c:1087
 #, c-format
 msgid "If output file is -, output is written to standard output.\n"
 msgstr "Jos tulostiedosto on -, tuloste kirjoitetaan vakiotulosteeseen.\n"
@@ -2467,7 +2461,7 @@ msgstr ""
 msgid "  -d DIRECTORY                base directory of .po files\n"
 msgstr "  -d HAKEMISTO                .po-tiedostojen perushakemisto\n"
 
-#: src/msgfmt.c:1003 src/xgettext.c:1138
+#: src/msgfmt.c:1003 src/xgettext.c:1141
 #, c-format
 msgid ""
 "  -kWORD, --keyword=WORD      look for WORD as an additional keyword\n"
@@ -2505,7 +2499,7 @@ msgid "  --template=TEMPLATE         an XML file used as a template\n"
 msgstr ""
 "  --template=MALLINNE         tiedostoa .desktop käytetään mallinteena\n"
 
-#: src/msgfmt.c:1034 src/xgettext.c:1101
+#: src/msgfmt.c:1034 src/xgettext.c:1104
 #, c-format
 msgid "Input file interpretation:\n"
 msgstr "Syötetiedoston tulkinta:\n"
@@ -2604,7 +2598,7 @@ msgstr "      --no-hash               binaaritiedosto ei sisällä hash-taulua\n
 msgid "      --statistics            print statistics about translations\n"
 msgstr "      --statistics            tulosta tilastot käännöksistä\n"
 
-#: src/msgfmt.c:1072 src/msgmerge.c:668 src/msgunfmt.c:531 src/xgettext.c:1239
+#: src/msgfmt.c:1072 src/msgmerge.c:668 src/msgunfmt.c:531 src/xgettext.c:1242
 #, c-format
 msgid "  -v, --verbose               increase verbosity level\n"
 msgstr "  -v, --verbose               kasvata laveustasoa\n"
@@ -2649,24 +2643,24 @@ msgstr "vajaa ’msgstr’-merkkijono jätetty huomioimatta"
 msgid "%s: warning: source file contains fuzzy translation"
 msgstr "%s: varoitus: lähdetiedosto sisältää vajaan käännöksen"
 
-#: src/msgfmt.c:1458
+#: src/msgfmt.c:1457
 #, c-format
 msgid "%s does not exist"
 msgstr "%s ei ole olemassa"
 
-#: src/msgfmt.c:1465
+#: src/msgfmt.c:1464
 #, c-format
 msgid "%s exists but cannot read"
 msgstr "%s on olemassa, mutta sen lukeminen epäonnistui"
 
 #: src/msggrep.c:252 src/po-lex.c:655 src/read-desktop.c:127 src/read-mo.c:88
-#: src/read-properties.c:609 src/read-stringtable.c:98 src/x-awk.c:138
-#: src/x-c.c:583 src/x-csharp.c:164 src/x-elisp.c:145 src/x-java.c:200
-#: src/x-javascript.c:180 src/x-librep.c:147 src/x-lisp.c:212 src/x-lua.c:174
-#: src/x-perl.c:256 src/x-perl.c:331 src/x-perl.c:424 src/x-php.c:162
-#: src/x-python.c:177 src/x-rst.c:242 src/x-rst.c:296 src/x-scheme.c:171
-#: src/x-sh.c:164 src/x-smalltalk.c:85 src/x-tcl.c:151 src/x-vala.c:177
-#: src/x-ycp.c:89
+#: src/read-properties.c:609 src/read-stringtable.c:99 src/x-awk.c:139
+#: src/x-c.c:584 src/x-csharp.c:165 src/x-elisp.c:146 src/x-java.c:201
+#: src/x-javascript.c:182 src/x-librep.c:148 src/x-lisp.c:213 src/x-lua.c:174
+#: src/x-perl.c:257 src/x-perl.c:332 src/x-perl.c:425 src/x-php.c:163
+#: src/x-python.c:179 src/x-rst.c:242 src/x-rst.c:296 src/x-scheme.c:172
+#: src/x-sh.c:165 src/x-smalltalk.c:86 src/x-tcl.c:152 src/x-vala.c:178
+#: src/x-ycp.c:90
 #, c-format
 msgid "error while reading \"%s\""
 msgstr "virhe luettaessa tiedostoa ”%s”"
@@ -2893,9 +2887,9 @@ msgstr ""
 "Määritä syötteen .pot-tiedosto valitsimella --input.\n"
 
 #: src/msginit.c:976 src/msginit.c:1059 src/msginit.c:1228 src/msginit.c:1330
-#: src/msginit.c:1511 src/read-csharp.c:83 src/read-java.c:82
-#: src/read-resources.c:84 src/read-tcl.c:128 src/write-resources.c:106
-#: src/x-ruby.c:146
+#: src/msginit.c:1510 src/read-csharp.c:84 src/read-java.c:83
+#: src/read-resources.c:85 src/read-tcl.c:128 src/write-resources.c:106
+#: src/x-ruby.c:147
 #, c-format
 msgid "%s subprocess failed with exit code %d"
 msgstr "%s aliprosessi epäonnistui poistumiskoodilla %d"
@@ -2917,28 +2911,28 @@ msgstr ""
 #. TRANSLATORS: "English" needs to be replaced by your language.
 #. For example in it.po write "Traduzioni italiani ...",
 #. *not* "Traduzioni inglesi ...".
-#: src/msginit.c:1706
+#: src/msginit.c:1705
 #, c-format
 msgid "English translations for %s package"
 msgstr "Suomenkielinen käännös %s-paketille"
 
-#: src/msgl-cat.c:178 src/msgl-charset.c:86 src/msgl-iconv.c:244
+#: src/msgl-cat.c:179 src/msgl-charset.c:86 src/msgl-iconv.c:245
 #, c-format
 msgid "present charset \"%s\" is not a portable encoding name"
 msgstr "nykyinen merkistö ”%s” ei ole siirrettävä koodausnimi"
 
-#: src/msgl-cat.c:188 src/msgl-iconv.c:255
+#: src/msgl-cat.c:189 src/msgl-iconv.c:256
 #, c-format
 msgid "two different charsets \"%s\" and \"%s\" in input file"
 msgstr "kaksi erilaista merkistöä ”%s” ja ”%s” syötetiedostossa"
 
-#: src/msgl-cat.c:203
+#: src/msgl-cat.c:204
 #, c-format
 msgid ""
 "input file '%s' doesn't contain a header entry with a charset specification"
 msgstr "syötetiedostossa ’%s’ ei ole otsaketta, jossa on merkistömäärittely"
 
-#: src/msgl-cat.c:207
+#: src/msgl-cat.c:208
 #, c-format
 msgid ""
 "domain \"%s\" in input file '%s' doesn't contain a header entry with a "
@@ -2947,24 +2941,32 @@ msgstr ""
 "nimiavaruus ”%s” syötetiedostossa ’%s’ ei sisällä otsaketta, jossa on "
 "merkistömäärittely"
 
-#: src/msgl-cat.c:305 src/xg-message.c:337
+#: src/msgl-cat.c:306 src/xg-message.c:337
 #, c-format
 msgid "msgid '%s' is used without plural and with plural."
 msgstr ""
 
-#: src/msgl-cat.c:403 src/msgl-iconv.c:363
+#: src/msgl-cat.c:414 src/msgl-iconv.c:364
 #, c-format
 msgid "target charset \"%s\" is not a portable encoding name."
 msgstr "kohdemerkistö %s” ei ole siirrettävä koodausnimi."
 
-#: src/msgl-cat.c:454 src/msgl-cat.c:460 src/msgl-charset.c:91
-#: src/msgl-charset.c:126 src/po-xerror.c:127 src/po-xerror.c:152
-#: src/xgettext.c:584 src/xgettext.c:1988 src/xg-message.c:335
+#: src/msgl-cat.c:422 src/msgl-iconv.c:373
+#, c-format
+msgid ""
+"Cannot write the control characters that protect file names with spaces in "
+"the %s encoding"
+msgstr ""
+
+#: src/msgl-cat.c:474 src/msgl-cat.c:480 src/msgl-cat.c:497
+#: src/msgl-charset.c:91 src/msgl-charset.c:126 src/po-xerror.c:127
+#: src/po-xerror.c:152 src/xgettext.c:587 src/xgettext.c:2004
+#: src/xg-message.c:335
 #, c-format
 msgid "warning: "
 msgstr "varoitus: "
 
-#: src/msgl-cat.c:455
+#: src/msgl-cat.c:475
 #, c-format
 msgid ""
 "Input files contain messages in different encodings, UTF-8 among others.\n"
@@ -2973,7 +2975,7 @@ msgstr ""
 "Syötetiedosto sisältää viestejä eri merkistöissä, mm. UTF-8:na.\n"
 "Muunnetaan tuloste UTF-8:ksi.\n"
 
-#: src/msgl-cat.c:461
+#: src/msgl-cat.c:481
 #, c-format
 msgid ""
 "Input files contain messages in different encodings, %s and %s among "
@@ -2986,7 +2988,19 @@ msgstr ""
 "Muunnetaan tuloste UTF-8 -koodaukseen.\n"
 "Eri tulostekoodauksen valitsemiseksi käytä valitsinta --to-code.\n"
 
-#: src/msgl-cat.c:500
+#: src/msgl-cat.c:498
+#, fuzzy, c-format
+#| msgid ""
+#| "Input files contain messages in different encodings, UTF-8 among others.\n"
+#| "Converting the output to UTF-8.\n"
+msgid ""
+"Input files contain messages referenced in file names with spaces.\n"
+"Converting the output to %s.\n"
+msgstr ""
+"Syötetiedosto sisältää viestejä eri merkistöissä, mm. UTF-8:na.\n"
+"Muunnetaan tuloste UTF-8:ksi.\n"
+
+#: src/msgl-cat.c:536
 #, c-format
 msgid ""
 "Conversion of file %s from %s encoding to %s encoding\n"
@@ -3206,22 +3220,22 @@ msgstr ""
 msgid "ASCII bullet ('%c') instead of Unicode"
 msgstr "ASCII-ellipsi (’...’) eikä Unicode-ellipsi"
 
-#: src/msgl-iconv.c:62
+#: src/msgl-iconv.c:63
 #, c-format
 msgid "%s: input is not valid in \"%s\" encoding"
 msgstr "%s: syöte ei ole kelvollinen ”%s”-koodauksessa"
 
-#: src/msgl-iconv.c:66
+#: src/msgl-iconv.c:67
 #, c-format
 msgid "%s: error while converting from \"%s\" encoding to \"%s\" encoding"
 msgstr "%s: virhe muunnettaessa ”%s”-koodauksesta ”%s”-koodaukseen"
 
-#: src/msgl-iconv.c:285
+#: src/msgl-iconv.c:286
 msgid "input file doesn't contain a header entry with a charset specification"
 msgstr "syötetiedosto ei sisällä otsaketta, jossa on merkistömäärittely"
 
-#: src/msgl-iconv.c:299 src/recode-sr-latin.c:291 src/recode-sr-latin.c:295
-#: src/xgettext.c:807 src/x-python.c:624
+#: src/msgl-iconv.c:300 src/recode-sr-latin.c:291 src/recode-sr-latin.c:295
+#: src/xgettext.c:810 src/x-python.c:626
 #, c-format
 msgid ""
 "Cannot convert from \"%s\" to \"%s\". %s relies on iconv(), and iconv() does "
@@ -3230,7 +3244,7 @@ msgstr ""
 "Muuntaminen koodauksesta ”%s” koodaukseen ”%s” epäonnistui. %s käyttää "
 "funktiota iconv(), ja iconv() ei tue tätä muunnosta."
 
-#: src/msgl-iconv.c:327
+#: src/msgl-iconv.c:328
 #, c-format
 msgid ""
 "Conversion from \"%s\" to \"%s\" introduces duplicates: some different "
@@ -3239,8 +3253,8 @@ msgstr ""
 "Muunnos koodauksesta ”%s” koodaukseen ”%s” esitteli kaksoiskappaleita: "
 "jotkut eri msgid-merkkijonot ovat samoja."
 
-#: src/msgl-iconv.c:331 src/recode-sr-latin.c:303 src/xgettext.c:813
-#: src/x-python.c:630
+#: src/msgl-iconv.c:332 src/recode-sr-latin.c:303 src/xgettext.c:816
+#: src/x-python.c:632
 #, c-format
 msgid ""
 "Cannot convert from \"%s\" to \"%s\". %s relies on iconv(). This version was "
@@ -3556,7 +3570,7 @@ msgstr ""
 msgid "<stdin>"
 msgstr "<vakiosyöte>"
 
-#: src/po-charset.c:491
+#: src/po-charset.c:500
 #, c-format
 msgid ""
 "Charset \"%s\" is not a portable encoding name.\n"
@@ -3565,7 +3579,7 @@ msgstr ""
 "Merkistö \"%s\" ei ole siirrettävä koodausnimi.\n"
 "Viestimuunnos käyttäjän merkistöön ei ehkä toimi.\n"
 
-#: src/po-charset.c:566
+#: src/po-charset.c:593
 #, c-format
 msgid ""
 "Charset \"%s\" is not supported. %s relies on iconv(),\n"
@@ -3574,7 +3588,7 @@ msgstr ""
 "Merkistöä \"%s\" ei tueta. %s käyttää iconv()-funktiota,\n"
 "ja iconv() ei tue kohdetta \"%s\".\n"
 
-#: src/po-charset.c:572 src/po-charset.c:627
+#: src/po-charset.c:599 src/po-charset.c:654
 msgid ""
 "Installing GNU libiconv and then reinstalling GNU gettext\n"
 "would fix this problem.\n"
@@ -3582,15 +3596,15 @@ msgstr ""
 "GNU libiconvin asennus ja GNU gettextin uudelleenasennus\n"
 "sen jälkeen korjaisi tämän ongelman.\n"
 
-#: src/po-charset.c:586 src/po-charset.c:631
+#: src/po-charset.c:613 src/po-charset.c:658
 msgid "Continuing anyway, expect parse errors."
 msgstr "Jatketaan kuitenkin, oleta jäsennysvirheitä."
 
-#: src/po-charset.c:588
+#: src/po-charset.c:615
 msgid "Continuing anyway."
 msgstr "Jatketaan kuitenkin."
 
-#: src/po-charset.c:622
+#: src/po-charset.c:649
 #, c-format
 msgid ""
 "Charset \"%s\" is not supported. %s relies on iconv().\n"
@@ -3599,7 +3613,7 @@ msgstr ""
 "Merkistöä \"%s\" ei tueta. %s käyttää iconv()-funktiota.\n"
 "Tämä versio rakennettiin ilman iconv()-funktiota.\n"
 
-#: src/po-charset.c:659
+#: src/po-charset.c:686
 msgid ""
 "Charset missing in header.\n"
 "Message conversion to user's charset will not work.\n"
@@ -3642,7 +3656,7 @@ msgstr "monikkomuodolla on väärä indeksi"
 msgid "too many errors, aborting"
 msgstr "liian monia virheitä, keskeytetään"
 
-#: src/po-lex.c:437 src/po-lex.c:505 src/write-po.c:812 src/write-po.c:949
+#: src/po-lex.c:437 src/po-lex.c:505 src/write-po.c:841 src/write-po.c:978
 #, c-format
 msgid "invalid multibyte sequence"
 msgstr "virheellinen monitavusekvenssi"
@@ -3686,7 +3700,7 @@ msgstr "rivinvaihto merkkijonon sisällä"
 msgid "context separator <EOT> within string"
 msgstr "kontekstierotin <EOT> merkkijonon sisällä"
 
-#: src/read-catalog.c:325 src/xgettext.c:1262
+#: src/read-catalog.c:325 src/xgettext.c:1265
 #, c-format
 msgid "this file may not contain domain directives"
 msgstr "tämä tiedosto ei ehkä sisällä nimiavaruusdirektiivejä"
@@ -3798,23 +3812,23 @@ msgstr "%s:%d: varoitus: yksinäinen sijainen U+%04X"
 msgid "warning: invalid Unicode character"
 msgstr "varoitus: virheellinen Unicode-merkki"
 
-#: src/read-stringtable.c:802
+#: src/read-stringtable.c:803
 msgid "warning: unterminated string"
 msgstr "varoitus: päättämätön merkkijono"
 
-#: src/read-stringtable.c:810
+#: src/read-stringtable.c:811
 msgid "warning: syntax error"
 msgstr "varoitus: syntaksivirhe"
 
-#: src/read-stringtable.c:871 src/read-stringtable.c:893
+#: src/read-stringtable.c:872 src/read-stringtable.c:894
 msgid "warning: unterminated key/value pair"
 msgstr "varoitus: päättämätön avain/arvo-pari"
 
-#: src/read-stringtable.c:940
+#: src/read-stringtable.c:941
 msgid "warning: syntax error, expected ';' after string"
 msgstr "varoitus: syntaksivirhe, odotettiin ’;’ merkkijonon jälkeen"
 
-#: src/read-stringtable.c:948
+#: src/read-stringtable.c:949
 msgid "warning: syntax error, expected '=' or ';' after string"
 msgstr "varoitus: syntaksivirhe, odotettiin ’=’ tai ’;’ merkkijonon jälkeen"
 
@@ -3956,19 +3970,19 @@ msgstr "tulostetiedoston ”%s” luominen epäonnistui"
 msgid "standard output"
 msgstr "vakiotuloste"
 
-#: src/write-csharp.c:708
+#: src/write-csharp.c:709
 #, c-format
 msgid "failed to create directory \"%s\""
 msgstr "hakemiston ”%s” luominen epäonnistui"
 
 #  käännetty tällä tavalla, jotta alkaisi pienellä alkukirjaimella.
-#: src/write-csharp.c:771
+#: src/write-csharp.c:772
 #, c-format
 msgid "compilation of C# class failed, please try --verbose"
 msgstr "epäonnistunut C#-luokan kääntäminen, yritä valitsinta --verbose"
 
 #  käännetty tällä tavalla, jotta alkaisi pienellä alkukirjaimella.
-#: src/write-csharp.c:773
+#: src/write-csharp.c:774
 #, c-format
 msgid "compilation of C# class failed"
 msgstr "epäonnistunut C#-luokan kääntäminen"
@@ -3979,13 +3993,13 @@ msgstr "epäonnistunut C#-luokan kääntäminen"
 msgid "error while opening \"%s\" for writing"
 msgstr "virhe avattaessa tiedostoa ”%s” kirjoittamista varten"
 
-#: src/write-java.c:1096
+#: src/write-java.c:1097
 #, c-format
 msgid "not a valid Java class name: %s"
 msgstr "kelvoton Java-luokkanimi: %s"
 
 #  käännetty tällä tavalla, jotta alkaisi pienellä alkukirjaimella.
-#: src/write-java.c:1216
+#: src/write-java.c:1217
 #, c-format
 msgid "compilation of Java class failed, please try --verbose or set $JAVAC"
 msgstr ""
@@ -3993,23 +4007,23 @@ msgstr ""
 "muuttuja $JAVAC"
 
 #  käännetty tällä tavalla, jotta alkaisi pienellä alkukirjaimella.
-#: src/write-java.c:1219
+#: src/write-java.c:1220
 #, c-format
 msgid "compilation of Java class failed, please try to set $JAVAC"
 msgstr "epäonnistunut Java-luokan kääntäminen, yritä asettaa muuttuja $JAVAC"
 
-#: src/write-po.c:821
+#: src/write-po.c:850
 msgid "incomplete multibyte sequence"
 msgstr "vaillinainen monitavusekvenssi"
 
-#: src/write-po.c:884
+#: src/write-po.c:913
 #, c-format
 msgid ""
 "internationalized messages should not contain the '\\%c' escape sequence"
 msgstr ""
 "paikallistettujen viestien ei pitäisi sisältää ’\\%c’-koodinvaihtosekvenssiä"
 
-#: src/write-po.c:1334 src/write-po.c:1502
+#: src/write-po.c:1363 src/write-po.c:1531
 #, c-format
 msgid ""
 "The following msgctxt contains non-ASCII characters.\n"
@@ -4023,7 +4037,7 @@ msgstr ""
 "msgctxt-merkkijonon käyttämistä.\n"
 "%s\n"
 
-#: src/write-po.c:1346 src/write-po.c:1514
+#: src/write-po.c:1375 src/write-po.c:1543
 #, c-format
 msgid ""
 "The following msgid contains non-ASCII characters.\n"
@@ -4107,22 +4121,22 @@ msgstr ""
 "viestiluettelossa on monikkomuotoisia käännöksiä\n"
 "mutta Tcl-viestiluettelomuoto ei tule monikkokäsittelyä\n"
 
-#: src/x-awk.c:340 src/x-javascript.c:764 src/x-python.c:891
+#: src/x-awk.c:341 src/x-javascript.c:766 src/x-python.c:893
 #, c-format
 msgid "%s:%d: warning: unterminated string"
 msgstr "%s:%d: varoitus: päättämätön merkkijono"
 
-#: src/x-awk.c:591
+#: src/x-awk.c:592
 #, c-format
 msgid "%s:%d: warning: unterminated regular expression"
 msgstr "%s:%d: varoitus: päättämätön säännöllinen lauseke"
 
-#: src/x-c.c:1152 src/x-csharp.c:1329 src/x-python.c:1098 src/x-vala.c:566
+#: src/x-c.c:1153 src/x-csharp.c:1330 src/x-python.c:1100 src/x-vala.c:567
 #, c-format
 msgid "%s:%d: warning: invalid Unicode character"
 msgstr "%s:%d: varoitus: virheellinen Unicode-merkki"
 
-#: src/x-c.c:1344
+#: src/x-c.c:1354
 #, fuzzy, c-format
 #| msgid "%s:%d: warning: unterminated string literal"
 msgid ""
@@ -4142,21 +4156,21 @@ msgstr "%s:%d: varoitus: päättämätön merkkijonoliteraali"
 msgid "%s:%d: warning: invalid raw string literal syntax"
 msgstr "%s:%d: varoitus: päättämätön merkkijonoliteraali"
 
-#: src/x-c.c:1617 src/x-csharp.c:1448 src/x-java.c:681 src/x-vala.c:808
+#: src/x-c.c:1617 src/x-csharp.c:1449 src/x-java.c:682 src/x-vala.c:809
 #, c-format
 msgid "%s:%d: warning: unterminated character constant"
 msgstr "%s:%d: varoitus: päättämätön merkkivakio"
 
-#: src/x-c.c:1654 src/x-vala.c:907
+#: src/x-c.c:1654 src/x-vala.c:908
 #, c-format
 msgid "%s:%d: warning: unterminated string literal"
 msgstr "%s:%d: varoitus: päättämätön merkkijonoliteraali"
 
-#: src/x-csharp.c:225 src/xg-encoding.c:111
+#: src/x-csharp.c:226 src/xg-encoding.c:111
 msgid "Please specify the source encoding through --from-code."
 msgstr "Määritä lähdekoodaus valitsimen --from-code avulla."
 
-#: src/x-csharp.c:269
+#: src/x-csharp.c:270
 #, c-format
 msgid ""
 "%s:%d: Invalid multibyte sequence.\n"
@@ -4165,7 +4179,7 @@ msgstr ""
 "%s:%d: Virheellinen monitavusekvenssi.\n"
 "Määritä oikea lähdekoodikoodaus valitsimen --from-code avulla.\n"
 
-#: src/x-csharp.c:285
+#: src/x-csharp.c:286
 #, c-format
 msgid ""
 "%s:%d: Long incomplete multibyte sequence.\n"
@@ -4174,7 +4188,7 @@ msgstr ""
 "%s:%d: Pitkä vaillinainen monitavusekvenssi.\n"
 "Määritä oikea lähdekoodikoodaus valitsimen --from-code avulla.\n"
 
-#: src/x-csharp.c:297
+#: src/x-csharp.c:298
 #, c-format
 msgid ""
 "%s:%d: Incomplete multibyte sequence at end of file.\n"
@@ -4183,7 +4197,7 @@ msgstr ""
 "%s:%d: Vaillinainen monitavusekvenssi tiedoston lopussa.\n"
 "Määritä oikea lähdekoodikoodaus valitsimen --from-code avulla.\n"
 
-#: src/x-csharp.c:306
+#: src/x-csharp.c:307
 #, c-format
 msgid ""
 "%s:%d: Incomplete multibyte sequence at end of line.\n"
@@ -4192,12 +4206,12 @@ msgstr ""
 "%s:%d: Vaillinainen monitavusekvenssi rivin lopussa.\n"
 "Määritä oikea lähdekoodikoodaus valitsimen --from-code avulla.\n"
 
-#: src/x-csharp.c:315 src/x-javascript.c:329 src/x-python.c:353
+#: src/x-csharp.c:316 src/x-javascript.c:331 src/x-python.c:355
 #, c-format
 msgid "%s:%d: iconv failure"
 msgstr "%s:%d: iconv-häiriö"
 
-#: src/x-csharp.c:338
+#: src/x-csharp.c:339
 #, c-format
 msgid ""
 "%s:%d: Invalid multibyte sequence.\n"
@@ -4206,17 +4220,17 @@ msgstr ""
 "%s:%d: Virheellinen monitavusekvenssi.\n"
 "Määritä lähdekoodikoodaus valitsimen --from-code avulla.\n"
 
-#: src/x-csharp.c:1451 src/x-java.c:684
+#: src/x-csharp.c:1452 src/x-java.c:685
 #, c-format
 msgid "%s:%d: warning: unterminated string constant"
 msgstr "%s:%d: varoitus: päättämätön merkkijonovakio"
 
-#: src/x-csharp.c:1953 src/x-java.c:1591
+#: src/x-csharp.c:1954 src/x-java.c:1592
 #, c-format
 msgid "%s:%d: warning: ')' found where '}' was expected"
 msgstr "%s:%d: varoitus: ’)’ löytyi kun ’}’ odotettiin"
 
-#: src/x-csharp.c:1983 src/x-java.c:1621
+#: src/x-csharp.c:1984 src/x-java.c:1622
 #, c-format
 msgid "%s:%d: warning: '}' found where ')' was expected"
 msgstr "%s:%d: varoitus: ’}’ löytyi kun ’)’ odotettiin"
@@ -4256,65 +4270,65 @@ msgstr "Ei-ASCII-kommentti osoitteessa tai ennen osoitetta %s%s."
 msgid "Non-ASCII string at %s%s."
 msgstr "Ei-ASCII-merkkijono osoitteessa %s%s."
 
-#: src/xgettext.c:585
+#: src/xgettext.c:588
 #, c-format
 msgid "'%s' is not a valid encoding name.  Using ASCII as fallback.\n"
 msgstr ""
 "’%s’ ei ole kelvollinen koodausnimi. Käytetään ASCII-koodia varmistuksena.\n"
 
-#: src/xgettext.c:655
+#: src/xgettext.c:658
 #, c-format
 msgid "syntax check '%s' unknown"
 msgstr "syntaksitarkistus ’%s’ on tuntematon"
 
-#: src/xgettext.c:664
+#: src/xgettext.c:667
 #, c-format
 msgid "sentence end type '%s' unknown"
 msgstr "lauselopputyyppi ’%s’ on tuntematon"
 
-#: src/xgettext.c:720
+#: src/xgettext.c:723
 #, c-format
 msgid "--join-existing cannot be used when output is written to stdout"
 msgstr ""
 "valitsimen --join-existing käyttäminen epäonnistui kun tuloste kirjoitetaan "
 "vakiotulosteeseen"
 
-#: src/xgettext.c:724
+#: src/xgettext.c:727
 #, c-format
 msgid "xgettext cannot work without keywords to look for"
 msgstr "xgettext ei voi työskennellä ilman etsittäviä avainsanoja"
 
-#: src/xgettext.c:859
+#: src/xgettext.c:862
 #, c-format
 msgid "warning: ITS rule file '%s' does not exist"
 msgstr ""
 
-#: src/xgettext.c:937
+#: src/xgettext.c:940
 #, c-format
 msgid ""
 "warning: a fallback ITS rule file '%s' is used; it may not be in sync with "
 "the upstream"
 msgstr ""
 
-#: src/xgettext.c:947
+#: src/xgettext.c:950
 #, c-format
 msgid ""
 "warning: ITS rule file '%s' does not exist; check your gettext installation"
 msgstr ""
 
-#: src/xgettext.c:965
+#: src/xgettext.c:968
 #, c-format
 msgid "warning: file '%s' extension '%s' is unknown; will try C"
 msgstr ""
 "varoitus: tiedoston ’%s’ tarkennin ’%s’ on tuntematon; yritetään tarkenninta "
 "C"
 
-#: src/xgettext.c:1055
+#: src/xgettext.c:1058
 #, c-format
 msgid "Extract translatable strings from given input files.\n"
 msgstr "Poimi käännettävät merkkijonot annetuista syötetiedostoista.\n"
 
-#: src/xgettext.c:1078
+#: src/xgettext.c:1081
 #, c-format
 msgid ""
 "  -d, --default-domain=NAME   use NAME.po for output (instead of messages."
@@ -4323,25 +4337,25 @@ msgstr ""
 "  -d, --default-domain=NIMI   käytä tiedostoa NIMI.po tulostukseen (eikä "
 "tiedostoa messages.po)\n"
 
-#: src/xgettext.c:1080
+#: src/xgettext.c:1083
 #, c-format
 msgid "  -o, --output=FILE           write output to specified file\n"
 msgstr ""
 "  -o, --output=TIEDOSTO       kirjoita tuloste määriteltyyn tiedostoon\n"
 
-#: src/xgettext.c:1082
+#: src/xgettext.c:1085
 #, c-format
 msgid ""
 "  -p, --output-dir=DIR        output files will be placed in directory DIR\n"
 msgstr ""
 "  -p, --output-dir=HAKEMISTO  tulostetiedostot sijoitetaan HAKEMISTOon\n"
 
-#: src/xgettext.c:1087
+#: src/xgettext.c:1090
 #, c-format
 msgid "Choice of input file language:\n"
 msgstr "Syötetiedoston kielen valinta:\n"
 
-#: src/xgettext.c:1089
+#: src/xgettext.c:1092
 #, fuzzy, c-format
 #| msgid ""
 #| "  -L, --language=NAME         recognise the specified language\n"
@@ -4373,13 +4387,13 @@ msgstr ""
 "                                GCC-source, NXStringTable, RST, Glade, Lua,\n"
 "                                JavaScript, Vala, Desktop)\n"
 
-#: src/xgettext.c:1096
+#: src/xgettext.c:1099
 #, c-format
 msgid "  -C, --c++                   shorthand for --language=C++\n"
 msgstr ""
 "  -C, --c++                   pikavalitsin valitsimelle --language=C++\n"
 
-#: src/xgettext.c:1098
+#: src/xgettext.c:1101
 #, c-format
 msgid ""
 "By default the language is guessed depending on the input file name "
@@ -4387,7 +4401,7 @@ msgid ""
 msgstr ""
 "Oletuksena kieli on arvattu riippuen syötetiedostonimen tarkentimesta.\n"
 
-#: src/xgettext.c:1103
+#: src/xgettext.c:1106
 #, c-format
 msgid ""
 "      --from-code=NAME        encoding of input files\n"
@@ -4396,24 +4410,24 @@ msgstr ""
 "      --from-code=NIMI        syötetiedostojen koodaus\n"
 "                                (paitsi kielille Python, Tcl, Glade)\n"
 
-#: src/xgettext.c:1106
+#: src/xgettext.c:1109
 #, c-format
 msgid "By default the input files are assumed to be in ASCII.\n"
 msgstr "Oletuksen syötetiedostojen otaksutaan olevan ASCII-tekstiä.\n"
 
-#: src/xgettext.c:1111
+#: src/xgettext.c:1114
 #, c-format
 msgid "  -j, --join-existing         join messages with existing file\n"
 msgstr ""
 "  -j, --join-existing         liitä viesti oleamssaolevaan tiedostoon\n"
 
-#: src/xgettext.c:1113
+#: src/xgettext.c:1116
 #, c-format
 msgid "  -x, --exclude-file=FILE.po  entries from FILE.po are not extracted\n"
 msgstr ""
 "  -x, --exclude-file=FILE.po  rivejä tiedostossa FILE.po ei ole poimittu\n"
 
-#: src/xgettext.c:1115
+#: src/xgettext.c:1118
 #, c-format
 msgid ""
 "  -cTAG, --add-comments=TAG   place comment blocks starting with TAG and\n"
@@ -4428,7 +4442,7 @@ msgstr ""
 "avainsana-\n"
 "                                rivit tulostetiedostoon\n"
 
-#: src/xgettext.c:1120
+#: src/xgettext.c:1123
 #, fuzzy, c-format
 #| msgid ""
 #| "      --check=NAME            perform syntax check on messages\n"
@@ -4443,7 +4457,7 @@ msgstr ""
 "                                (ellipsis-unicode, space-ellipsis,\n"
 "                                 quote-unicode)\n"
 
-#: src/xgettext.c:1124
+#: src/xgettext.c:1127
 #, c-format
 msgid ""
 "      --sentence-end=TYPE     type describing the end of sentence\n"
@@ -4454,17 +4468,17 @@ msgstr ""
 "                                (single-space, joka on oletus, \n"
 "                                 tai double-space)\n"
 
-#: src/xgettext.c:1129
+#: src/xgettext.c:1132
 #, c-format
 msgid "Language specific options:\n"
 msgstr "Kielikohtaiset valitsimet:\n"
 
-#: src/xgettext.c:1131
+#: src/xgettext.c:1134
 #, c-format
 msgid "  -a, --extract-all           extract all strings\n"
 msgstr "  -a, --extract-all           pura kaikki merkkijonot\n"
 
-#: src/xgettext.c:1133
+#: src/xgettext.c:1136
 #, c-format
 msgid ""
 "                                (only languages C, C++, ObjectiveC, Shell,\n"
@@ -4479,7 +4493,7 @@ msgstr ""
 "                                C#, awk, Tcl, Perl, PHP, GCC-source, Glade,\n"
 "                                Lua, JavaScript, Vala)\n"
 
-#: src/xgettext.c:1141
+#: src/xgettext.c:1144
 #, c-format
 msgid ""
 "                                (only languages C, C++, ObjectiveC, Shell,\n"
@@ -4494,7 +4508,7 @@ msgstr ""
 "                                C#, awk, Tcl, Perl, PHP, GCC-source, Glade,\n"
 "                                Lua, JavaScript, Vala, Desktop)\n"
 
-#: src/xgettext.c:1146
+#: src/xgettext.c:1149
 #, c-format
 msgid ""
 "      --flag=WORD:ARG:FLAG    additional flag for strings inside the "
@@ -4505,7 +4519,7 @@ msgstr ""
 "argumentti-\n"
 "                              numeron ARG sisällä\n"
 
-#: src/xgettext.c:1149
+#: src/xgettext.c:1152
 #, c-format
 msgid ""
 "                                (only languages C, C++, ObjectiveC, Shell,\n"
@@ -4520,51 +4534,51 @@ msgstr ""
 "                                C#, awk, YCP, Tcl, Perl, PHP, GCC-source,\n"
 "                                Lua, JavaScript, Vala)\n"
 
-#: src/xgettext.c:1154
+#: src/xgettext.c:1157
 #, c-format
 msgid "  -T, --trigraphs             understand ANSI C trigraphs for input\n"
 msgstr ""
 "  -T, --trigraphs             ymmärrä ANSI C kolmimerkkejä syötettä varten\n"
 
-#: src/xgettext.c:1156
+#: src/xgettext.c:1159
 #, c-format
 msgid "                                (only languages C, C++, ObjectiveC)\n"
 msgstr "                                (vain kielet C, C++, ObjectiveC)\n"
 
-#: src/xgettext.c:1158
+#: src/xgettext.c:1161
 #, fuzzy, c-format
 #| msgid "  -f, --files-from=FILE       get list of input files from FILE\n"
 msgid "      --its=FILE              apply ITS rules from FILE\n"
 msgstr ""
 "  -f, --files-from=TIEDOSTO   hae syötetiedostojen luettelo TIEDOSTOsta\n"
 
-#: src/xgettext.c:1160
+#: src/xgettext.c:1163
 #, fuzzy, c-format
 #| msgid "                                (only language C++)\n"
 msgid "                                (only XML based languages)\n"
 msgstr "                                (vain C++-kieli)\n"
 
-#: src/xgettext.c:1162
+#: src/xgettext.c:1165
 #, c-format
 msgid "      --qt                    recognize Qt format strings\n"
 msgstr "      --qt                    tunnista Qt-muotoiset merkkijonot\n"
 
-#: src/xgettext.c:1164 src/xgettext.c:1168 src/xgettext.c:1172
+#: src/xgettext.c:1167 src/xgettext.c:1171 src/xgettext.c:1175
 #, c-format
 msgid "                                (only language C++)\n"
 msgstr "                                (vain C++-kieli)\n"
 
-#: src/xgettext.c:1166
+#: src/xgettext.c:1169
 #, c-format
 msgid "      --kde                   recognize KDE 4 format strings\n"
 msgstr "      --kde                   tunnista KDE 4 -muotoiset merkkijonot\n"
 
-#: src/xgettext.c:1170
+#: src/xgettext.c:1173
 #, c-format
 msgid "      --boost                 recognize Boost format strings\n"
 msgstr "      --boost                 tunnista Boost-muotoiset merkkijonot\n"
 
-#: src/xgettext.c:1174
+#: src/xgettext.c:1177
 #, c-format
 msgid ""
 "      --debug                 more detailed formatstring recognition result\n"
@@ -4572,24 +4586,24 @@ msgstr ""
 "      --debug                 yksityiskohtaisempi "
 "muotomerkkijonotunnistustulos\n"
 
-#: src/xgettext.c:1199
+#: src/xgettext.c:1202
 #, c-format
 msgid "      --properties-output     write out a Java .properties file\n"
 msgstr "      --properties-output     luo Java .properties -tiedoston\n"
 
-#: src/xgettext.c:1203
+#: src/xgettext.c:1206
 #, fuzzy, c-format
 #| msgid "      --indent                indented output style\n"
 msgid "      --itstool               write out itstool comments\n"
 msgstr "      --indent                sisennetty tulostetyyli\n"
 
-#: src/xgettext.c:1216
+#: src/xgettext.c:1219
 #, c-format
 msgid "      --copyright-holder=STRING  set copyright holder in output\n"
 msgstr ""
 "      --copyright-holder=STRING  aseta copyright-omistajan tulosteessa\n"
 
-#: src/xgettext.c:1218
+#: src/xgettext.c:1221
 #, c-format
 msgid ""
 "      --foreign-user          omit FSF copyright in output for foreign user\n"
@@ -4597,17 +4611,17 @@ msgstr ""
 "      --foreign-user          ohita FSF copyright-tulosteessa "
 "vieraskieliselle käyttäjälle\n"
 
-#: src/xgettext.c:1220
+#: src/xgettext.c:1223
 #, c-format
 msgid "      --package-name=PACKAGE  set package name in output\n"
 msgstr "      --package-name=PACKAGE  aseta pakkausnimi tulosteessa\n"
 
-#: src/xgettext.c:1222
+#: src/xgettext.c:1225
 #, c-format
 msgid "      --package-version=VERSION  set package version in output\n"
 msgstr "      --package-version=VERSION  aseta pakkausversio tulosteessa\n"
 
-#: src/xgettext.c:1224
+#: src/xgettext.c:1227
 #, c-format
 msgid ""
 "      --msgid-bugs-address=EMAIL@ADDRESS  set report address for msgid bugs\n"
@@ -4615,7 +4629,7 @@ msgstr ""
 "      --msgid-bugs-address=EMAIL@ADDRESS  aseta ilmoitusosoite msgid-"
 "vikailmoituksia varten\n"
 
-#: src/xgettext.c:1226
+#: src/xgettext.c:1229
 #, c-format
 msgid ""
 "  -m[STRING], --msgstr-prefix[=STRING]  use STRING or \"\" as prefix for "
@@ -4626,7 +4640,7 @@ msgstr ""
 "etuliitteenä msgstr-\n"
 "                                merkkijonon arvoille\n"
 
-#: src/xgettext.c:1229
+#: src/xgettext.c:1232
 #, c-format
 msgid ""
 "  -M[STRING], --msgstr-suffix[=STRING]  use STRING or \"\" as suffix for "
@@ -4637,7 +4651,7 @@ msgstr ""
 "loppuliitteenä msgstr-\n"
 "                                merkkijonon arvoille\n"
 
-#: src/xgettext.c:1641
+#: src/xgettext.c:1644
 #, c-format
 msgid ""
 "A --flag argument doesn't have the <keyword>:<argnum>:[pass-]<flag> syntax: "
@@ -4646,11 +4660,11 @@ msgstr ""
 "Argumentilla --flag ei ole <avainsana>:<argumenttinumero>:[pass-]<lippu> -"
 "syntaksia: %s"
 
-#: src/xgettext.c:1798
+#: src/xgettext.c:1811
 msgid "standard input"
 msgstr "vakiosyöte"
 
-#: src/xgettext.c:1989
+#: src/xgettext.c:2005
 msgid ""
 "The option --msgid-bugs-address was not specified.\n"
 "If you are using a 'Makevars' file, please specify\n"
@@ -4662,7 +4676,7 @@ msgstr ""
 "MSGID_BUGS_ADDRESS-muuttuja; muussa tapauksessa\n"
 "määritä komentorivivalitsin --msgid-bugs-address.\n"
 
-#: src/xgettext.c:2208
+#: src/xgettext.c:2220
 #, c-format
 msgid "language '%s' unknown"
 msgstr "kieli ’%s’ on tuntematon"
@@ -4735,23 +4749,23 @@ msgstr ""
 msgid "%s:%d: warning: lone surrogate U+%04X"
 msgstr "%s:%d: varoitus: yksinäinen sijainen U+%04X"
 
-#: src/x-java.c:1207 src/x-java.c:1251
+#: src/x-java.c:1208 src/x-java.c:1252
 #, fuzzy, c-format
 #| msgid "%s:%d: warning: unterminated string"
 msgid "%s:%d: warning: unterminated text block"
 msgstr "%s:%d: varoitus: päättämätön merkkijono"
 
-#: src/x-java.c:1220
+#: src/x-java.c:1221
 #, fuzzy, c-format
 #| msgid "%s:%d: warning: invalid Unicode character"
 msgid "%s:%d: warning: invalid syntax in text block"
 msgstr "%s:%d: varoitus: virheellinen Unicode-merkki"
 
-#: src/x-javascript.c:239
+#: src/x-javascript.c:241
 msgid "Please specify the source encoding through --from-code\n"
 msgstr "Määritä lähdekoodaus valitsimen --from-code avulla\n"
 
-#: src/x-javascript.c:283
+#: src/x-javascript.c:285
 #, c-format
 msgid ""
 "%s:%d: Invalid multibyte sequence.\n"
@@ -4760,7 +4774,7 @@ msgstr ""
 "%s:%d: Virheellinen monitavusekvenssi.\n"
 "Määritä oikea lähdekoodikoodaus valitsimen --from-code avulla\n"
 
-#: src/x-javascript.c:299
+#: src/x-javascript.c:301
 #, c-format
 msgid ""
 "%s:%d: Long incomplete multibyte sequence.\n"
@@ -4769,7 +4783,7 @@ msgstr ""
 "%s:%d: Pitkä vaillinainen monitavusekvenssi.\n"
 "Määritä oikea lähdekoodikoodaus valitsimen --from-code avulla\n"
 
-#: src/x-javascript.c:311
+#: src/x-javascript.c:313
 #, c-format
 msgid ""
 "%s:%d: Incomplete multibyte sequence at end of file.\n"
@@ -4778,7 +4792,7 @@ msgstr ""
 "%s:%d: Vaillinainen monitavusekvenssi tiedoston lopussa.\n"
 "Määritä oikea lähdekoodikoodaus valitsimen --from-code avulla\n"
 
-#: src/x-javascript.c:320
+#: src/x-javascript.c:322
 #, c-format
 msgid ""
 "%s:%d: Incomplete multibyte sequence at end of line.\n"
@@ -4787,7 +4801,7 @@ msgstr ""
 "%s:%d: Vaillinainen monitavusekvenssi rivin lopussa.\n"
 "Määritä oikea lähdekoodikoodaus valitsimen --from-code avulla\n"
 
-#: src/x-javascript.c:352
+#: src/x-javascript.c:354
 #, c-format
 msgid ""
 "%s:%d: Invalid multibyte sequence.\n"
@@ -4796,59 +4810,59 @@ msgstr ""
 "%s:%d: Virheellinen monitavusekvenssi.\n"
 "Määritä lähdekoodikoodaus valitsimen --from-code avulla\n"
 
-#: src/x-javascript.c:979
+#: src/x-javascript.c:981
 #, c-format
 msgid "%s:%d: warning: RegExp literal terminated too early"
 msgstr "%s:%d: varoitus: RegExp-merkkijonoliteraali päättyi liian aikaisin"
 
-#: src/x-javascript.c:1102
+#: src/x-javascript.c:1104
 #, c-format
 msgid "%s:%d: warning: %s is not allowed"
 msgstr "%s:%d: varoitus: %s ei ole sallittu"
 
-#: src/x-javascript.c:1117
+#: src/x-javascript.c:1119
 #, c-format
 msgid "%s:%d: warning: unterminated XML markup"
 msgstr "%s:%d: varoitus: päättämätön XML-merkkaus"
 
-#: src/x-perl.c:338
+#: src/x-perl.c:339
 #, c-format
 msgid "%s:%d: can't find string terminator \"%s\" anywhere before EOF"
 msgstr ""
 "%s:%d: ei löydetä merkkijonopäättämismerkkiä ”%s” mistään ennen EOF-"
 "tiedostonloppumerkkiä"
 
-#: src/x-perl.c:1073
+#: src/x-perl.c:1074
 #, c-format
 msgid "%s:%d: missing right brace on \\x{HEXNUMBER}"
 msgstr "%s:%d: puuttuu oikea aaltosulje kohteessa \\x{HEXNUMBER}"
 
-#: src/x-perl.c:1194
+#: src/x-perl.c:1195
 #, c-format
 msgid "%s:%d: invalid interpolation (\"\\l\") of 8bit character \"%c\""
 msgstr "%s:%d: virheellinen 8-bittisen merkin ”%c” interpolaatio (”\\l”)"
 
-#: src/x-perl.c:1214
+#: src/x-perl.c:1215
 #, c-format
 msgid "%s:%d: invalid interpolation (\"\\u\") of 8bit character \"%c\""
 msgstr "%s:%d: virheellinen 8-bittisen merkin ”%c” interpolaatio (”\\u”)"
 
-#: src/x-perl.c:1248
+#: src/x-perl.c:1249
 #, c-format
 msgid "%s:%d: invalid variable interpolation at \"%c\""
 msgstr "%s:%d: virheellinen muuttujainterpolaatio osoitteessa ”%c”"
 
-#: src/x-perl.c:1261
+#: src/x-perl.c:1262
 #, c-format
 msgid "%s:%d: invalid interpolation (\"\\L\") of 8bit character \"%c\""
 msgstr "%s:%d: virheellinen 8-bitisen merkin ”%c” interpolaatio (”\\L”)"
 
-#: src/x-perl.c:1278
+#: src/x-perl.c:1279
 #, c-format
 msgid "%s:%d: invalid interpolation (\"\\U\") of 8bit character \"%c\""
 msgstr "%s:%d: virheellinen 8-bittisen merkin ”%c” interpolaatio (”\\U”)"
 
-#: src/x-python.c:279
+#: src/x-python.c:281
 #, fuzzy
 #| msgid ""
 #| "Please specify the source encoding through --from-code or through a "
@@ -4861,7 +4875,7 @@ msgstr ""
 "Määritä lähdekoodikoodaus valitsimen --from-code tai kommentin avulla\n"
 "kuten on määritelty asiakirjassa http://www.python.org/peps/pep-0263.html.\n"
 
-#: src/x-python.c:336
+#: src/x-python.c:338
 #, fuzzy, c-format
 #| msgid ""
 #| "%s:%d: Long incomplete multibyte sequence.\n"
@@ -4877,7 +4891,7 @@ msgstr ""
 "Määritä oikea lähdekoodikoodaus valitsimen --from-code tai kommentin avulla\n"
 "kuten on määritelty asiakirjassa http://www.python.org/peps/pep-0263.html.\n"
 
-#: src/x-python.c:488
+#: src/x-python.c:490
 #, fuzzy, c-format
 #| msgid ""
 #| "%s:%d: Invalid multibyte sequence.\n"
@@ -4893,7 +4907,7 @@ msgstr ""
 "Määritä oikea lähdekoodikoodaus valitsimen --from-code tai kommentin avulla\n"
 "kuten on määritelty asiakirjassa http://www.python.org/peps/pep-0263.html.\n"
 
-#: src/x-python.c:497
+#: src/x-python.c:499
 #, fuzzy, c-format
 #| msgid ""
 #| "%s:%d: Incomplete multibyte sequence at end of file.\n"
@@ -4909,7 +4923,7 @@ msgstr ""
 "Määritä oikea lähdekoodikoodaus valitsimen --from-code tai kommentin avulla\n"
 "kuten on määritelty asiakirjassa http://www.python.org/peps/pep-0263.html.\n"
 
-#: src/x-python.c:506
+#: src/x-python.c:508
 #, fuzzy, c-format
 #| msgid ""
 #| "%s:%d: Incomplete multibyte sequence at end of line.\n"
@@ -4925,7 +4939,7 @@ msgstr ""
 "Määritä oikea lähdekoodikoodaus valitsimen --from-code tai kommentin avulla\n"
 "kuten on määritelty asiakirjassa http://www.python.org/peps/pep-0263.html.\n"
 
-#: src/x-python.c:679
+#: src/x-python.c:681
 #, c-format
 msgid "Unknown encoding \"%s\". Proceeding with ASCII instead."
 msgstr "Tuntematon koodaus ”%s”. Jatketaan sen sijaan ASCII-koodauksella."
@@ -4962,12 +4976,12 @@ msgstr "%s:%d: virheellinen merkkijonomäärittely"
 msgid "%s:%d: invalid RSJ version. Only version 1 is supported."
 msgstr ""
 
-#: src/x-ruby.c:88
+#: src/x-ruby.c:89
 #, c-format
 msgid "(output from '%s')"
 msgstr ""
 
-#: src/x-sh.c:1141
+#: src/x-sh.c:1142
 #, c-format
 msgid ""
 "%s:%lu: warning: the syntax $\"...\" is deprecated due to security reasons; "
@@ -4976,7 +4990,7 @@ msgstr ""
 "%s:%lu: varoitus: syntaksi $\"...\" on vanhentunut turvallisuussyistä; käytä "
 "sen sijaan funktiota eval_gettext"
 
-#: src/x-vala.c:616
+#: src/x-vala.c:617
 #, c-format
 msgid "%s:%d: warning: regular expression literal terminated too early"
 msgstr ""
@@ -5118,27 +5132,24 @@ msgstr ""
 msgid "document ended unexpectedly: %s"
 msgstr ""
 
-#, c-format
+#~ msgid "cannot remove temporary file %s"
+#~ msgstr "väliaikaistiedoston %s poistaminen epäonnistui"
+
 #~ msgid "%s: option '--%s' doesn't allow an argument\n"
 #~ msgstr "%s: valitsin ’--%s’ ei salli argumenttia\n"
 
-#, c-format
 #~ msgid "%s: unrecognized option '--%s'\n"
 #~ msgstr "%s: tunnistamaton valitsin ’--%s’\n"
 
-#, c-format
 #~ msgid "%s: option '-W %s' is ambiguous\n"
 #~ msgstr "%s: valitsin ’-W %s’ ei ole yksiselitteinen\n"
 
-#, c-format
 #~ msgid "%s: option '-W %s' doesn't allow an argument\n"
 #~ msgstr "%s: valitsin ’-W %s’ ei salli argumenttia\n"
 
-#, c-format
 #~ msgid "%s: option '-W %s' requires an argument\n"
 #~ msgstr "%s: valitsin ’-W %s’ vaatii argumentin\n"
 
-#, c-format
 #~ msgid "setting permissions for %s"
 #~ msgstr "asetetaan käyttöoikeuksia kohteelle %s"
 
@@ -5149,23 +5160,18 @@ msgstr ""
 #~ "Ilmoita suomennoksen vioista osoitteeseen <translation-team-fi@lists."
 #~ "sourceforge.net>.\n"
 
-#, c-format
 #~ msgid "warning: PO file header fuzzy\n"
 #~ msgstr "varoitus: PO-tiedoston otsake on merkitty vajaaksi\n"
 
-#, c-format
 #~ msgid "warning: older versions of msgfmt will give an error on this\n"
 #~ msgstr "varoitus: msgfmt:n vanhat versiot antavat tästä virheen\n"
 
-#, c-format
 #~ msgid "Missing context for the string extracted from '%s' element"
 #~ msgstr "Puuttuva asiayhteys merkkijonolle, joka poimittiin elementistä ’%s’"
 
-#, c-format
 #~ msgid "%s:%lu:%lu: %s"
 #~ msgstr "%s:%lu:%lu: %s"
 
-#, c-format
 #~ msgid ""
 #~ "Language \"glade\" is not supported. %s relies on expat.\n"
 #~ "This version was built without expat.\n"
@@ -5173,7 +5179,6 @@ msgstr ""
 #~ "Kieltä ”glade” ei tueta. %s turvautuu expat-ohjelmaan.\n"
 #~ "Tämä versio on rakennettu ilman expat-ohjelmaa.\n"
 
-#, c-format
 #~ msgid ""
 #~ "%s:%d: Invalid multibyte sequence.\n"
 #~ "Please specify the source encoding through --from-code or through a "

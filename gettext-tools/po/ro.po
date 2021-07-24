@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gettext-tools 0.13-pre1\n"
 "Report-Msgid-Bugs-To: bug-gettext@gnu.org\n"
-"POT-Creation-Date: 2020-07-26 21:56+0200\n"
+"POT-Creation-Date: 2021-07-16 15:36+0200\n"
 "PO-Revision-Date: 2003-11-23 11:43+0200\n"
 "Last-Translator: Eugen Hoanca <eugenh@urban-grafx.ro>\n"
 "Language-Team: Romanian <translation-team-ro@lists.sourceforge.net>\n"
@@ -34,24 +34,18 @@ msgstr "parametru ambiguu `%s' pentru `%s'"
 msgid "Valid arguments are:"
 msgstr "Parametrii valizi sunt: "
 
-#: gnulib-lib/clean-temp.c:460
-#, fuzzy, c-format
-#| msgid "cannot create output file \"%s\""
-msgid "cannot remove temporary file %s"
-msgstr "nu se poate crea fiºierul de ieºire(output) \"%s\""
-
-#: gnulib-lib/clean-temp.c:579
+#: gnulib-lib/clean-temp.c:235
 #, c-format
 msgid "cannot find a temporary directory, try setting $TMPDIR"
 msgstr "nu se poate gãsi un director temporar, încercaþi sã setaþi $TMPDIR"
 
-#: gnulib-lib/clean-temp.c:594
+#: gnulib-lib/clean-temp.c:250
 #, c-format
 msgid "cannot create a temporary directory using template \"%s\""
 msgstr ""
 "nu se poate crea un director temporar folosind modelul(template) \"%s\""
 
-#: gnulib-lib/clean-temp.c:711
+#: gnulib-lib/clean-temp.c:371
 #, fuzzy, c-format
 #| msgid "cannot create a temporary directory using template \"%s\""
 msgid "cannot remove temporary directory %s"
@@ -97,15 +91,15 @@ msgstr "eroare dupã citirea lui \"%s\""
 msgid "preserving permissions for %s"
 msgstr ""
 
-#: gnulib-lib/csharpcomp.c:202 gnulib-lib/javaversion.c:78 src/msginit.c:955
-#: src/msginit.c:1038 src/msginit.c:1207 src/msginit.c:1313 src/msginit.c:1483
-#: src/read-csharp.c:72 src/read-java.c:71 src/read-resources.c:73
-#: src/read-tcl.c:111 src/write-resources.c:79 src/x-ruby.c:134
+#: gnulib-lib/csharpcomp.c:203 gnulib-lib/javaversion.c:78 src/msginit.c:955
+#: src/msginit.c:1038 src/msginit.c:1207 src/msginit.c:1313 src/msginit.c:1482
+#: src/read-csharp.c:73 src/read-java.c:72 src/read-resources.c:74
+#: src/read-tcl.c:111 src/write-resources.c:79 src/x-ruby.c:135
 #, c-format
 msgid "fdopen() failed"
 msgstr "fdopen() eºuat"
 
-#: gnulib-lib/csharpcomp.c:443
+#: gnulib-lib/csharpcomp.c:444
 #, fuzzy, c-format
 #| msgid "Java compiler not found, try installing gcj or set $JAVAC"
 msgid "C# compiler not found, try installing mono"
@@ -113,7 +107,7 @@ msgstr ""
 "Nu a fost gãsit compilatorul Java, încercaþi sã instalaþi gcj sau setaþi "
 "$JAVAC"
 
-#: gnulib-lib/csharpexec.c:255
+#: gnulib-lib/csharpexec.c:259
 #, fuzzy, c-format
 #| msgid "Java virtual machine not found, try installing gij or set $JAVA"
 msgid "C# virtual machine not found, try installing mono"
@@ -125,9 +119,8 @@ msgstr ""
 msgid "Unknown system error"
 msgstr "Eroare de sistem necunoscutã"
 
-#: gnulib-lib/execute.c:185 gnulib-lib/execute.c:258
-#: gnulib-lib/spawn-pipe.c:235 gnulib-lib/spawn-pipe.c:349
-#: gnulib-lib/wait-process.c:290 gnulib-lib/wait-process.c:364
+#: gnulib-lib/execute.c:348 gnulib-lib/spawn-pipe.c:597
+#: gnulib-lib/wait-process.c:291 gnulib-lib/wait-process.c:365
 #, c-format
 msgid "%s subprocess failed"
 msgstr "Subprocesul %s a eºuat"
@@ -185,28 +178,28 @@ msgstr ""
 msgid "invalid target_version argument to compile_java_class"
 msgstr ""
 
-#: gnulib-lib/javacomp.c:579 src/write-csharp.c:744 src/write-java.c:1145
-#: src/write-java.c:1153 src/write-java.c:1181 src/write-java.c:1193
+#: gnulib-lib/javacomp.c:583 src/write-csharp.c:745 src/write-java.c:1146
+#: src/write-java.c:1154 src/write-java.c:1182 src/write-java.c:1194
 #, c-format
 msgid "failed to create \"%s\""
 msgstr "eroare în crearea \"%s\""
 
-#: gnulib-lib/javacomp.c:586 src/write-catalog.c:256 src/write-catalog.c:329
-#: src/write-csharp.c:753 src/write-desktop.c:183 src/write-java.c:1161
-#: src/write-java.c:1202 src/write-mo.c:802 src/write-mo.c:824
+#: gnulib-lib/javacomp.c:590 src/write-catalog.c:256 src/write-catalog.c:329
+#: src/write-csharp.c:754 src/write-desktop.c:183 src/write-java.c:1162
+#: src/write-java.c:1203 src/write-mo.c:802 src/write-mo.c:824
 #: src/write-qt.c:751 src/write-tcl.c:228 src/write-xml.c:76
 #, c-format
 msgid "error while writing \"%s\" file"
 msgstr "eroare în scrierea fiºierului \"%s\""
 
-#: gnulib-lib/javacomp.c:2436
+#: gnulib-lib/javacomp.c:2442
 #, c-format
 msgid "Java compiler not found, try installing gcj or set $JAVAC"
 msgstr ""
 "Nu a fost gãsit compilatorul Java, încercaþi sã instalaþi gcj sau setaþi "
 "$JAVAC"
 
-#: gnulib-lib/javaexec.c:417
+#: gnulib-lib/javaexec.c:426
 #, c-format
 msgid "Java virtual machine not found, try installing gij or set $JAVA"
 msgstr ""
@@ -214,46 +207,57 @@ msgstr ""
 "setaþi $JAVA"
 
 #: gnulib-lib/javaversion.c:86 src/msginit.c:963 src/msginit.c:1046
-#: src/msginit.c:1215 src/msginit.c:1491
+#: src/msginit.c:1215 src/msginit.c:1490
 #, c-format
 msgid "%s subprocess I/O error"
 msgstr "eroare I/O a subprocesului %s"
 
-#: gnulib-lib/obstack.c:338 gnulib-lib/obstack.c:340 gnulib-lib/xmalloc.c:38
-#: gnulib-lib/xsetenv.c:37 src/msgl-check.c:563 src/po-lex.c:83
-#: src/po-lex.c:102 libgettextpo/gettext-po.c:1326 libgettextpo/obstack.c:338
-#: libgettextpo/obstack.c:340 libgettextpo/xmalloc.c:38
+#: gnulib-lib/obstack.c:337 gnulib-lib/obstack.c:339 gnulib-lib/xsetenv.c:37
+#: src/msgl-check.c:563 src/po-lex.c:83 src/po-lex.c:102
+#: libgettextpo/gettext-po.c:1326 libgettextpo/obstack.c:337
+#: libgettextpo/obstack.c:339
 #, c-format
 msgid "memory exhausted"
 msgstr "memorie plinã"
 
-#: gnulib-lib/pipe-filter-ii.c:313
+#: gnulib-lib/os2-spawn.c:46
+#, c-format
+msgid "_open_osfhandle failed"
+msgstr "_open_osfhandle a eºuat"
+
+#: gnulib-lib/os2-spawn.c:83
+#, fuzzy, c-format
+#| msgid "cannot create output file \"%s\""
+msgid "cannot restore fd %d: dup2 failed"
+msgstr "nu se poate crea fiºierul de ieºire(output) \"%s\""
+
+#: gnulib-lib/pipe-filter-ii.c:314
 #, c-format
 msgid "creation of threads failed"
 msgstr ""
 
-#: gnulib-lib/pipe-filter-ii.c:345 gnulib-lib/pipe-filter-ii.c:502
+#: gnulib-lib/pipe-filter-ii.c:346 gnulib-lib/pipe-filter-ii.c:503
 #: src/msgexec.c:428
 #, c-format
 msgid "write to %s subprocess failed"
 msgstr "scrierea în subprocesul %s eºuatã"
 
-#: gnulib-lib/pipe-filter-ii.c:366 gnulib-lib/pipe-filter-ii.c:545
+#: gnulib-lib/pipe-filter-ii.c:367 gnulib-lib/pipe-filter-ii.c:546
 #, c-format
 msgid "read from %s subprocess failed"
 msgstr "citirea din subprocesul %s a eºuat"
 
-#: gnulib-lib/pipe-filter-ii.c:419
+#: gnulib-lib/pipe-filter-ii.c:420
 #, c-format
 msgid "cannot set up nonblocking I/O to %s subprocess"
 msgstr "nu se poate seta I/O neblocant pentru subprocesul %s"
 
-#: gnulib-lib/pipe-filter-ii.c:457
+#: gnulib-lib/pipe-filter-ii.c:458
 #, c-format
 msgid "communication with %s subprocess failed"
 msgstr "comunicaþia cu subprocesul %s a eºuat"
 
-#: gnulib-lib/pipe-filter-ii.c:577
+#: gnulib-lib/pipe-filter-ii.c:578
 #, c-format
 msgid "%s subprocess terminated with exit code %d"
 msgstr "subprocesul %s s-a terminat cu cod de ieºire %d"
@@ -287,30 +291,19 @@ msgstr ""
 msgid "'"
 msgstr ""
 
-#: gnulib-lib/spawn-pipe.c:141 gnulib-lib/spawn-pipe.c:144
-#: gnulib-lib/spawn-pipe.c:265 gnulib-lib/spawn-pipe.c:268
+#: gnulib-lib/spawn-pipe.c:217 gnulib-lib/spawn-pipe.c:220
+#: gnulib-lib/spawn-pipe.c:459 gnulib-lib/spawn-pipe.c:462
 #, c-format
 msgid "cannot create pipe"
 msgstr "nu se poate crea legãtura(pipe)"
 
-#: gnulib-lib/w32spawn.h:49
-#, c-format
-msgid "_open_osfhandle failed"
-msgstr "_open_osfhandle a eºuat"
-
-#: gnulib-lib/w32spawn.h:90
-#, fuzzy, c-format
-#| msgid "cannot create output file \"%s\""
-msgid "cannot restore fd %d: dup2 failed"
-msgstr "nu se poate crea fiºierul de ieºire(output) \"%s\""
-
-#: gnulib-lib/wait-process.c:231 gnulib-lib/wait-process.c:263
-#: gnulib-lib/wait-process.c:325
+#: gnulib-lib/wait-process.c:232 gnulib-lib/wait-process.c:264
+#: gnulib-lib/wait-process.c:326
 #, c-format
 msgid "%s subprocess"
 msgstr "subprocesul %s"
 
-#: gnulib-lib/wait-process.c:282 gnulib-lib/wait-process.c:354
+#: gnulib-lib/wait-process.c:283 gnulib-lib/wait-process.c:355
 #, c-format
 msgid "%s subprocess got fatal signal %d"
 msgstr "subprocesul %s a primit semnalul fatal %d"
@@ -340,7 +333,7 @@ msgstr ""
 #: src/msgen.c:298 src/msgexec.c:256 src/msgfilter.c:407 src/msgfmt.c:900
 #: src/msggrep.c:506 src/msginit.c:405 src/msgmerge.c:534 src/msgunfmt.c:421
 #: src/msguniq.c:320 src/recode-sr-latin.c:140 src/urlget.c:169
-#: src/xgettext.c:1047
+#: src/xgettext.c:1050
 #, fuzzy, c-format
 #| msgid "Try `%s --help' for more information.\n"
 msgid "Try '%s --help' for more information.\n"
@@ -362,7 +355,7 @@ msgid ""
 "If no argument is given, it reads CLDR plural rules from the standard input.\n"
 msgstr ""
 
-#: src/cldr-plurals.c:206 src/msgfmt.c:913 src/xgettext.c:1060
+#: src/cldr-plurals.c:206 src/msgfmt.c:913 src/xgettext.c:1063
 #, c-format, no-wrap
 msgid ""
 "Mandatory arguments to long options are mandatory for short options too.\n"
@@ -382,7 +375,7 @@ msgstr "  -h, --help                  afiºeazã acest ajutor ºi iese\n"
 #: src/msgen.c:381 src/msgexec.c:305 src/msgfilter.c:507 src/msgfmt.c:1066
 #: src/msggrep.c:624 src/msginit.c:469 src/msgmerge.c:664 src/msgunfmt.c:527
 #: src/msguniq.c:417 src/recode-sr-latin.c:161 src/urlget.c:185
-#: src/xgettext.c:1235
+#: src/xgettext.c:1238
 #, c-format, no-wrap
 msgid "  -h, --help                  display this help and exit\n"
 msgstr "  -h, --help                  afiºeazã acest ajutor ºi iese\n"
@@ -392,7 +385,7 @@ msgstr "  -h, --help                  afiºeazã acest ajutor ºi iese\n"
 #: src/msgen.c:383 src/msgexec.c:307 src/msgfilter.c:509 src/msgfmt.c:1068
 #: src/msggrep.c:626 src/msginit.c:471 src/msgmerge.c:666 src/msgunfmt.c:529
 #: src/msguniq.c:419 src/recode-sr-latin.c:164 src/urlget.c:187
-#: src/xgettext.c:1237
+#: src/xgettext.c:1240
 #, c-format, no-wrap
 msgid "  -V, --version               output version information and exit\n"
 msgstr "  -V, --version               afiºeazã informaþii despre versiune ºi iese\n"
@@ -407,7 +400,7 @@ msgstr "  -V, --version               afiºeazã informaþii despre versiune ºi ies
 #: src/msgen.c:391 src/msgexec.c:315 src/msgfilter.c:517 src/msgfmt.c:1080
 #: src/msggrep.c:634 src/msginit.c:479 src/msgmerge.c:678 src/msgunfmt.c:539
 #: src/msguniq.c:427 src/recode-sr-latin.c:172 src/urlget.c:197
-#: src/xgettext.c:1247
+#: src/xgettext.c:1250
 #, c-format
 msgid ""
 "Report bugs in the bug tracker at <%s>\n"
@@ -419,7 +412,7 @@ msgstr ""
 #: src/msgen.c:239 src/msgexec.c:183 src/msgfilter.c:286 src/msgfmt.c:442
 #: src/msggrep.c:413 src/msginit.c:269 src/msgmerge.c:370 src/msgunfmt.c:260
 #: src/msguniq.c:262 src/recode-sr-latin.c:107 src/urlget.c:140
-#: src/xgettext.c:686
+#: src/xgettext.c:689
 #, c-format, no-wrap
 msgid ""
 "Copyright (C) %s Free Software Foundation, Inc.\n"
@@ -432,7 +425,7 @@ msgstr ""
 #: src/msgcat.c:297 src/msgcmp.c:175 src/msgcomm.c:288 src/msgconv.c:248
 #: src/msgen.c:245 src/msgexec.c:189 src/msgfilter.c:292 src/msgfmt.c:448
 #: src/msggrep.c:419 src/msginit.c:275 src/msgmerge.c:376 src/msgunfmt.c:266
-#: src/msguniq.c:268 src/urlget.c:146 src/xgettext.c:692
+#: src/msguniq.c:268 src/urlget.c:146 src/xgettext.c:695
 #, c-format
 msgid "Written by %s.\n"
 msgstr "Scris de %s.\n"
@@ -464,14 +457,14 @@ msgstr ""
 
 #: src/file-list.c:53 src/msggrep.c:241 src/open-catalog.c:124
 #: src/read-mo.c:270 src/read-tcl.c:126 src/urlget.c:217
-#: src/write-desktop.c:173 src/xgettext.c:1755 src/xgettext.c:1764
-#: src/xgettext.c:1780 src/xgettext.c:1812 src/xgettext.c:1822
-#: src/xgettext.c:1839
+#: src/write-desktop.c:173 src/xgettext.c:1764 src/xgettext.c:1776
+#: src/xgettext.c:1792 src/xgettext.c:1825 src/xgettext.c:1835
+#: src/xgettext.c:1852
 #, c-format
 msgid "error while opening \"%s\" for reading"
 msgstr "eroare în timpul deschiderii \"%s\" pentru citire"
 
-#: src/format-awk.c:509 src/format-boost.c:617 src/format-elisp.c:348
+#: src/format-awk.c:509 src/format-boost.c:618 src/format-elisp.c:348
 #: src/format-gcc-internal.c:627 src/format-java-printf.c:580
 #: src/format-javascript.c:355 src/format-kde.c:223 src/format-librep.c:312
 #: src/format-lua.c:228 src/format-pascal.c:396 src/format-perl.c:582
@@ -487,7 +480,7 @@ msgstr ""
 "o specificaþie de formatare pentru parametrul %u, ca în `%s', nu existã în "
 "'msgid'"
 
-#: src/format-awk.c:520 src/format-boost.c:628 src/format-elisp.c:359
+#: src/format-awk.c:520 src/format-boost.c:629 src/format-elisp.c:359
 #: src/format-gcc-internal.c:638 src/format-java-printf.c:591
 #: src/format-javascript.c:366 src/format-kde.c:234 src/format-librep.c:323
 #: src/format-lua.c:235 src/format-pascal.c:407 src/format-perl.c:593
@@ -497,7 +490,7 @@ msgstr ""
 msgid "a format specification for argument %u doesn't exist in '%s'"
 msgstr "o specificaþie de format pentru argumentul %u nu existã în '%s'"
 
-#: src/format-awk.c:540 src/format-boost.c:648 src/format-c.c:146
+#: src/format-awk.c:540 src/format-boost.c:649 src/format-c.c:146
 #: src/format-elisp.c:379 src/format-gcc-internal.c:658
 #: src/format-gfc-internal.c:372 src/format-java-printf.c:611
 #: src/format-javascript.c:389 src/format-librep.c:343 src/format-lua.c:242
@@ -511,7 +504,7 @@ msgstr ""
 "specificaþiile de formatare din 'msgid' ºi '%s' pentru argumentul %u sunt "
 "diferite"
 
-#: src/format-boost.c:449
+#: src/format-boost.c:450
 #, fuzzy, c-format
 #| msgid ""
 #| "In the directive number %u, the width's argument number 0 is not a "
@@ -1267,7 +1260,7 @@ msgstr "  -i, --ip-address      adresele pentru numele de host\n"
 #: src/msgcomm.c:452 src/msgconv.c:383 src/msgen.c:379 src/msgexec.c:303
 #: src/msgfilter.c:505 src/msgfmt.c:1064 src/msggrep.c:622 src/msginit.c:467
 #: src/msgmerge.c:662 src/msgunfmt.c:525 src/msguniq.c:415
-#: src/recode-sr-latin.c:158 src/urlget.c:183 src/xgettext.c:1233
+#: src/recode-sr-latin.c:158 src/urlget.c:183 src/xgettext.c:1236
 #, c-format, no-wrap
 msgid "Informative output:\n"
 msgstr "Ieºire(output) informativã:\n"
@@ -1348,8 +1341,8 @@ msgstr "cel mult un fiºier de intrare(input) este permis"
 #: src/msgen.c:267 src/msgfilter.c:307 src/msgfmt.c:501 src/msgfmt.c:509
 #: src/msgfmt.c:524 src/msgfmt.c:546 src/msggrep.c:440 src/msgmerge.c:401
 #: src/msgmerge.c:406 src/msgmerge.c:411 src/msgmerge.c:416 src/msgmerge.c:437
-#: src/msgunfmt.c:297 src/msguniq.c:289 src/xgettext.c:702 src/xgettext.c:709
-#: src/xgettext.c:712 src/xgettext.c:715 src/xgettext.c:739
+#: src/msgunfmt.c:297 src/msguniq.c:289 src/xgettext.c:705 src/xgettext.c:712
+#: src/xgettext.c:715 src/xgettext.c:718 src/xgettext.c:742
 #, c-format
 msgid "%s and %s are mutually exclusive"
 msgstr "%s ºi %s se exclud reciproc"
@@ -1382,7 +1375,7 @@ msgstr ""
 #: src/msgattrib.c:431 src/msgcat.c:384 src/msgcmp.c:227 src/msgcomm.c:375
 #: src/msgconv.c:316 src/msgen.c:317 src/msgexec.c:287 src/msgfilter.c:422
 #: src/msgfmt.c:918 src/msggrep.c:523 src/msginit.c:422 src/msgmerge.c:558
-#: src/msgunfmt.c:447 src/msguniq.c:343 src/xgettext.c:1065
+#: src/msgunfmt.c:447 src/msguniq.c:343 src/xgettext.c:1068
 #, c-format
 msgid "Input file location:\n"
 msgstr "Locaþie fiºier intrare(input):\n"
@@ -1395,7 +1388,7 @@ msgstr "  FIªIER_INTRARE                   fiºier de intrare(input) PO\n"
 #: src/msgattrib.c:435 src/msgcat.c:390 src/msgcmp.c:233 src/msgcomm.c:381
 #: src/msgconv.c:320 src/msgen.c:321 src/msgexec.c:291 src/msgfilter.c:426
 #: src/msgfmt.c:922 src/msggrep.c:527 src/msgmerge.c:564 src/msguniq.c:347
-#: src/xgettext.c:1071
+#: src/xgettext.c:1074
 #, c-format
 msgid ""
 "  -D, --directory=DIRECTORY   add DIRECTORY to list for input files search\n"
@@ -1414,7 +1407,7 @@ msgstr ""
 #: src/msgattrib.c:440 src/msgcat.c:395 src/msgcomm.c:386 src/msgconv.c:325
 #: src/msgen.c:326 src/msgfilter.c:431 src/msgfmt.c:946 src/msggrep.c:532
 #: src/msginit.c:430 src/msgmerge.c:576 src/msgunfmt.c:487 src/msguniq.c:352
-#: src/xgettext.c:1076
+#: src/xgettext.c:1079
 #, c-format
 msgid "Output file location:\n"
 msgstr "Locaþie fiºier ieºire(output):\n"
@@ -1593,14 +1586,14 @@ msgstr ""
 #: src/msgattrib.c:496 src/msgcat.c:423 src/msgcomm.c:414 src/msgconv.c:347
 #: src/msgen.c:341 src/msgfilter.c:467 src/msgfmt.c:1054 src/msggrep.c:586
 #: src/msginit.c:445 src/msgmerge.c:624 src/msgunfmt.c:495 src/msguniq.c:374
-#: src/xgettext.c:1177
+#: src/xgettext.c:1180
 #, c-format
 msgid "Output details:\n"
 msgstr "Detalii de output:\n"
 
 #: src/msgattrib.c:498 src/msgcat.c:432 src/msgcomm.c:416 src/msgconv.c:349
 #: src/msgen.c:345 src/msgfilter.c:469 src/msggrep.c:588 src/msginit.c:451
-#: src/msgmerge.c:628 src/msgunfmt.c:497 src/msguniq.c:381 src/xgettext.c:1179
+#: src/msgmerge.c:628 src/msgunfmt.c:497 src/msguniq.c:381 src/xgettext.c:1182
 #, c-format
 msgid ""
 "      --color                 use colors and other text attributes always\n"
@@ -1611,14 +1604,14 @@ msgstr ""
 
 #: src/msgattrib.c:502 src/msgcat.c:436 src/msgcomm.c:420 src/msgconv.c:353
 #: src/msgen.c:349 src/msgfilter.c:473 src/msggrep.c:592 src/msginit.c:455
-#: src/msgmerge.c:632 src/msgunfmt.c:501 src/msguniq.c:385 src/xgettext.c:1183
+#: src/msgmerge.c:632 src/msgunfmt.c:501 src/msguniq.c:385 src/xgettext.c:1186
 #, c-format
 msgid "      --style=STYLEFILE       specify CSS style rule file for --color\n"
 msgstr ""
 
 #: src/msgattrib.c:504 src/msgcat.c:438 src/msgcomm.c:422 src/msgconv.c:355
 #: src/msgen.c:351 src/msgmerge.c:634 src/msgunfmt.c:503 src/msguniq.c:387
-#: src/xgettext.c:1185
+#: src/xgettext.c:1188
 #, c-format
 msgid ""
 "  -e, --no-escape             do not use C escapes in output (default)\n"
@@ -1626,7 +1619,7 @@ msgstr "  -e, --no-escape             nu foloseºte escape-uri C în output\n"
 
 #: src/msgattrib.c:506 src/msgcat.c:440 src/msgcomm.c:424 src/msgconv.c:357
 #: src/msgen.c:353 src/msgfilter.c:477 src/msgmerge.c:636 src/msgunfmt.c:505
-#: src/msguniq.c:389 src/xgettext.c:1187
+#: src/msguniq.c:389 src/xgettext.c:1190
 #, c-format
 msgid ""
 "  -E, --escape                use C escapes in output, no extended chars\n"
@@ -1636,26 +1629,26 @@ msgstr ""
 
 #: src/msgattrib.c:508 src/msgcat.c:442 src/msgcomm.c:426 src/msgconv.c:359
 #: src/msgen.c:355 src/msgfilter.c:479 src/msggrep.c:598 src/msgmerge.c:638
-#: src/msgunfmt.c:507 src/msguniq.c:391 src/xgettext.c:1189
+#: src/msgunfmt.c:507 src/msguniq.c:391 src/xgettext.c:1192
 #, c-format
 msgid "      --force-po              write PO file even if empty\n"
 msgstr "      --force-po              scrie fiºierul PO chiar dacã e gol\n"
 
 #: src/msgattrib.c:510 src/msgcat.c:444 src/msgcomm.c:428 src/msguniq.c:393
-#: src/xgettext.c:1191
+#: src/xgettext.c:1194
 #, c-format
 msgid "  -i, --indent                write the .po file using indented style\n"
 msgstr ""
 "  -i, --indent                scrie fiºierul .po folosind stil indentat\n"
 
 #: src/msgattrib.c:512 src/msgcat.c:446 src/msgcomm.c:430 src/msguniq.c:395
-#: src/xgettext.c:1193
+#: src/xgettext.c:1196
 #, c-format
 msgid "      --no-location           do not write '#: filename:line' lines\n"
 msgstr "      --no-location           nu scrie liniile '#: filename:line'\n"
 
 #: src/msgattrib.c:514 src/msgcat.c:448 src/msgcomm.c:432 src/msguniq.c:397
-#: src/xgettext.c:1195
+#: src/xgettext.c:1198
 #, c-format
 msgid ""
 "  -n, --add-location          generate '#: filename:line' lines (default)\n"
@@ -1664,7 +1657,7 @@ msgstr ""
 "line' (implicit)\n"
 
 #: src/msgattrib.c:516 src/msgcat.c:450 src/msgcomm.c:434 src/msguniq.c:399
-#: src/xgettext.c:1197
+#: src/xgettext.c:1200
 #, c-format
 msgid ""
 "      --strict                write out strict Uniforum conforming .po file\n"
@@ -1679,7 +1672,7 @@ msgstr "  -p, --properties-output     scrie un fiºier .properties Java\n"
 
 #: src/msgattrib.c:520 src/msgcat.c:454 src/msgcomm.c:438 src/msgconv.c:371
 #: src/msgen.c:367 src/msgfilter.c:493 src/msggrep.c:610 src/msginit.c:459
-#: src/msgmerge.c:650 src/msgunfmt.c:515 src/msguniq.c:403 src/xgettext.c:1201
+#: src/msgmerge.c:650 src/msgunfmt.c:515 src/msguniq.c:403 src/xgettext.c:1204
 #, c-format
 msgid ""
 "      --stringtable-output    write out a NeXTstep/GNUstep .strings file\n"
@@ -1688,14 +1681,14 @@ msgstr ""
 
 #: src/msgattrib.c:522 src/msgcat.c:456 src/msgcomm.c:440 src/msgconv.c:373
 #: src/msgen.c:369 src/msgfilter.c:495 src/msggrep.c:612 src/msginit.c:461
-#: src/msgmerge.c:652 src/msgunfmt.c:517 src/msguniq.c:405 src/xgettext.c:1205
+#: src/msgmerge.c:652 src/msgunfmt.c:517 src/msguniq.c:405 src/xgettext.c:1208
 #, c-format
 msgid "  -w, --width=NUMBER          set output page width\n"
 msgstr " -w, --width=NUMÃR          setare lãþime output paginã\n"
 
 #: src/msgattrib.c:524 src/msgcat.c:458 src/msgcomm.c:442 src/msgconv.c:375
 #: src/msgen.c:371 src/msgfilter.c:497 src/msggrep.c:614 src/msginit.c:463
-#: src/msgmerge.c:654 src/msgunfmt.c:519 src/msguniq.c:407 src/xgettext.c:1207
+#: src/msgmerge.c:654 src/msgunfmt.c:519 src/msguniq.c:407 src/xgettext.c:1210
 #, c-format
 msgid ""
 "      --no-wrap               do not break long message lines, longer than\n"
@@ -1708,14 +1701,14 @@ msgstr ""
 
 #: src/msgattrib.c:527 src/msgcat.c:461 src/msgcomm.c:445 src/msgconv.c:378
 #: src/msgen.c:374 src/msgfilter.c:500 src/msgmerge.c:657 src/msgunfmt.c:522
-#: src/msguniq.c:410 src/xgettext.c:1210
+#: src/msguniq.c:410 src/xgettext.c:1213
 #, c-format
 msgid "  -s, --sort-output           generate sorted output\n"
 msgstr "  -s, --sort-output           genereazã output sortat\n"
 
 #: src/msgattrib.c:529 src/msgcat.c:463 src/msgcomm.c:447 src/msgconv.c:380
 #: src/msgen.c:376 src/msgfilter.c:502 src/msgmerge.c:659 src/msguniq.c:412
-#: src/xgettext.c:1212
+#: src/xgettext.c:1215
 #, c-format
 msgid "  -F, --sort-by-file          sort output by file location\n"
 msgstr ""
@@ -1726,7 +1719,7 @@ msgstr ""
 msgid "impossible selection criteria specified (%d < n < %d)"
 msgstr "criteriu de selecþie specificat imposibil (%d < n < %d)"
 
-#: src/msgcat.c:364 src/msgcomm.c:356 src/xgettext.c:1051
+#: src/msgcat.c:364 src/msgcomm.c:356 src/xgettext.c:1054
 #, c-format
 msgid "Usage: %s [OPTION] [INPUTFILE]...\n"
 msgstr "Folosire: %s [OPÞIUNE] [FIªIER_INTRARE]...\n"
@@ -1765,12 +1758,12 @@ msgstr ""
 "este specificat --use-first, caz în care vor fi preluate din primul fiºier PO pentru\n"
 "a fi definite. Pozitþiile din fiºier din toate fiºierele PO vor fi cumulate.\n"
 
-#: src/msgcat.c:386 src/msgcomm.c:377 src/xgettext.c:1067
+#: src/msgcat.c:386 src/msgcomm.c:377 src/xgettext.c:1070
 #, c-format
 msgid "  INPUTFILE ...               input files\n"
 msgstr "  FIªIER_INTRARE ...                  fiºiere de intrare(input)\n"
 
-#: src/msgcat.c:388 src/msgcomm.c:379 src/xgettext.c:1069
+#: src/msgcat.c:388 src/msgcomm.c:379 src/xgettext.c:1072
 #, c-format
 msgid "  -f, --files-from=FILE       get list of input files from FILE\n"
 msgstr ""
@@ -1778,7 +1771,7 @@ msgstr ""
 "FIªIER\n"
 
 #: src/msgcat.c:392 src/msgcomm.c:383 src/msgen.c:323 src/msgfmt.c:924
-#: src/xgettext.c:1073
+#: src/xgettext.c:1076
 #, c-format
 msgid "If input file is -, standard input is read.\n"
 msgstr ""
@@ -1972,7 +1965,7 @@ msgstr "acest mesaj este folosit dar nu ºi definit în %s"
 msgid "warning: this message is not used"
 msgstr "avertisment: acest mesaj nu este folosit"
 
-#: src/msgcmp.c:556 src/msgfmt.c:773 src/msgfmt.c:1606 src/xgettext.c:1020
+#: src/msgcmp.c:556 src/msgfmt.c:773 src/msgfmt.c:1605 src/xgettext.c:1023
 #, c-format
 msgid "found %d fatal error"
 msgid_plural "found %d fatal errors"
@@ -2024,7 +2017,7 @@ msgstr ""
 "                                 definiþii, dacã nu este setat implicit este "
 "1\n"
 
-#: src/msgcomm.c:449 src/xgettext.c:1214
+#: src/msgcomm.c:449 src/xgettext.c:1217
 #, fuzzy, c-format
 #| msgid ""
 #| "      --omit-header           don't write header with `msgid \"\"' entry\n"
@@ -2083,7 +2076,7 @@ msgid "      --strict                strict Uniforum output style\n"
 msgstr ""
 "      --strict                   scrie strict fiºiere conforme Uniforum\n"
 
-#: src/msgen.c:256 src/msgfmt.c:461 src/xgettext.c:732
+#: src/msgen.c:256 src/msgfmt.c:461 src/xgettext.c:735
 #, c-format
 msgid "no input file given"
 msgstr "nu este furnizat nici un fiºier de intrare"
@@ -2286,7 +2279,7 @@ msgid "invalid endianness: %s"
 msgstr ""
 
 #. This is a proper name. See the gettext manual, section Names.
-#: src/msgfmt.c:448 src/msgunfmt.c:266 src/xgettext.c:692
+#: src/msgfmt.c:448 src/msgunfmt.c:266 src/xgettext.c:695
 msgid "Ulrich Drepper"
 msgstr ""
 
@@ -2389,7 +2382,7 @@ msgstr ""
 msgid "  filename.po ...             input files\n"
 msgstr "  numefiºier.po ...             fiºiere de intrare(input)\n"
 
-#: src/msgfmt.c:927 src/msgmerge.c:570 src/msgunfmt.c:436 src/xgettext.c:1109
+#: src/msgfmt.c:927 src/msgmerge.c:570 src/msgunfmt.c:436 src/xgettext.c:1112
 #, c-format
 msgid "Operation mode:\n"
 msgstr "Mod de operare:\n"
@@ -2455,7 +2448,7 @@ msgstr "      --qt                   Mod Qt: genereazã un fiºier .qm Qt\n"
 msgid "      --strict                enable strict Uniforum mode\n"
 msgstr "      --strict                activeazã modul strict Uniforum\n"
 
-#: src/msgfmt.c:952 src/xgettext.c:1084
+#: src/msgfmt.c:952 src/xgettext.c:1087
 #, c-format
 msgid "If output file is -, output is written to standard output.\n"
 msgstr ""
@@ -2584,7 +2577,7 @@ msgstr ""
 "  -d DIRECTOR                 directorul de bazã al cataloagelor de mesaje ."
 "msg\n"
 
-#: src/msgfmt.c:1003 src/xgettext.c:1138
+#: src/msgfmt.c:1003 src/xgettext.c:1141
 #, fuzzy, c-format
 #| msgid ""
 #| "  -k, --keyword[=WORD]        additional keyword to be looked for "
@@ -2622,7 +2615,7 @@ msgstr ""
 msgid "  --template=TEMPLATE         an XML file used as a template\n"
 msgstr ""
 
-#: src/msgfmt.c:1034 src/xgettext.c:1101
+#: src/msgfmt.c:1034 src/xgettext.c:1104
 #, c-format
 msgid "Input file interpretation:\n"
 msgstr "Interpretare fiºier de intrarea(input):\n"
@@ -2718,7 +2711,7 @@ msgstr ""
 msgid "      --statistics            print statistics about translations\n"
 msgstr "      --statistics            afiºeazã statistici despre traduceri\n"
 
-#: src/msgfmt.c:1072 src/msgmerge.c:668 src/msgunfmt.c:531 src/xgettext.c:1239
+#: src/msgfmt.c:1072 src/msgmerge.c:668 src/msgunfmt.c:531 src/xgettext.c:1242
 #, c-format
 msgid "  -v, --verbose               increase verbosity level\n"
 msgstr "  -v, --verbose               mãreºte nivelul de detaliere\n"
@@ -2768,24 +2761,24 @@ msgstr "intrarea `msgstr' neclarã(fuzzy) ignoratã"
 msgid "%s: warning: source file contains fuzzy translation"
 msgstr "%s: avertisment: fiºierul sursã conþine traduceri aproximative(fuzzy)"
 
-#: src/msgfmt.c:1458
+#: src/msgfmt.c:1457
 #, c-format
 msgid "%s does not exist"
 msgstr ""
 
-#: src/msgfmt.c:1465
+#: src/msgfmt.c:1464
 #, c-format
 msgid "%s exists but cannot read"
 msgstr ""
 
 #: src/msggrep.c:252 src/po-lex.c:655 src/read-desktop.c:127 src/read-mo.c:88
-#: src/read-properties.c:609 src/read-stringtable.c:98 src/x-awk.c:138
-#: src/x-c.c:583 src/x-csharp.c:164 src/x-elisp.c:145 src/x-java.c:200
-#: src/x-javascript.c:180 src/x-librep.c:147 src/x-lisp.c:212 src/x-lua.c:174
-#: src/x-perl.c:256 src/x-perl.c:331 src/x-perl.c:424 src/x-php.c:162
-#: src/x-python.c:177 src/x-rst.c:242 src/x-rst.c:296 src/x-scheme.c:171
-#: src/x-sh.c:164 src/x-smalltalk.c:85 src/x-tcl.c:151 src/x-vala.c:177
-#: src/x-ycp.c:89
+#: src/read-properties.c:609 src/read-stringtable.c:99 src/x-awk.c:139
+#: src/x-c.c:584 src/x-csharp.c:165 src/x-elisp.c:146 src/x-java.c:201
+#: src/x-javascript.c:182 src/x-librep.c:148 src/x-lisp.c:213 src/x-lua.c:174
+#: src/x-perl.c:257 src/x-perl.c:332 src/x-perl.c:425 src/x-php.c:163
+#: src/x-python.c:179 src/x-rst.c:242 src/x-rst.c:296 src/x-scheme.c:172
+#: src/x-sh.c:165 src/x-smalltalk.c:86 src/x-tcl.c:152 src/x-vala.c:178
+#: src/x-ycp.c:90
 #, c-format
 msgid "error while reading \"%s\""
 msgstr "eroare în timpul citirii \"%s\""
@@ -3033,9 +3026,9 @@ msgstr ""
 "Vã rugãm specificaþi fiºierul de intrare .pot prin opþiunea --input.\n"
 
 #: src/msginit.c:976 src/msginit.c:1059 src/msginit.c:1228 src/msginit.c:1330
-#: src/msginit.c:1511 src/read-csharp.c:83 src/read-java.c:82
-#: src/read-resources.c:84 src/read-tcl.c:128 src/write-resources.c:106
-#: src/x-ruby.c:146
+#: src/msginit.c:1510 src/read-csharp.c:84 src/read-java.c:83
+#: src/read-resources.c:85 src/read-tcl.c:128 src/write-resources.c:106
+#: src/x-ruby.c:147
 #, c-format
 msgid "%s subprocess failed with exit code %d"
 msgstr "subprocesul %s a eºuat cu cod de ieºire %d"
@@ -3057,26 +3050,26 @@ msgstr ""
 #. TRANSLATORS: "English" needs to be replaced by your language.
 #. For example in it.po write "Traduzioni italiani ...",
 #. *not* "Traduzioni inglesi ...".
-#: src/msginit.c:1706
+#: src/msginit.c:1705
 #, c-format
 msgid "English translations for %s package"
 msgstr "Traducerea în limba românã pentru pachetul %s"
 
-#: src/msgl-cat.c:178 src/msgl-charset.c:86 src/msgl-iconv.c:244
+#: src/msgl-cat.c:179 src/msgl-charset.c:86 src/msgl-iconv.c:245
 #, c-format
 msgid "present charset \"%s\" is not a portable encoding name"
 msgstr ""
 "setul de caractere prezent \"%s\" nu este un nume de codare(encoding) "
 "portabil"
 
-#: src/msgl-cat.c:188 src/msgl-iconv.c:255
+#: src/msgl-cat.c:189 src/msgl-iconv.c:256
 #, c-format
 msgid "two different charsets \"%s\" and \"%s\" in input file"
 msgstr ""
 "douã seturi diferite de caractere \"%s\" ºi \"%s\" în fiºierul de "
 "intrare(input)"
 
-#: src/msgl-cat.c:203
+#: src/msgl-cat.c:204
 #, fuzzy, c-format
 #| msgid ""
 #| "input file `%s' doesn't contain a header entry with a charset "
@@ -3087,7 +3080,7 @@ msgstr ""
 "fiºierul de intrare(input) `%s' nu conþine un header cu specificaþie de set "
 "de caractere"
 
-#: src/msgl-cat.c:207
+#: src/msgl-cat.c:208
 #, fuzzy, c-format
 #| msgid ""
 #| "domain \"%s\" in input file `%s' doesn't contain a header entry with a "
@@ -3099,25 +3092,33 @@ msgstr ""
 "domeniu \"%s\" din fiºierul de intrare `%s' nu conþine un header cu o "
 "specificaþie de set de caractere"
 
-#: src/msgl-cat.c:305 src/xg-message.c:337
+#: src/msgl-cat.c:306 src/xg-message.c:337
 #, c-format
 msgid "msgid '%s' is used without plural and with plural."
 msgstr ""
 
-#: src/msgl-cat.c:403 src/msgl-iconv.c:363
+#: src/msgl-cat.c:414 src/msgl-iconv.c:364
 #, c-format
 msgid "target charset \"%s\" is not a portable encoding name."
 msgstr ""
 "setul de caractere þintã \"%s\" nu este un nume de codare(encoding) portabil."
 
-#: src/msgl-cat.c:454 src/msgl-cat.c:460 src/msgl-charset.c:91
-#: src/msgl-charset.c:126 src/po-xerror.c:127 src/po-xerror.c:152
-#: src/xgettext.c:584 src/xgettext.c:1988 src/xg-message.c:335
+#: src/msgl-cat.c:422 src/msgl-iconv.c:373
+#, c-format
+msgid ""
+"Cannot write the control characters that protect file names with spaces in "
+"the %s encoding"
+msgstr ""
+
+#: src/msgl-cat.c:474 src/msgl-cat.c:480 src/msgl-cat.c:497
+#: src/msgl-charset.c:91 src/msgl-charset.c:126 src/po-xerror.c:127
+#: src/po-xerror.c:152 src/xgettext.c:587 src/xgettext.c:2004
+#: src/xg-message.c:335
 #, c-format
 msgid "warning: "
 msgstr "avertisment: "
 
-#: src/msgl-cat.c:455
+#: src/msgl-cat.c:475
 #, c-format
 msgid ""
 "Input files contain messages in different encodings, UTF-8 among others.\n"
@@ -3127,7 +3128,7 @@ msgstr ""
 "printre altele.\n"
 "Se converteºte ieºirea(output) în UTF-8.\n"
 
-#: src/msgl-cat.c:461
+#: src/msgl-cat.c:481
 #, c-format
 msgid ""
 "Input files contain messages in different encodings, %s and %s among "
@@ -3142,7 +3143,20 @@ msgstr ""
 "opþiunea\n"
 "--to-code.\n"
 
-#: src/msgl-cat.c:500
+#: src/msgl-cat.c:498
+#, fuzzy, c-format
+#| msgid ""
+#| "Input files contain messages in different encodings, UTF-8 among others.\n"
+#| "Converting the output to UTF-8.\n"
+msgid ""
+"Input files contain messages referenced in file names with spaces.\n"
+"Converting the output to %s.\n"
+msgstr ""
+"Fiºierele de intrare conþin mesaje în diverse codãri(encodings), UTF-8 "
+"printre altele.\n"
+"Se converteºte ieºirea(output) în UTF-8.\n"
+
+#: src/msgl-cat.c:536
 #, c-format
 msgid ""
 "Conversion of file %s from %s encoding to %s encoding\n"
@@ -3377,25 +3391,25 @@ msgstr ""
 msgid "ASCII bullet ('%c') instead of Unicode"
 msgstr ""
 
-#: src/msgl-iconv.c:62
+#: src/msgl-iconv.c:63
 #, c-format
 msgid "%s: input is not valid in \"%s\" encoding"
 msgstr ""
 
-#: src/msgl-iconv.c:66
+#: src/msgl-iconv.c:67
 #, fuzzy, c-format
 #| msgid "error while opening \"%s\" for reading"
 msgid "%s: error while converting from \"%s\" encoding to \"%s\" encoding"
 msgstr "eroare în timpul deschiderii \"%s\" pentru citire"
 
-#: src/msgl-iconv.c:285
+#: src/msgl-iconv.c:286
 msgid "input file doesn't contain a header entry with a charset specification"
 msgstr ""
 "fiºierul de intrare(input) nu conþine un header cu specificaþia unui set de "
 "caractere"
 
-#: src/msgl-iconv.c:299 src/recode-sr-latin.c:291 src/recode-sr-latin.c:295
-#: src/xgettext.c:807 src/x-python.c:624
+#: src/msgl-iconv.c:300 src/recode-sr-latin.c:291 src/recode-sr-latin.c:295
+#: src/xgettext.c:810 src/x-python.c:626
 #, c-format
 msgid ""
 "Cannot convert from \"%s\" to \"%s\". %s relies on iconv(), and iconv() does "
@@ -3404,7 +3418,7 @@ msgstr ""
 "Nu se poate converti din \"%s\" în \"%s\". %s se bazeazã pe inconv(), iar "
 "iconv() nu suportã aceastã conversie."
 
-#: src/msgl-iconv.c:327
+#: src/msgl-iconv.c:328
 #, c-format
 msgid ""
 "Conversion from \"%s\" to \"%s\" introduces duplicates: some different "
@@ -3413,8 +3427,8 @@ msgstr ""
 "Conversia din \"%s\" în \"%s\" introduce duplicate: anumite msgid-uri "
 "diferite devin egale."
 
-#: src/msgl-iconv.c:331 src/recode-sr-latin.c:303 src/xgettext.c:813
-#: src/x-python.c:630
+#: src/msgl-iconv.c:332 src/recode-sr-latin.c:303 src/xgettext.c:816
+#: src/x-python.c:632
 #, c-format
 msgid ""
 "Cannot convert from \"%s\" to \"%s\". %s relies on iconv(). This version was "
@@ -3748,7 +3762,7 @@ msgstr ""
 msgid "<stdin>"
 msgstr "<stdin>"
 
-#: src/po-charset.c:491
+#: src/po-charset.c:500
 #, c-format
 msgid ""
 "Charset \"%s\" is not a portable encoding name.\n"
@@ -3759,7 +3773,7 @@ msgstr ""
 "nu\n"
 "funcþioneze.\n"
 
-#: src/po-charset.c:566
+#: src/po-charset.c:593
 #, c-format
 msgid ""
 "Charset \"%s\" is not supported. %s relies on iconv(),\n"
@@ -3768,7 +3782,7 @@ msgstr ""
 "Setul de caractere \"%s\" nu este suportat. %s se bazeazã pe iconv(),\n"
 "iar iconv() nu suportã \"%s\".\n"
 
-#: src/po-charset.c:572 src/po-charset.c:627
+#: src/po-charset.c:599 src/po-charset.c:654
 msgid ""
 "Installing GNU libiconv and then reinstalling GNU gettext\n"
 "would fix this problem.\n"
@@ -3776,15 +3790,15 @@ msgstr ""
 "Instalarea GNU libiconv ºi apoi reinstalarea GNU gettext\n"
 "va rezolva aceastã problemã.\n"
 
-#: src/po-charset.c:586 src/po-charset.c:631
+#: src/po-charset.c:613 src/po-charset.c:658
 msgid "Continuing anyway, expect parse errors."
 msgstr "Se continuã oricum, se aºteaptã analiza(parse) erorilor."
 
-#: src/po-charset.c:588
+#: src/po-charset.c:615
 msgid "Continuing anyway."
 msgstr "Se continuã oricum."
 
-#: src/po-charset.c:622
+#: src/po-charset.c:649
 #, c-format
 msgid ""
 "Charset \"%s\" is not supported. %s relies on iconv().\n"
@@ -3793,7 +3807,7 @@ msgstr ""
 "Setul de caractere \"%s\" nu este suportat. %s se bazeazã pe iconv().\n"
 "Aceastã versiune a fost construitã(built) fãrã iconv().\n"
 
-#: src/po-charset.c:659
+#: src/po-charset.c:686
 msgid ""
 "Charset missing in header.\n"
 "Message conversion to user's charset will not work.\n"
@@ -3840,7 +3854,7 @@ msgstr "forma pluralã are index greºit"
 msgid "too many errors, aborting"
 msgstr "prea multe erori, se renunþã"
 
-#: src/po-lex.c:437 src/po-lex.c:505 src/write-po.c:812 src/write-po.c:949
+#: src/po-lex.c:437 src/po-lex.c:505 src/write-po.c:841 src/write-po.c:978
 #, c-format
 msgid "invalid multibyte sequence"
 msgstr "secvenþã multibyte invalidã"
@@ -3884,7 +3898,7 @@ msgstr "sfârºit de linie în ºir"
 msgid "context separator <EOT> within string"
 msgstr ""
 
-#: src/read-catalog.c:325 src/xgettext.c:1262
+#: src/read-catalog.c:325 src/xgettext.c:1265
 #, c-format
 msgid "this file may not contain domain directives"
 msgstr "acest fiºier poate sã nu conþinã directive de domeniu"
@@ -3997,31 +4011,31 @@ msgstr ""
 msgid "warning: invalid Unicode character"
 msgstr "%s:%d: avertisment: caracter Unicode invalid"
 
-#: src/read-stringtable.c:802
+#: src/read-stringtable.c:803
 #, fuzzy
 #| msgid "%s:%d: warning: unterminated string"
 msgid "warning: unterminated string"
 msgstr "%s:%d: avertisment: ºir neterminat"
 
-#: src/read-stringtable.c:810
+#: src/read-stringtable.c:811
 #, fuzzy
 #| msgid "%s:%lu: warning: syntax error"
 msgid "warning: syntax error"
 msgstr "%s:%lu: avertisment: eroare de sintaxã"
 
-#: src/read-stringtable.c:871 src/read-stringtable.c:893
+#: src/read-stringtable.c:872 src/read-stringtable.c:894
 #, fuzzy
 #| msgid "%s:%lu: warning: unterminated key/value pair"
 msgid "warning: unterminated key/value pair"
 msgstr "%s:%lu: avertisment: pereche cheie/valoare neterminatã"
 
-#: src/read-stringtable.c:940
+#: src/read-stringtable.c:941
 #, fuzzy
 #| msgid "%s:%lu: warning: syntax error, expected ';' after string"
 msgid "warning: syntax error, expected ';' after string"
 msgstr "%s:%lu: avertisment: eroare de sintaxã, se aºtepta ';' dupã ºir"
 
-#: src/read-stringtable.c:948
+#: src/read-stringtable.c:949
 #, fuzzy
 #| msgid "%s:%lu: warning: syntax error, expected '=' or ';' after string"
 msgid "warning: syntax error, expected '=' or ';' after string"
@@ -4177,13 +4191,13 @@ msgstr "nu se poate crea fiºierul de ieºire(output) \"%s\""
 msgid "standard output"
 msgstr "ieºire(output) standard"
 
-#: src/write-csharp.c:708
+#: src/write-csharp.c:709
 #, fuzzy, c-format
 #| msgid "failed to create \"%s\""
 msgid "failed to create directory \"%s\""
 msgstr "eroare în crearea \"%s\""
 
-#: src/write-csharp.c:771
+#: src/write-csharp.c:772
 #, fuzzy, c-format
 #| msgid "compilation of Java class failed, please try --verbose or set $JAVAC"
 msgid "compilation of C# class failed, please try --verbose"
@@ -4191,7 +4205,7 @@ msgstr ""
 "compilarea clasei Java a eºuat, vã rugãm încercaþi --verbose sau setaþi "
 "$JAVAC"
 
-#: src/write-csharp.c:773
+#: src/write-csharp.c:774
 #, fuzzy, c-format
 #| msgid "communication with %s subprocess failed"
 msgid "compilation of C# class failed"
@@ -4203,19 +4217,19 @@ msgstr "comunicaþia cu subprocesul %s a eºuat"
 msgid "error while opening \"%s\" for writing"
 msgstr "eroare în deschiderea \"%s\" pentru scriere"
 
-#: src/write-java.c:1096
+#: src/write-java.c:1097
 #, c-format
 msgid "not a valid Java class name: %s"
 msgstr "nu este un nume valid de clasã Java: %s"
 
-#: src/write-java.c:1216
+#: src/write-java.c:1217
 #, c-format
 msgid "compilation of Java class failed, please try --verbose or set $JAVAC"
 msgstr ""
 "compilarea clasei Java a eºuat, vã rugãm încercaþi --verbose sau setaþi "
 "$JAVAC"
 
-#: src/write-java.c:1219
+#: src/write-java.c:1220
 #, fuzzy, c-format
 #| msgid "compilation of Java class failed, please try --verbose or set $JAVAC"
 msgid "compilation of Java class failed, please try to set $JAVAC"
@@ -4223,13 +4237,13 @@ msgstr ""
 "compilarea clasei Java a eºuat, vã rugãm încercaþi --verbose sau setaþi "
 "$JAVAC"
 
-#: src/write-po.c:821
+#: src/write-po.c:850
 #, fuzzy
 #| msgid "invalid multibyte sequence"
 msgid "incomplete multibyte sequence"
 msgstr "secvenþã multibyte invalidã"
 
-#: src/write-po.c:884
+#: src/write-po.c:913
 #, fuzzy, c-format
 #| msgid ""
 #| "internationalized messages should not contain the `\\%c' escape sequence"
@@ -4238,7 +4252,7 @@ msgid ""
 msgstr ""
 "mesajele internaþionalizate nu ar trebui sã conþinã secvenþa de escape `\\%c'"
 
-#: src/write-po.c:1334 src/write-po.c:1502
+#: src/write-po.c:1363 src/write-po.c:1531
 #, fuzzy, c-format
 #| msgid ""
 #| "The following msgid contains non-ASCII characters.\n"
@@ -4258,7 +4272,7 @@ msgstr ""
 "pur ASCII în loc.\n"
 "%s\n"
 
-#: src/write-po.c:1346 src/write-po.c:1514
+#: src/write-po.c:1375 src/write-po.c:1543
 #, c-format
 msgid ""
 "The following msgid contains non-ASCII characters.\n"
@@ -4363,22 +4377,22 @@ msgstr ""
 "catalogul de mesaje are traduceri în formã pluralã,\n"
 "dar formatul catalogului de mesaje Tcl nu suportã manipularea pluralelor\n"
 
-#: src/x-awk.c:340 src/x-javascript.c:764 src/x-python.c:891
+#: src/x-awk.c:341 src/x-javascript.c:766 src/x-python.c:893
 #, c-format
 msgid "%s:%d: warning: unterminated string"
 msgstr "%s:%d: avertisment: ºir neterminat"
 
-#: src/x-awk.c:591
+#: src/x-awk.c:592
 #, c-format
 msgid "%s:%d: warning: unterminated regular expression"
 msgstr "%s:%d: avertisment: expresie regulatã neterminatã"
 
-#: src/x-c.c:1152 src/x-csharp.c:1329 src/x-python.c:1098 src/x-vala.c:566
+#: src/x-c.c:1153 src/x-csharp.c:1330 src/x-python.c:1100 src/x-vala.c:567
 #, c-format
 msgid "%s:%d: warning: invalid Unicode character"
 msgstr "%s:%d: avertisment: caracter Unicode invalid"
 
-#: src/x-c.c:1344
+#: src/x-c.c:1354
 #, fuzzy, c-format
 #| msgid "%s:%d: warning: unterminated string literal"
 msgid ""
@@ -4398,17 +4412,17 @@ msgstr "%s:%d: avertisment: ºir literal neterminat"
 msgid "%s:%d: warning: invalid raw string literal syntax"
 msgstr "%s:%d: avertisment: ºir literal neterminat"
 
-#: src/x-c.c:1617 src/x-csharp.c:1448 src/x-java.c:681 src/x-vala.c:808
+#: src/x-c.c:1617 src/x-csharp.c:1449 src/x-java.c:682 src/x-vala.c:809
 #, c-format
 msgid "%s:%d: warning: unterminated character constant"
 msgstr "%s:%d: avertisment: constantã caracter neterminatã"
 
-#: src/x-c.c:1654 src/x-vala.c:907
+#: src/x-c.c:1654 src/x-vala.c:908
 #, c-format
 msgid "%s:%d: warning: unterminated string literal"
 msgstr "%s:%d: avertisment: ºir literal neterminat"
 
-#: src/x-csharp.c:225 src/xg-encoding.c:111
+#: src/x-csharp.c:226 src/xg-encoding.c:111
 #, fuzzy
 #| msgid ""
 #| "Non-ASCII string at %s%s.\n"
@@ -4418,7 +4432,7 @@ msgstr ""
 "ªir non-ASCII la %s%s.\n"
 "Vã rugãm specificaþi sursa codãrii(encoding) prin --from-code.\n"
 
-#: src/x-csharp.c:269
+#: src/x-csharp.c:270
 #, fuzzy, c-format
 #| msgid ""
 #| "Non-ASCII string at %s%s.\n"
@@ -4430,7 +4444,7 @@ msgstr ""
 "ªir non-ASCII la %s%s.\n"
 "Vã rugãm specificaþi sursa codãrii(encoding) prin --from-code.\n"
 
-#: src/x-csharp.c:285
+#: src/x-csharp.c:286
 #, fuzzy, c-format
 #| msgid ""
 #| "Non-ASCII string at %s%s.\n"
@@ -4442,7 +4456,7 @@ msgstr ""
 "ªir non-ASCII la %s%s.\n"
 "Vã rugãm specificaþi sursa codãrii(encoding) prin --from-code.\n"
 
-#: src/x-csharp.c:297
+#: src/x-csharp.c:298
 #, fuzzy, c-format
 #| msgid ""
 #| "Non-ASCII string at %s%s.\n"
@@ -4454,7 +4468,7 @@ msgstr ""
 "ªir non-ASCII la %s%s.\n"
 "Vã rugãm specificaþi sursa codãrii(encoding) prin --from-code.\n"
 
-#: src/x-csharp.c:306
+#: src/x-csharp.c:307
 #, fuzzy, c-format
 #| msgid ""
 #| "Non-ASCII string at %s%s.\n"
@@ -4466,13 +4480,13 @@ msgstr ""
 "ªir non-ASCII la %s%s.\n"
 "Vã rugãm specificaþi sursa codãrii(encoding) prin --from-code.\n"
 
-#: src/x-csharp.c:315 src/x-javascript.c:329 src/x-python.c:353
+#: src/x-csharp.c:316 src/x-javascript.c:331 src/x-python.c:355
 #, fuzzy, c-format
 #| msgid "iconv failure"
 msgid "%s:%d: iconv failure"
 msgstr "eroare iconv"
 
-#: src/x-csharp.c:338
+#: src/x-csharp.c:339
 #, fuzzy, c-format
 #| msgid ""
 #| "Non-ASCII string at %s%s.\n"
@@ -4484,18 +4498,18 @@ msgstr ""
 "ªir non-ASCII la %s%s.\n"
 "Vã rugãm specificaþi sursa codãrii(encoding) prin --from-code.\n"
 
-#: src/x-csharp.c:1451 src/x-java.c:684
+#: src/x-csharp.c:1452 src/x-java.c:685
 #, fuzzy, c-format
 #| msgid "%s:%d: warning: unterminated string"
 msgid "%s:%d: warning: unterminated string constant"
 msgstr "%s:%d: avertisment: ºir neterminat"
 
-#: src/x-csharp.c:1953 src/x-java.c:1591
+#: src/x-csharp.c:1954 src/x-java.c:1592
 #, c-format
 msgid "%s:%d: warning: ')' found where '}' was expected"
 msgstr "%s:%d: avertisment: s-a gãsit ')' unde se aºtepta '}'"
 
-#: src/x-csharp.c:1983 src/x-java.c:1621
+#: src/x-csharp.c:1984 src/x-java.c:1622
 #, c-format
 msgid "%s:%d: warning: '}' found where ')' was expected"
 msgstr "%s:%d: avertisment: s-a gãsit '}' unde se aºtepta ')'"
@@ -4536,65 +4550,65 @@ msgstr ""
 msgid "Non-ASCII string at %s%s."
 msgstr ""
 
-#: src/xgettext.c:585
+#: src/xgettext.c:588
 #, c-format
 msgid "'%s' is not a valid encoding name.  Using ASCII as fallback.\n"
 msgstr ""
 
-#: src/xgettext.c:655
+#: src/xgettext.c:658
 #, fuzzy, c-format
 #| msgid "language `%s' unknown"
 msgid "syntax check '%s' unknown"
 msgstr "limbajul `%s' este necunoscut"
 
-#: src/xgettext.c:664
+#: src/xgettext.c:667
 #, c-format
 msgid "sentence end type '%s' unknown"
 msgstr ""
 
-#: src/xgettext.c:720
+#: src/xgettext.c:723
 #, c-format
 msgid "--join-existing cannot be used when output is written to stdout"
 msgstr ""
 "--join-existing nu poate fi folosit când output-ul este scris la stdout"
 
-#: src/xgettext.c:724
+#: src/xgettext.c:727
 #, c-format
 msgid "xgettext cannot work without keywords to look for"
 msgstr "xgettext nu poate funcþiona fãrã cuvinte cheie dupã care sã caute"
 
-#: src/xgettext.c:859
+#: src/xgettext.c:862
 #, c-format
 msgid "warning: ITS rule file '%s' does not exist"
 msgstr ""
 
-#: src/xgettext.c:937
+#: src/xgettext.c:940
 #, c-format
 msgid ""
 "warning: a fallback ITS rule file '%s' is used; it may not be in sync with "
 "the upstream"
 msgstr ""
 
-#: src/xgettext.c:947
+#: src/xgettext.c:950
 #, c-format
 msgid ""
 "warning: ITS rule file '%s' does not exist; check your gettext installation"
 msgstr ""
 
-#: src/xgettext.c:965
+#: src/xgettext.c:968
 #, fuzzy, c-format
 #| msgid "warning: file `%s' extension `%s' is unknown; will try C"
 msgid "warning: file '%s' extension '%s' is unknown; will try C"
 msgstr ""
 "avertisment: fiºierul `%s' extensia `%s' este necunoscut(ã); se va încerca C"
 
-#: src/xgettext.c:1055
+#: src/xgettext.c:1058
 #, c-format
 msgid "Extract translatable strings from given input files.\n"
 msgstr ""
 "Extrage ºirurile traductibile din fiºierele de intrare(input) specificate.\n"
 
-#: src/xgettext.c:1078
+#: src/xgettext.c:1081
 #, c-format
 msgid ""
 "  -d, --default-domain=NAME   use NAME.po for output (instead of messages."
@@ -4603,13 +4617,13 @@ msgstr ""
 "  -d, --default-domain=NUME      foloseºte NUME.po pentru output \n"
 "(în loc de messages.po)\n"
 
-#: src/xgettext.c:1080
+#: src/xgettext.c:1083
 #, c-format
 msgid "  -o, --output=FILE           write output to specified file\n"
 msgstr ""
 "  -o, --output=FIªIER              scrie output-ul în fiºierul specificat\n"
 
-#: src/xgettext.c:1082
+#: src/xgettext.c:1085
 #, c-format
 msgid ""
 "  -p, --output-dir=DIR        output files will be placed in directory DIR\n"
@@ -4618,12 +4632,12 @@ msgstr ""
 "în \n"
 "directorul DIR\n"
 
-#: src/xgettext.c:1087
+#: src/xgettext.c:1090
 #, c-format
 msgid "Choice of input file language:\n"
 msgstr "Alegerea limbajul fiºierelor de intrare(input):\n"
 
-#: src/xgettext.c:1089
+#: src/xgettext.c:1092
 #, fuzzy, c-format
 #| msgid ""
 #| "  -L, --language=NAME         recognise the specified language\n"
@@ -4650,12 +4664,12 @@ msgstr ""
 "                                JavaProperties, awk, YCP, Tcl, Perl, PHP,\n"
 "                                GCC-source, NXStringTable, RST, Glade)\n"
 
-#: src/xgettext.c:1096
+#: src/xgettext.c:1099
 #, c-format
 msgid "  -C, --c++                   shorthand for --language=C++\n"
 msgstr "  -C, --c++                      scurtãturã pentru --language=C++\n"
 
-#: src/xgettext.c:1098
+#: src/xgettext.c:1101
 #, c-format
 msgid ""
 "By default the language is guessed depending on the input file name "
@@ -4665,7 +4679,7 @@ msgstr ""
 "intrare \n"
 "(input)\n"
 
-#: src/xgettext.c:1103
+#: src/xgettext.c:1106
 #, c-format
 msgid ""
 "      --from-code=NAME        encoding of input files\n"
@@ -4674,25 +4688,25 @@ msgstr ""
 "      --from-code=NUME        codare pentru fiºierele de intrare(input)\n"
 "                                (exceptând Python, Tcl, Glade)\n"
 
-#: src/xgettext.c:1106
+#: src/xgettext.c:1109
 #, c-format
 msgid "By default the input files are assumed to be in ASCII.\n"
 msgstr "Implicit fiºierele de intrare(input) sunt presupuse a fi în ASCII.\n"
 
-#: src/xgettext.c:1111
+#: src/xgettext.c:1114
 #, c-format
 msgid "  -j, --join-existing         join messages with existing file\n"
 msgstr ""
 "  -j, --join-existing            alãturã mesajele fiºierului existent\n"
 
-#: src/xgettext.c:1113
+#: src/xgettext.c:1116
 #, c-format
 msgid "  -x, --exclude-file=FILE.po  entries from FILE.po are not extracted\n"
 msgstr ""
 "  -x, --exclude-file=FIªIER.po     intrãrile din FIªIER.po nu vor fi "
 "extrase\n"
 
-#: src/xgettext.c:1115
+#: src/xgettext.c:1118
 #, fuzzy, c-format
 #| msgid ""
 #| "  -c, --add-comments[=TAG]    place comment block with TAG (or those\n"
@@ -4710,7 +4724,7 @@ msgstr ""
 "                                 cuvinte cheie) în fiºierul de "
 "ieºire(output)\n"
 
-#: src/xgettext.c:1120
+#: src/xgettext.c:1123
 #, c-format
 msgid ""
 "      --check=NAME            perform syntax check on messages\n"
@@ -4718,7 +4732,7 @@ msgid ""
 "                                 quote-unicode, bullet-unicode)\n"
 msgstr ""
 
-#: src/xgettext.c:1124
+#: src/xgettext.c:1127
 #, c-format
 msgid ""
 "      --sentence-end=TYPE     type describing the end of sentence\n"
@@ -4726,17 +4740,17 @@ msgid ""
 "                                 or double-space)\n"
 msgstr ""
 
-#: src/xgettext.c:1129
+#: src/xgettext.c:1132
 #, c-format
 msgid "Language specific options:\n"
 msgstr "Opþiuni specifice limbajului:\n"
 
-#: src/xgettext.c:1131
+#: src/xgettext.c:1134
 #, c-format
 msgid "  -a, --extract-all           extract all strings\n"
 msgstr "  -a, --extract-all              extrage toate ºirurile\n"
 
-#: src/xgettext.c:1133
+#: src/xgettext.c:1136
 #, fuzzy, c-format
 #| msgid ""
 #| "                                (only languages C, C++, ObjectiveC, "
@@ -4755,7 +4769,7 @@ msgstr ""
 "                                Python, Lisp, EmacsLisp, librep, Java, awk,\n"
 "                                Tcl, Perl, PHP, GCC-sursã, Glade)\n"
 
-#: src/xgettext.c:1141
+#: src/xgettext.c:1144
 #, fuzzy, c-format
 #| msgid ""
 #| "                                (only languages C, C++, ObjectiveC, "
@@ -4774,7 +4788,7 @@ msgstr ""
 "                                Python, Lisp, EmacsLisp, librep, Java, awk,\n"
 "                                Tcl, Perl, PHP, GCC-sursã, Glade)\n"
 
-#: src/xgettext.c:1146
+#: src/xgettext.c:1149
 #, c-format
 msgid ""
 "      --flag=WORD:ARG:FLAG    additional flag for strings inside the "
@@ -4785,7 +4799,7 @@ msgstr ""
 "argumentul\n"
 "                              numãrul ARG al cuvântului cheie CUVÂNT\n"
 
-#: src/xgettext.c:1149
+#: src/xgettext.c:1152
 #, fuzzy, c-format
 #| msgid ""
 #| "                                (only languages C, C++, ObjectiveC, "
@@ -4804,7 +4818,7 @@ msgstr ""
 "                                Python, Lisp, EmacsLisp, librep, Java, awk,\n"
 "                                YCP, Tcl, Perl, PHP, GCC-sursã)\n"
 
-#: src/xgettext.c:1154
+#: src/xgettext.c:1157
 #, c-format
 msgid "  -T, --trigraphs             understand ANSI C trigraphs for input\n"
 msgstr ""
@@ -4812,12 +4826,12 @@ msgstr ""
 "pentru intrare\n"
 "                                     (input)\n"
 
-#: src/xgettext.c:1156
+#: src/xgettext.c:1159
 #, c-format
 msgid "                                (only languages C, C++, ObjectiveC)\n"
 msgstr "                                (doar limbajele C, C++, ObjectiveC)\n"
 
-#: src/xgettext.c:1158
+#: src/xgettext.c:1161
 #, fuzzy, c-format
 #| msgid "  -f, --files-from=FILE       get list of input files from FILE\n"
 msgid "      --its=FILE              apply ITS rules from FILE\n"
@@ -4825,35 +4839,35 @@ msgstr ""
 "  -f, --files-from=FIªIER          obþine lista de fiºiere de intrare din "
 "FIªIER\n"
 
-#: src/xgettext.c:1160
+#: src/xgettext.c:1163
 #, fuzzy, c-format
 #| msgid "                                (only language C++)\n"
 msgid "                                (only XML based languages)\n"
 msgstr "                                (doar limbajul C++)\n"
 
-#: src/xgettext.c:1162
+#: src/xgettext.c:1165
 #, c-format
 msgid "      --qt                    recognize Qt format strings\n"
 msgstr "      --qt                    recunoaºte formatul ºirurilor Qt\n"
 
-#: src/xgettext.c:1164 src/xgettext.c:1168 src/xgettext.c:1172
+#: src/xgettext.c:1167 src/xgettext.c:1171 src/xgettext.c:1175
 #, c-format
 msgid "                                (only language C++)\n"
 msgstr "                                (doar limbajul C++)\n"
 
-#: src/xgettext.c:1166
+#: src/xgettext.c:1169
 #, fuzzy, c-format
 #| msgid "      --qt                    recognize Qt format strings\n"
 msgid "      --kde                   recognize KDE 4 format strings\n"
 msgstr "      --qt                    recunoaºte formatul ºirurilor Qt\n"
 
-#: src/xgettext.c:1170
+#: src/xgettext.c:1173
 #, fuzzy, c-format
 #| msgid "      --qt                    recognize Qt format strings\n"
 msgid "      --boost                 recognize Boost format strings\n"
 msgstr "      --qt                    recunoaºte formatul ºirurilor Qt\n"
 
-#: src/xgettext.c:1174
+#: src/xgettext.c:1177
 #, c-format
 msgid ""
 "      --debug                 more detailed formatstring recognition result\n"
@@ -4861,26 +4875,26 @@ msgstr ""
 "      --debug                    rezultat mai detaliat al recunoaºterii "
 "formatstring\n"
 
-#: src/xgettext.c:1199
+#: src/xgettext.c:1202
 #, c-format
 msgid "      --properties-output     write out a Java .properties file\n"
 msgstr "      --properties-output     scrie un fiºier .properties Java\n"
 
-#: src/xgettext.c:1203
+#: src/xgettext.c:1206
 #, fuzzy, c-format
 #| msgid "      --indent                indented output style\n"
 msgid "      --itstool               write out itstool comments\n"
 msgstr ""
 "      --indent                   scrie fiºierul .po folosind stil indentat\n"
 
-#: src/xgettext.c:1216
+#: src/xgettext.c:1219
 #, c-format
 msgid "      --copyright-holder=STRING  set copyright holder in output\n"
 msgstr ""
 "      --copyright-holder=ªIR  seteazã deþinãtorul copyright-ului la "
 "ieºire(output)\n"
 
-#: src/xgettext.c:1218
+#: src/xgettext.c:1221
 #, c-format
 msgid ""
 "      --foreign-user          omit FSF copyright in output for foreign user\n"
@@ -4888,12 +4902,12 @@ msgstr ""
 "      --foreign-user          omite copyright FSF la ieºire pentru user "
 "strãin(foreign)\n"
 
-#: src/xgettext.c:1220
+#: src/xgettext.c:1223
 #, c-format
 msgid "      --package-name=PACKAGE  set package name in output\n"
 msgstr ""
 
-#: src/xgettext.c:1222
+#: src/xgettext.c:1225
 #, fuzzy, c-format
 #| msgid "      --copyright-holder=STRING  set copyright holder in output\n"
 msgid "      --package-version=VERSION  set package version in output\n"
@@ -4901,7 +4915,7 @@ msgstr ""
 "      --copyright-holder=ªIR  seteazã deþinãtorul copyright-ului la "
 "ieºire(output)\n"
 
-#: src/xgettext.c:1224
+#: src/xgettext.c:1227
 #, c-format
 msgid ""
 "      --msgid-bugs-address=EMAIL@ADDRESS  set report address for msgid bugs\n"
@@ -4909,7 +4923,7 @@ msgstr ""
 "      --msgid-bugs-address=EMAIL@ADRESÃ  seteazã adresa de reportare a\n"
 "bug-urilor msgid\n"
 
-#: src/xgettext.c:1226
+#: src/xgettext.c:1229
 #, fuzzy, c-format
 #| msgid ""
 #| "  -m, --msgstr-prefix[=STRING]  use STRING or \"\" as prefix for msgstr "
@@ -4922,7 +4936,7 @@ msgstr ""
 "  -m, --msgstr-prefix[=ªIR]  foloseºte ªIR sau \"\" ca prefix pentru "
 "intrãrile msgstr\n"
 
-#: src/xgettext.c:1229
+#: src/xgettext.c:1232
 #, fuzzy, c-format
 #| msgid ""
 #| "  -M, --msgstr-suffix[=STRING]  use STRING or \"\" as suffix for msgstr "
@@ -4935,7 +4949,7 @@ msgstr ""
 "  -M, --msgstr-suffix[=ªIR]  foloseºte ªIR sau \"\" ca suefix pentru "
 "intrãrile msgstr\n"
 
-#: src/xgettext.c:1641
+#: src/xgettext.c:1644
 #, c-format
 msgid ""
 "A --flag argument doesn't have the <keyword>:<argnum>:[pass-]<flag> syntax: "
@@ -4943,11 +4957,11 @@ msgid ""
 msgstr ""
 "Un argument --flag nu are sintaxa <keyword>:<argnum>:[pass-]<flag> : %s"
 
-#: src/xgettext.c:1798
+#: src/xgettext.c:1811
 msgid "standard input"
 msgstr "intrare(input) standard"
 
-#: src/xgettext.c:1989
+#: src/xgettext.c:2005
 #, fuzzy
 #| msgid ""
 #| "The option --msgid-bugs-address was not specified.\n"
@@ -4965,7 +4979,7 @@ msgstr ""
 "aici variabila MSGID_BUGS_ADDRESS; în caz contrar\n"
 "vã rugãm specificaþi optiunea --msgid-bugs-address în linia de comandã.\n"
 
-#: src/xgettext.c:2208
+#: src/xgettext.c:2220
 #, fuzzy, c-format
 #| msgid "language `%s' unknown"
 msgid "language '%s' unknown"
@@ -5035,19 +5049,19 @@ msgstr ""
 msgid "%s:%d: warning: lone surrogate U+%04X"
 msgstr "%s:%d: avertisment: ºir neterminat"
 
-#: src/x-java.c:1207 src/x-java.c:1251
+#: src/x-java.c:1208 src/x-java.c:1252
 #, fuzzy, c-format
 #| msgid "%s:%d: warning: unterminated string"
 msgid "%s:%d: warning: unterminated text block"
 msgstr "%s:%d: avertisment: ºir neterminat"
 
-#: src/x-java.c:1220
+#: src/x-java.c:1221
 #, fuzzy, c-format
 #| msgid "%s:%d: warning: invalid Unicode character"
 msgid "%s:%d: warning: invalid syntax in text block"
 msgstr "%s:%d: avertisment: caracter Unicode invalid"
 
-#: src/x-javascript.c:239
+#: src/x-javascript.c:241
 #, fuzzy
 #| msgid ""
 #| "Non-ASCII string at %s%s.\n"
@@ -5057,7 +5071,7 @@ msgstr ""
 "ªir non-ASCII la %s%s.\n"
 "Vã rugãm specificaþi sursa codãrii(encoding) prin --from-code.\n"
 
-#: src/x-javascript.c:283
+#: src/x-javascript.c:285
 #, fuzzy, c-format
 #| msgid ""
 #| "Non-ASCII string at %s%s.\n"
@@ -5069,7 +5083,7 @@ msgstr ""
 "ªir non-ASCII la %s%s.\n"
 "Vã rugãm specificaþi sursa codãrii(encoding) prin --from-code.\n"
 
-#: src/x-javascript.c:299
+#: src/x-javascript.c:301
 #, fuzzy, c-format
 #| msgid ""
 #| "Non-ASCII string at %s%s.\n"
@@ -5081,7 +5095,7 @@ msgstr ""
 "ªir non-ASCII la %s%s.\n"
 "Vã rugãm specificaþi sursa codãrii(encoding) prin --from-code.\n"
 
-#: src/x-javascript.c:311
+#: src/x-javascript.c:313
 #, fuzzy, c-format
 #| msgid ""
 #| "Non-ASCII string at %s%s.\n"
@@ -5093,7 +5107,7 @@ msgstr ""
 "ªir non-ASCII la %s%s.\n"
 "Vã rugãm specificaþi sursa codãrii(encoding) prin --from-code.\n"
 
-#: src/x-javascript.c:320
+#: src/x-javascript.c:322
 #, fuzzy, c-format
 #| msgid ""
 #| "Non-ASCII string at %s%s.\n"
@@ -5105,7 +5119,7 @@ msgstr ""
 "ªir non-ASCII la %s%s.\n"
 "Vã rugãm specificaþi sursa codãrii(encoding) prin --from-code.\n"
 
-#: src/x-javascript.c:352
+#: src/x-javascript.c:354
 #, fuzzy, c-format
 #| msgid ""
 #| "Non-ASCII string at %s%s.\n"
@@ -5117,67 +5131,67 @@ msgstr ""
 "ªir non-ASCII la %s%s.\n"
 "Vã rugãm specificaþi sursa codãrii(encoding) prin --from-code.\n"
 
-#: src/x-javascript.c:979
+#: src/x-javascript.c:981
 #, fuzzy, c-format
 #| msgid "%s:%d: warning: unterminated string literal"
 msgid "%s:%d: warning: RegExp literal terminated too early"
 msgstr "%s:%d: avertisment: ºir literal neterminat"
 
-#: src/x-javascript.c:1102
+#: src/x-javascript.c:1104
 #, fuzzy, c-format
 #| msgid "%s:%lu: warning: syntax error"
 msgid "%s:%d: warning: %s is not allowed"
 msgstr "%s:%lu: avertisment: eroare de sintaxã"
 
-#: src/x-javascript.c:1117
+#: src/x-javascript.c:1119
 #, fuzzy, c-format
 #| msgid "%s:%d: warning: unterminated string"
 msgid "%s:%d: warning: unterminated XML markup"
 msgstr "%s:%d: avertisment: ºir neterminat"
 
-#: src/x-perl.c:338
+#: src/x-perl.c:339
 #, c-format
 msgid "%s:%d: can't find string terminator \"%s\" anywhere before EOF"
 msgstr ""
 "%s:%d: nu se poate gãsi terminatorul de ºir \"%s\" oriunde înainte de EOF"
 
-#: src/x-perl.c:1073
+#: src/x-perl.c:1074
 #, c-format
 msgid "%s:%d: missing right brace on \\x{HEXNUMBER}"
 msgstr "%s:%d: lipseºte acoladã dreaptã în \\x{HEXNUMBER}"
 
-#: src/x-perl.c:1194
+#: src/x-perl.c:1195
 #, c-format
 msgid "%s:%d: invalid interpolation (\"\\l\") of 8bit character \"%c\""
 msgstr "%s:%d: interpolare invalidã (\"\\l\") a caracterului pe 8biþi \"%c\""
 
-#: src/x-perl.c:1214
+#: src/x-perl.c:1215
 #, c-format
 msgid "%s:%d: invalid interpolation (\"\\u\") of 8bit character \"%c\""
 msgstr "%s:%d: interpolare invalidã (\"\\u\") a caracterului pe 8biþi \"%c\""
 
-#: src/x-perl.c:1248
+#: src/x-perl.c:1249
 #, c-format
 msgid "%s:%d: invalid variable interpolation at \"%c\""
 msgstr "%s:%d: interpolare invalidã de variabilã la \"%c\""
 
-#: src/x-perl.c:1261
+#: src/x-perl.c:1262
 #, c-format
 msgid "%s:%d: invalid interpolation (\"\\L\") of 8bit character \"%c\""
 msgstr "%s:%d: interpolare invalidã (\"\\L\") a caracterului pe 8biþi  \"%c\""
 
-#: src/x-perl.c:1278
+#: src/x-perl.c:1279
 #, c-format
 msgid "%s:%d: invalid interpolation (\"\\U\") of 8bit character \"%c\""
 msgstr "%s:%d: interpolare invalidã (\"\\U\") a caracterului pe 8biþi  \"%c\""
 
-#: src/x-python.c:279
+#: src/x-python.c:281
 msgid ""
 "Please specify the source encoding through --from-code or through a comment\n"
 "as specified in https://www.python.org/peps/pep-0263.html.\n"
 msgstr ""
 
-#: src/x-python.c:336
+#: src/x-python.c:338
 #, c-format
 msgid ""
 "%s:%d: Long incomplete multibyte sequence.\n"
@@ -5185,7 +5199,7 @@ msgid ""
 "comment as specified in https://www.python.org/peps/pep-0263.html.\n"
 msgstr ""
 
-#: src/x-python.c:488
+#: src/x-python.c:490
 #, c-format
 msgid ""
 "%s:%d: Invalid multibyte sequence.\n"
@@ -5193,7 +5207,7 @@ msgid ""
 "comment as specified in https://www.python.org/peps/pep-0263.html.\n"
 msgstr ""
 
-#: src/x-python.c:497
+#: src/x-python.c:499
 #, c-format
 msgid ""
 "%s:%d: Incomplete multibyte sequence at end of file.\n"
@@ -5201,7 +5215,7 @@ msgid ""
 "comment as specified in https://www.python.org/peps/pep-0263.html.\n"
 msgstr ""
 
-#: src/x-python.c:506
+#: src/x-python.c:508
 #, c-format
 msgid ""
 "%s:%d: Incomplete multibyte sequence at end of line.\n"
@@ -5209,7 +5223,7 @@ msgid ""
 "comment as specified in https://www.python.org/peps/pep-0263.html.\n"
 msgstr ""
 
-#: src/x-python.c:679
+#: src/x-python.c:681
 #, c-format
 msgid "Unknown encoding \"%s\". Proceeding with ASCII instead."
 msgstr ""
@@ -5246,12 +5260,12 @@ msgstr "%s:%d: definiþie invalidã de ºir"
 msgid "%s:%d: invalid RSJ version. Only version 1 is supported."
 msgstr ""
 
-#: src/x-ruby.c:88
+#: src/x-ruby.c:89
 #, c-format
 msgid "(output from '%s')"
 msgstr ""
 
-#: src/x-sh.c:1141
+#: src/x-sh.c:1142
 #, c-format
 msgid ""
 "%s:%lu: warning: the syntax $\"...\" is deprecated due to security reasons; "
@@ -5260,7 +5274,7 @@ msgstr ""
 "%s:%lu: avertisment: sintaxa $\"...\" nu se mai foloseºte din motive de "
 "securitate; înlocuiþi cu eval_gettext"
 
-#: src/x-vala.c:616
+#: src/x-vala.c:617
 #, fuzzy, c-format
 #| msgid "%s:%d: warning: unterminated string literal"
 msgid "%s:%d: warning: regular expression literal terminated too early"
@@ -5401,35 +5415,32 @@ msgstr ""
 msgid "document ended unexpectedly: %s"
 msgstr ""
 
-#, c-format
+#, fuzzy
+#~| msgid "cannot create output file \"%s\""
+#~ msgid "cannot remove temporary file %s"
+#~ msgstr "nu se poate crea fiºierul de ieºire(output) \"%s\""
+
 #~ msgid "%s: option `--%s' doesn't allow an argument\n"
 #~ msgstr "%s: opþiunea `--%s' nu permite parametri\n"
 
-#, c-format
 #~ msgid "%s: unrecognized option `--%s'\n"
 #~ msgstr "%s: opþiune necunoscutã `--%s'\n"
 
-#, c-format
 #~ msgid "%s: illegal option -- %c\n"
 #~ msgstr "%s: opþiune ilegalã -- %c\n"
 
-#, c-format
 #~ msgid "%s: option `-W %s' is ambiguous\n"
 #~ msgstr "%s: opþiunea `-W %s' este ambiguã\n"
 
-#, c-format
 #~ msgid "%s: option `-W %s' doesn't allow an argument\n"
 #~ msgstr "%s: opþiunea `-W %s' nu permite parametri\n"
 
-#, c-format
 #~ msgid "DuplicateHandle failed with error code 0x%08x"
 #~ msgstr "DuplicateHandle a eºuat cu cod de eroare 0x%08x"
 
-#, c-format
 #~ msgid "Multiple references to %%%c."
 #~ msgstr "Referinþe multiple la % % %c."
 
-#, c-format, no-wrap
 #~ msgid ""
 #~ "Copyright (C) %s Free Software Foundation, Inc.\n"
 #~ "This is free software; see the source for copying conditions.  There is NO\n"
@@ -5442,53 +5453,41 @@ msgstr ""
 #~ msgid "Report bugs to <bug-gnu-gettext@gnu.org>.\n"
 #~ msgstr "Raportaþi bug-urile la <bug-gnu-gettext@gnu.org>.\n"
 
-#, c-format
 #~ msgid "Not yet implemented."
 #~ msgstr "Neimplimentat încã."
 
-#, c-format
 #~ msgid "header field `%s' should start at beginning of line\n"
 #~ msgstr "câmpul header `%s' ar trebui sã înceapã la începutul liniei\n"
 
-#, c-format
 #~ msgid "field `%s' still has initial default value\n"
 #~ msgstr "câmpul `%s' încã are valoarea implicitã iniþialã\n"
 
-#, c-format
 #~ msgid "warning: PO file header fuzzy\n"
 #~ msgstr "avertisment: headerul fiºierului PO este neclar(fuzzy)\n"
 
-#, c-format
 #~ msgid "warning: older versions of msgfmt will give an error on this\n"
 #~ msgstr ""
 #~ "avertisment: versiunile mai vechi ale msgfmt ar putea aici raporta o "
 #~ "eroare\n"
 
-#, c-format
 #~ msgid "write to grep subprocess failed"
 #~ msgstr "scrierea în subprocesul grep a eºuat"
 
-#, c-format
 #~ msgid "conversion failure"
 #~ msgstr "eroare de conversie"
 
-#, c-format
 #~ msgid "%s: warning: "
 #~ msgstr "%s: avertisment: "
 
-#, c-format
 #~ msgid "%s\n"
 #~ msgstr "%s\n"
 
-#, c-format
 #~ msgid "%s:%lu: warning: unterminated string"
 #~ msgstr "%s:%lu: avertisment: ºir neterminat"
 
-#, c-format
 #~ msgid "%s:%d:%d: %s"
 #~ msgstr "%s:%d:%d: %s"
 
-#, c-format
 #~ msgid ""
 #~ "Language \"glade\" is not supported. %s relies on expat.\n"
 #~ "This version was built without expat.\n"
@@ -5496,7 +5495,6 @@ msgstr ""
 #~ "Limbajul \"glade\" nu este suportat. %s se bazeazã pe expat.\n"
 #~ "Aceastã versiune a fost construitã fãrã expat.\n"
 
-#, c-format
 #~ msgid "%s:%d: fatal: plural message seen before singular message\n"
 #~ msgstr "%s:%d: fatal: mesaj plural întâlnit înainte de mesajul singular\n"
 
