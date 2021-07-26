@@ -22,6 +22,8 @@
 # define _GNU_SOURCE    1
 #endif
 
+#include "config.h"
+
 /* Specification.  */
 #include "autosprintf.h"
 
